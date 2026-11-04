@@ -10,23 +10,24 @@
     "score": "round(max(0,10-.9*M-T-V),2), hard cap4.9",
     "keep": "no hard error, no unresolved suspicious, rounded quality_score>=7",
     "review": "advisory only; not automatic exclusion",
-    "details": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/qc_core.py",
+    "details": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/qc_core.py",
     "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa"
   },
   "k256": {
-    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/k256/codebook.npz",
-    "sha256": "da11ccffdb9e98f6071b662bcc2bafee2e26ae79937537302e05a8c62151dfa8",
+    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/k256/codebook.npz",
+    "sha256": "685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d",
     "motion_ids": "1..256",
     "stop": 0,
     "dtype": "uint16",
-    "fit": "each retained nonleaking train trajectory equal total weight; original adjacent real frames",
-    "supervision": "current original image -> next original image; terminal original frame -> STOP",
-    "micro_actions": "retained by design",
+    "fit": "each retained nonleaking train trajectory equal total weight; real macro observation nodes, exact same indices as RVQ",
+    "supervision": "current retained image -> next retained image; true original terminal frame -> STOP",
+    "micro_actions": "merged; GT edges and all decoded motion codes must exceed10cm OR10deg; terminal preserved; K256_MICRO_VALIDATION.json",
+    "deployment": "execute one decoded macro goal then reobserve; recorded timestamp gaps are not control deadlines",
     "encode_entry": "k256.encode(body_deltas_Nx3,k256.load_book())",
     "decode_entry": "k256.decode(codes,k256.load_book())"
   },
   "rvq": {
-    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/deps/codebook.npz",
+    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/deps/codebook.npz",
     "sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f",
     "shape": [
       3,
@@ -50,7 +51,7 @@
       1,
       1
     ],
-    "fit_metadata": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/rvq/CODEBOOK.json",
+    "fit_metadata": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/rvq/CODEBOOK.json",
     "fitting": "from scratch on all frozen retained train trajectories; per-trajectory weight1; masked future padding; STOP excluded",
     "horizon": 5,
     "target": "five absolute local poses relative to current selected real observation, never chained increments",
@@ -81,17 +82,17 @@
     "visibility_claim": "frustum projection only"
   },
   "reader": {
-    "entry": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/reader.py",
+    "entry": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/reader.py",
     "dataset": "reader.NavigationDataset",
-    "training_adapter": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/training_adapter.py",
-    "adapter_config": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/TRAINING_ADAPTER_CONFIG.json",
-    "adapter_validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/TRAINING_ADAPTER_VALIDATION.json",
+    "training_adapter": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/training_adapter.py",
+    "adapter_config": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/TRAINING_ADAPTER_CONFIG.json",
+    "adapter_validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/TRAINING_ADAPTER_VALIDATION.json",
     "codec_storage": "Annotation JSON uses integer lists; TrainingDataset.codec_ids is NumPy uint16. Reader action_token is a Python integer, not a model vocabulary ID.",
     "images": "RGB uint8 HxWx3 arrays; list is history in chronological order followed by current selected observation",
     "tokenizer": "map by token string with tokenizer.encode(...,add_special_tokens=False); require atomic registered tokens; source token IDs are not model IDs",
     "VeOmni": "Generic explicit PyTorch Dataset supplied; no VeOmni installation or trainer integration claimed."
   },
-  "evaluation": "Paired cohort only: complete trajectories successfully supervised in both branches. Both branches compared at identical true retained macro nodes. K256 rolls all original adjacent decoded actions between those nodes; RVQ rolls only decoded[0] per decision. Local H5 compares the same five actual future node frames; padding excluded. Metrics distributions are across per-trajectory metric values; no length weighting.",
+  "evaluation": "Paired cohort only: complete trajectories successfully supervised in both branches. Both branches compared at identical true retained macro nodes. K256 rolls one decoded macro action per real retained node; RVQ rolls only decoded[0] per decision. Local H5 compares the same five actual future node frames; padding excluded. Metrics distributions are across per-trajectory metric values; no length weighting.",
   "not_performed": [
     "policy optimization",
     "model quality evaluation",

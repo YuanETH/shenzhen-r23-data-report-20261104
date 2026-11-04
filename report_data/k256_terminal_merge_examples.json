@@ -1,0 +1,100 @@
+{
+  "status": "complete",
+  "selection": "First three actual published K256 episodes in deterministic part order with original last-edge micro action; illustrative, not a prevalence estimate.",
+  "micro_threshold": "translation<=10cm AND abs_yaw<=10deg; STOP excluded",
+  "codebook_sha256": "685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d",
+  "figure": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/figures/k256_terminal_merge_examples.png",
+  "figure_sha256": "8c95214c23ffa451d490a0e2bc63cfbb9125685699118967024afdd064929f77",
+  "cases": [
+    {
+      "dataset": "shenzhen_office_r23_k3_bin1_20261028",
+      "split": "train",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5/5c01825bb5cc4ae48bae5b2e12c0b2b6/rgb.mp4",
+      "frame_indices": {
+        "A": 27,
+        "B": 28,
+        "C": 29
+      },
+      "original_final_frame_retained": true,
+      "B_absent_from_current_and_history_nodes": true,
+      "raw_terminal_delta": [
+        0.06627876818336635,
+        -5.419276138951545e-15,
+        3.1086244689504383e-15
+      ],
+      "merged_terminal_delta": [
+        0.32114385139832574,
+        2.525757381022231e-15,
+        1.3766765505351941e-14
+      ],
+      "decoded_terminal_delta": [
+        0.31396538735840085,
+        -1.6816473325576267e-07,
+        -3.255191738816632e-06
+      ],
+      "K256_motion_id": 222,
+      "terminal_code": 0
+    },
+    {
+      "dataset": "shenzhen_office_r23_k3_bin1_20261028",
+      "split": "train",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_9a1bf389",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_9a1bf389/bb553a382b9949a6a7a3852e8a40d18e/rgb.mp4",
+      "frame_indices": {
+        "A": 63,
+        "B": 64,
+        "C": 65
+      },
+      "original_final_frame_retained": true,
+      "B_absent_from_current_and_history_nodes": true,
+      "raw_terminal_delta": [
+        0.0705206966478516,
+        5.898059818321144e-17,
+        3.552713678800501e-15
+      ],
+      "merged_terminal_delta": [
+        0.3418679442381864,
+        -4.746203430272544e-15,
+        1.6431300764452317e-14
+      ],
+      "decoded_terminal_delta": [
+        0.3332207320847283,
+        3.739948056867081e-07,
+        -1.8753068255274305e-05
+      ],
+      "K256_motion_id": 171,
+      "terminal_code": 0
+    },
+    {
+      "dataset": "shenzhen_office_r23_k3_bin1_20261028",
+      "split": "train",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_f2382d6a",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_f2382d6a/2c9cd106a86b49a99bf9114c1d1e0927/rgb.mp4",
+      "frame_indices": {
+        "A": 63,
+        "B": 64,
+        "C": 65
+      },
+      "original_final_frame_retained": true,
+      "B_absent_from_current_and_history_nodes": true,
+      "raw_terminal_delta": [
+        0.04228706819647725,
+        2.636779683484747e-16,
+        0.0
+      ],
+      "merged_terminal_delta": [
+        0.37595991857666644,
+        1.4710455076283324e-15,
+        -3.552713678800501e-15
+      ],
+      "decoded_terminal_delta": [
+        0.3748034215318181,
+        7.42348739736803e-08,
+        5.877179647470997e-06
+      ],
+      "K256_motion_id": 125,
+      "terminal_code": 0
+    }
+  ]
+}

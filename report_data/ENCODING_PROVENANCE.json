@@ -1,8 +1,8 @@
 {
-  "K256": "From-scratch fit on all frozen retained train trajectories; all original adjacent actions re-encoded with new book.",
-  "RVQ": "From-scratch three-stage codebook fit on all frozen retained train trajectories; all motion nodes run through beam encoding again. No old codebook or old codes used.",
-  "GT": "Immutable verified real observation nodes, projection labels, targets and padding reused from identical frozen QC set. Pose/target/whitelist independently recomputed in verify.py.",
+  "K256": "Newly fitted on all QC-retained train real macro edges; each trajectory total weight1; all 256 motion centers constrained non-tiny. All labels regenerated.",
+  "RVQ": "Unchanged dataset-fitted v3 codebook and encoded labels copied to independent output parts. GT nodes, targets, masks, codes and decoded values unchanged; independently verified again.",
+  "GT": "Same exact true first-to-terminal original observation node indices in both branches; raw videos/poses unchanged. Immutable internal GT preparation refers to previous release, explicitly; training label parts and books are independent copies.",
   "source_verification_sha256": "6825cf79fa39ddfb020afa511b000259bab0e74125545dd365180fed0586ebd5",
   "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
-  "producer_sha256": "79903916f60d48106589db9dceb11bc8c97927ebb86f46ee1149c1fe1b9360fc"
+  "producer_sha256": "e3fcc57fd82c4d11718267fc3a5a95791a59eb475fec20cbcbfa02e4059a8156"
 }

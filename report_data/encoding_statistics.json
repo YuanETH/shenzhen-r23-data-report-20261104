@@ -2,25 +2,46 @@
   "schema_version": 1,
   "generated_at_utc": "2026-11-04T11:07:19.890015+00:00",
   "source": {
-    "verification_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/VERIFICATION.json",
-    "verification_sha256": "6825cf79fa39ddfb020afa511b000259bab0e74125545dd365180fed0586ebd5",
-    "offline_metrics_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/offline_metrics.jsonl.gz",
-    "offline_metrics_sha256": "a8e9be3a91a6c98aa364a6c980d8fc6d103cb11b799fece03d683a918960cefb",
-    "k256_codebook_sha256": "da11ccffdb9e98f6071b662bcc2bafee2e26ae79937537302e05a8c62151dfa8",
+    "verification_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VERIFICATION.json",
+    "verification_sha256": "e0df411fcd390c71dbb10349acfd022ec2a99f15a2fbaf52ee92b5f23539d54d",
+    "offline_metrics_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/offline_metrics.jsonl.gz",
+    "offline_metrics_sha256": "ced78ce09b4376a5fc1ae6066452e148d64722c1fa85b12e61c4302e6b5ad06a",
+    "k256_codebook_sha256": "685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d",
     "rvq_codebook_sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f",
-    "encoding_provenance_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/ENCODING_PROVENANCE.json",
-    "encoding_provenance_sha256": "cedafa460f541cbc299714d02ad95fe76874ab999323d507986435adb0e3b04a"
+    "encoding_provenance_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/ENCODING_PROVENANCE.json",
+    "encoding_provenance_sha256": "8b07684b9a34cf3fcece1fc2fce31d4ff069e7b27620a5fe8ad1d3f9efca66ae",
+    "RVQ_statistics_reuse": {
+      "source": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/encoding_statistics.json",
+      "source_sha256": "13d377d5291c2894b9fe70462f0ff9aec2f976cc25ada1738da28f6ac3ae563a",
+      "all_RVQ_label_part_SHA256_equal": true,
+      "same_codebook_SHA256": true,
+      "same_frozen_QC_SHA256": true,
+      "note": "All RVQ values and physical GT spans reused unchanged; new K256 metrics/usage recomputed on identical nodes."
+    }
   },
   "definitions": {
     "cohort": "K256 usage over all verified retained K256 outputs; RVQ usage over accepted RVQ non-STOP macro nodes; performance on paired complete trajectories only.",
     "metric_weighting": "per-trajectory metrics; N/mean/P50/P95; route strata are paired-cohort path-length tertiles.",
     "comparability": "Full open-loop, locally re-anchored H5, and global heading drift are separate; no policy or robot inference.",
-    "sampling": "H5 uses five true future macro-node targets with padding excluded."
+    "sampling": "Both branches share identical real macro observation nodes; K256 executes one decoded macro action, RVQ executes decoded[0]; valid H5 future nodes share the current origin."
   },
   "cohort": {
     "k256_trajectories": 80475,
-    "k256_samples": 6868697,
+    "k256_samples": 5167420,
     "k256_stop": 80475,
+    "k256_merged_skipped_frames": 1701277,
+    "k256_raw_motion_edges": 6788222,
+    "k256_raw_micro_edges": 1738833,
+    "k256_raw_terminal_micro_edges": 56380,
+    "k256_raw_first_micro_edges": 80475,
+    "k256_motion_edges_checked": 5086945,
+    "k256_terminal_edges_checked": 80475,
+    "k256_GT_micro_residual": 0,
+    "k256_decoded_micro_residual": 0,
+    "k256_terminal_micro_residual": 0,
+    "k256_first_micro_residual": 0,
+    "k256_last3_motion_edges_checked": 241425,
+    "k256_last3_micro_residual": 0,
     "rvq_trajectories": 80475,
     "rvq_samples": 5167420,
     "rvq_stop": 80475,
@@ -39,53 +60,53 @@
     "unresolved_rvq_frames": 0
   },
   "k256": {
-    "total_motion_tokens": 6788222,
+    "total_motion_tokens": 5086945,
     "stop_tokens": 80475,
-    "raw_code_rows_including_stop": 6868697,
-    "entropy_bits": 6.60149107481865,
-    "effective_codes": 97.10617096952953,
+    "raw_code_rows_including_stop": 5167420,
+    "entropy_bits": 6.148978396157076,
+    "effective_codes": 70.96217854936316,
     "used_codes": 256,
-    "top10_share": 0.24999712737738983,
+    "top10_share": 0.36894953650963397,
     "top10_codes": [
       {
-        "code": 40,
-        "count": 258918
+        "code": 251,
+        "count": 328734
       },
       {
-        "code": 151,
-        "count": 252818
+        "code": 32,
+        "count": 278609
       },
       {
-        "code": 109,
-        "count": 218015
+        "code": 98,
+        "count": 268910
       },
       {
-        "code": 2,
-        "count": 160934
+        "code": 85,
+        "count": 185676
       },
       {
-        "code": 124,
-        "count": 156040
+        "code": 1,
+        "count": 158211
       },
       {
-        "code": 203,
-        "count": 148522
+        "code": 232,
+        "count": 144166
       },
       {
-        "code": 10,
-        "count": 147369
+        "code": 222,
+        "count": 139347
       },
       {
-        "code": 155,
-        "count": 133030
+        "code": 201,
+        "count": 131585
       },
       {
-        "code": 107,
-        "count": 115072
+        "code": 171,
+        "count": 125927
       },
       {
-        "code": 41,
-        "count": 106318
+        "code": 80,
+        "count": 115661
       }
     ],
     "actions": {
@@ -98,10 +119,10 @@
       },
       "counts": {
         "STOP": 80475,
-        "straight": 4601671,
-        "in_place_turn": 909611,
-        "turn": 4283,
-        "low_displacement": 1272657
+        "turn": 75344,
+        "low_displacement": 15062,
+        "straight": 4154191,
+        "in_place_turn": 842348
       }
     },
     "code_csv": "report_data/k256_code_usage.csv",
@@ -109,177 +130,277 @@
     "heatmap_png": "site/assets/encoding_k256_usage_heatmap.png",
     "open_loop": {
       "full_open_loop_position_m": {
-        "n": 80475,
-        "mean": 0.1613018129602807,
-        "p50": 0.10188365749368646,
-        "p95": 0.5067147354262624
+        "mean": 0.29646126874694567,
+        "p50": 0.18523854630437672,
+        "p90": 0.695317680612193,
+        "p95": 0.9496123228800718,
+        "p99": 1.5563010817343894,
+        "max": 4.810340108407415,
+        "n": 80475
       },
       "full_open_loop_terminal_position_m": {
-        "n": 80475,
-        "mean": 0.3260688902729913,
-        "p50": 0.1958099045736376,
-        "p95": 1.0708386557274565
+        "mean": 0.5906954317270049,
+        "p50": 0.35334310448504985,
+        "p90": 1.4099811775407707,
+        "p95": 1.950594991690137,
+        "p99": 3.312985003544916,
+        "max": 10.308409792690412,
+        "n": 80475
       },
       "full_open_loop_terminal_heading_deg": {
-        "n": 80475,
-        "mean": 1.067694852149548,
-        "p50": 0.8444818258148731,
-        "p95": 2.80553801341473
+        "mean": 1.9351967526002738,
+        "p50": 1.531356630213653,
+        "p90": 4.1153845303875185,
+        "p95": 5.091778223863512,
+        "p99": 7.335773373845043,
+        "max": 16.143134117979102,
+        "n": 80475
       },
       "local_h5_position_m": {
-        "n": 80475,
-        "mean": 0.006878950981588496,
-        "p50": 0.006600805812039801,
-        "p95": 0.009537026161693106
+        "mean": 0.011361512843016015,
+        "p50": 0.010938677890483096,
+        "p90": 0.014379207246241428,
+        "p95": 0.015944371895599548,
+        "p99": 0.02175088320054597,
+        "max": 0.12233380982872026,
+        "n": 80475
       },
       "local_h5_terminal_position_m": {
-        "n": 80475,
-        "mean": 0.010142561797472438,
-        "p50": 0.00963123103959248,
-        "p95": 0.014506382031103108
+        "mean": 0.01683384352327105,
+        "p50": 0.016165561183675303,
+        "p90": 0.021674988364755423,
+        "p95": 0.02410040571118728,
+        "p99": 0.03319130362888511,
+        "max": 0.2005049879571143,
+        "n": 80475
       },
       "local_h5_heading_deg": {
-        "n": 80475,
-        "mean": 0.12393439559353188,
-        "p50": 0.11354047854218757,
-        "p95": 0.22179456869720895
+        "mean": 0.23688694747179656,
+        "p50": 0.21810784910601005,
+        "p90": 0.36593426477643215,
+        "p95": 0.4283034708383136,
+        "p99": 0.6106497242780494,
+        "max": 3.282593295578239,
+        "n": 80475
       },
       "first_macro_target_position_m": {
-        "n": 80475,
-        "mean": 0.003515690926260719,
-        "p50": 0.0034223865686361316,
-        "p95": 0.00458760454888742
+        "mean": 0.005639264572128379,
+        "p50": 0.005409142854211119,
+        "p90": 0.007004849659175052,
+        "p95": 0.0077943515692877165,
+        "p99": 0.0110183602632262,
+        "max": 0.05234390517677962,
+        "n": 80475
       },
       "first_macro_target_heading_deg": {
-        "n": 80475,
-        "mean": 0.0591823919739581,
-        "p50": 0.053592625909912914,
-        "p95": 0.10307769222946708
+        "mean": 0.11534752651430714,
+        "p50": 0.10545895988169936,
+        "p90": 0.17177149320495716,
+        "p95": 0.201558141658897,
+        "p99": 0.3102189862764334,
+        "max": 1.884105237826719,
+        "n": 80475
       }
     },
     "codebook": {
-      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/k256/codebook.npz",
-      "sha256": "da11ccffdb9e98f6071b662bcc2bafee2e26ae79937537302e05a8c62151dfa8",
-      "normalization": "stored mean/scale; decoded centers are forward,left,yaw rad"
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/k256/codebook.npz",
+      "sha256": "685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d",
+      "normalization": "stored weighted mean/scale; decoded macro centers are forward m,left m,CCW rad"
     },
     "training_contract": {
-      "representation": "adjacent original frames; forward,left,ccw_yaw_rad",
+      "representation": "real macro observation nodes shared with RVQ; forward,left,ccw_yaw_rad",
       "action_coordinate_system": "NWU body frame: forward, left, counter-clockwise yaw radians",
-      "observation_sampling": "every adjacent original real observation frame",
+      "observation_sampling": "exact same GT macro nodes as RVQ, including original first and terminal frames",
       "motion_ids": [
         1,
         256
       ],
       "STOP": 0,
       "dtype": "uint16",
-      "codebook_source": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/k256/codebook.npz",
-      "fit_scope": "each train trajectory sums to 1; no length buckets; all original adjacent deltas",
+      "codebook_source": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/k256/codebook.npz",
+      "fit_scope": "each train trajectory sums to 1; no length buckets; all real macro-node deltas; each codeword must exceed 10cm OR 10deg",
       "fit_trajectories": 80475,
-      "fit_trajectory_manifest": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/k256/fit_trajectories.json",
-      "fit_manifest_sha256": "95299590116e22b7520c06b893b02ea7885017ad9db36845d174de080f06e0ec",
+      "fit_trajectory_manifest": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/k256/fit_trajectories.json",
+      "fit_manifest_sha256": "9ea51004ba9908db8663036916f4bfc4f4aa2ee048c250702af9f313d91c5896",
       "evaluation_holdout_excluded": true,
-      "fit_metadata_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/k256/CODEBOOK.json",
-      "fit_metadata_sha256": "53d4390af82dcbc15abae99edfd932164dfc82268c6b4416499cf4e11c666eb6",
-      "reader": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/reader.py"
+      "fit_metadata_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/k256/CODEBOOK.json",
+      "fit_metadata_sha256": "9c1b43c0f9e40fbcd62ea8f94d5737b941ef20a431a436eb1170f7841284b37d",
+      "reader": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/reader.py"
     },
-    "original_single_step_errors": {
-      "definition": "decode each K256 code for original adjacent observations (codes[:-1]); compare body-frame forward/left displacement norm and wrapped CCW yaw error against body_delta of each original adjacent pose pair. STOP excluded.",
+    "micro_merge": {
+      "status": "passed",
+      "definition": "translation<=0.10m AND abs(wrapped_yaw)<=10deg; tolerances1e-8m and1e-7deg; STOP excluded",
+      "all_256_motion_centers_checked": true,
+      "tiny_motion_centers": 0,
+      "preserves_original_first_and_terminal_frames": true,
+      "exact_same_real_observation_indices_as_RVQ": true,
+      "counts": {
+        "k256_trajectories": 80475,
+        "k256_samples": 5167420,
+        "k256_stop": 80475,
+        "k256_merged_skipped_frames": 1701277,
+        "k256_raw_motion_edges": 6788222,
+        "k256_raw_micro_edges": 1738833,
+        "k256_raw_terminal_micro_edges": 56380,
+        "k256_raw_first_micro_edges": 80475,
+        "k256_motion_edges_checked": 5086945,
+        "k256_terminal_edges_checked": 80475,
+        "k256_GT_micro_residual": 0,
+        "k256_decoded_micro_residual": 0,
+        "k256_terminal_micro_residual": 0,
+        "k256_first_micro_residual": 0,
+        "k256_last3_motion_edges_checked": 241425,
+        "k256_last3_micro_residual": 0
+      },
+      "terminal_distributions": {
+        "k256_terminal_gt_translation_m": {
+          "mean": 0.24422362000877873,
+          "p50": 0.2184531762980211,
+          "p90": 0.45741734244378685,
+          "p95": 0.49058122388783243,
+          "p99": 0.5292469441097188,
+          "max": 0.5794256325513987,
+          "n": 80475
+        },
+        "k256_terminal_gt_yaw_deg": {
+          "mean": 0.36391889507319275,
+          "p50": 5.088887490341627e-14,
+          "p90": 5.597776239375789e-13,
+          "p95": 2.500270573716837,
+          "p99": 8.412118870654258,
+          "max": 18.94733967159008,
+          "n": 80475
+        },
+        "k256_terminal_decoded_translation_m": {
+          "mean": 0.24487500866068965,
+          "p50": 0.21451919928535546,
+          "p90": 0.44661622809329893,
+          "p95": 0.498771108411016,
+          "p99": 0.5259655790635184,
+          "max": 0.5781135359118575,
+          "n": 80475
+        },
+        "k256_terminal_decoded_yaw_deg": {
+          "mean": 0.3587710560543645,
+          "p50": 0.00107447166394798,
+          "p90": 0.005137587503990311,
+          "p95": 3.6854769958458773,
+          "p99": 7.623220670113448,
+          "max": 14.83197470427847,
+          "n": 80475
+        },
+        "k256_terminal_yaw_drift_deg": {
+          "mean": 1.9351967526002738,
+          "p50": 1.531356630213653,
+          "p90": 4.1153845303875185,
+          "p95": 5.091778223863512,
+          "p99": 7.335773373845043,
+          "max": 16.143134117979102,
+          "n": 80475
+        }
+      },
+      "frozen_qc_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+      "codebook_sha256": "685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d",
+      "producer_sha256": "8f55fe971f40611f8395256cd0537e5f668f59da611e37dea78742851ea3d658"
+    },
+    "macro_single_step_errors": {
+      "definition": "decode each K256 code for retained real macro observations (codes[:-1]); compare body-frame forward/left displacement norm and wrapped CCW yaw error against body_delta of each retained macro-node pose pair. STOP excluded.",
       "sample_weighted": {
         "position_error_m": {
-          "n": 6788222,
-          "mean": 0.002770337009703756,
-          "p50": 0.002131437649950385,
-          "p95": 0.007906030863523483
+          "n": 5086945,
+          "mean": 0.0054411907182957365,
+          "p50": 0.004340182989835739,
+          "p95": 0.013813239149749273
         },
         "heading_error_deg": {
-          "n": 6788222,
-          "mean": 0.04737035664496974,
-          "p50": 0.00019206567958462983,
-          "p95": 0.2714434266090393
+          "n": 5086945,
+          "mean": 0.10615002637065774,
+          "p50": 0.0004297505074646324,
+          "p95": 0.5729970216751097
         }
       },
       "trajectory_weighted": {
         "mean_per_trajectory_position_error_m": {
           "n": 80475,
-          "mean": 0.002817114518755574,
-          "p50": 0.0027469589840620756,
-          "p95": 0.0036729144165292384
+          "mean": 0.0056392645737984885,
+          "p50": 0.005409144330769777,
+          "p95": 0.007794352388009429
         },
         "mean_per_trajectory_heading_error_deg": {
           "n": 80475,
-          "mean": 0.050148774231058214,
-          "p50": 0.04652675241231918,
-          "p95": 0.08090146034955979
+          "mean": 0.11534752657523731,
+          "p50": 0.10545894503593445,
+          "p95": 0.20155816227197654
         }
       },
       "cohort": {
         "episodes": 80475,
-        "original_adjacent_motion_steps": 6788222
+        "macro_motion_steps": 5086945
       },
       "codebook": {
-        "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/k256/codebook.npz",
-        "sha256": "da11ccffdb9e98f6071b662bcc2bafee2e26ae79937537302e05a8c62151dfa8"
+        "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/k256/codebook.npz",
+        "sha256": "685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d"
       },
-      "source_verification_sha256": "6825cf79fa39ddfb020afa511b000259bab0e74125545dd365180fed0586ebd5",
+      "source_verification_sha256": "e0df411fcd390c71dbb10349acfd022ec2a99f15a2fbaf52ee92b5f23539d54d",
       "shards": [
         {
           "group": 0,
-          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/k256_single_step_shards/part-000.npz",
-          "sha256": "ae6ee76bc1fe6350496f28e8e08bc8bc322cabf0bd3547eb83c8bfd625ae6705",
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/k256_single_step_shards/part-000.npz",
+          "sha256": "99141251126b22cfdeef92abbea29f8b969af82d55fb5470aa533a3fcae7db06",
           "episodes": 10052,
-          "motion_steps": 844827
+          "motion_steps": 633189
         },
         {
           "group": 1,
-          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/k256_single_step_shards/part-001.npz",
-          "sha256": "a4ec25df1a4dfced53dff99b8279c9e8336685c667683a33f4d8d993137e5833",
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/k256_single_step_shards/part-001.npz",
+          "sha256": "49db2be4da316a5cdd22a50d39a3111ba19b04c42b85fdd54a7a49ecc4ec8168",
           "episodes": 10072,
-          "motion_steps": 843791
+          "motion_steps": 632263
         },
         {
           "group": 2,
-          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/k256_single_step_shards/part-002.npz",
-          "sha256": "d1e79df8347d46fcf1ca945d704429f5d0c1e22e7490d144ce5d636af4824488",
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/k256_single_step_shards/part-002.npz",
+          "sha256": "b04f1d7a860d90f33a04356d8932fb39902a8132492e478709389faad0bbdb05",
           "episodes": 10053,
-          "motion_steps": 845938
+          "motion_steps": 633985
         },
         {
           "group": 3,
-          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/k256_single_step_shards/part-003.npz",
-          "sha256": "0b0b126baf3fcd10388f20d1a08a121df1edd86c7f01226311504a5ce30c098a",
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/k256_single_step_shards/part-003.npz",
+          "sha256": "d956edfb96ed875b8bca8c85590b06fdd7d3bd27bfcd5d1849ba130c0a73e956",
           "episodes": 10062,
-          "motion_steps": 855093
+          "motion_steps": 640833
         },
         {
           "group": 4,
-          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/k256_single_step_shards/part-004.npz",
-          "sha256": "4794c6d327f97cc47439de2aa7b1191dcebdf73aab24b6dcd9daf6768d431893",
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/k256_single_step_shards/part-004.npz",
+          "sha256": "65724a3d99f03d9a719f09496d091f70831dbac8fa4e5affe27c1c0c70839eb8",
           "episodes": 10060,
-          "motion_steps": 846395
+          "motion_steps": 634462
         },
         {
           "group": 5,
-          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/k256_single_step_shards/part-005.npz",
-          "sha256": "229206df59715caacca5fd3007d30c68a6a061ed824cca87f893de1b1cb08407",
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/k256_single_step_shards/part-005.npz",
+          "sha256": "b4f5ff5bc01d1e36a8cc8880b0d2532347ac3479e16cc9372014ea6225e22999",
           "episodes": 10060,
-          "motion_steps": 852992
+          "motion_steps": 639348
         },
         {
           "group": 6,
-          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/k256_single_step_shards/part-006.npz",
-          "sha256": "74dd8bef8c73a48e0c32d8f9da0cc0648b54ecc488a23916f5317c97968faa30",
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/k256_single_step_shards/part-006.npz",
+          "sha256": "bbdd40b380d61e2883a7882998e5fa17be14a78e25c34bce52fe7faa63e08fad",
           "episodes": 10054,
-          "motion_steps": 843503
+          "motion_steps": 631779
         },
         {
           "group": 7,
-          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/k256_single_step_shards/part-007.npz",
-          "sha256": "956563868f8bcddfbe2ba58fca85ad51f70a4434e3dff0d2e5eed53fd3cacdbb",
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/k256_single_step_shards/part-007.npz",
+          "sha256": "2a71fa98f292d8f6c788f95713aed7189ec3ca6bc0d834616e024a7c4aa2c37c",
           "episodes": 10062,
-          "motion_steps": 855683
+          "motion_steps": 641086
         }
       ],
-      "shards_dir": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/k256_single_step_shards"
+      "shards_dir": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/k256_single_step_shards"
     }
   },
   "rvq": {
@@ -2335,7 +2456,7 @@
       }
     },
     "codebook": {
-      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/deps/codebook.npz",
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/deps/codebook.npz",
       "sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f",
       "shape": [
         3,
@@ -2349,8 +2470,8 @@
       "observation_sampling": "continuous real image node sequence",
       "prediction_points": 5,
       "executed_points": "decoded[0] only then observe and replan",
-      "codebook_source": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/deps/codebook.npz",
-      "fitting_scope": "from scratch on all frozen retained train trajectories, equal total trajectory weights, all non-STOP macro nodes, padding masked",
+      "codebook_source": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/deps/codebook.npz",
+      "fitting_scope": "unchanged v3 dataset-fitted codebook, originally fitted from scratch on these same80475 retained train trajectories; no old external codebook",
       "fit_metadata": {
         "sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f",
         "shape": [
@@ -3461,23 +3582,23 @@
         ],
         "seconds": 302.83017683029175
       },
-      "fit_metadata_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/rvq/CODEBOOK.json",
+      "fit_metadata_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/rvq/CODEBOOK.json",
       "fit_manifest_sha256": "e8e2d571b3c4dcd38db874a71d1284ceac464ce6c6a634fa2d147f0587bd4659",
       "fit_trajectories": 80475,
       "beam_search": {
         "beam": 8,
         "retry_beam": 32,
         "current_release_provenance": {
-          "K256": "From-scratch fit on all frozen retained train trajectories; all original adjacent actions re-encoded with new book.",
-          "RVQ": "From-scratch three-stage codebook fit on all frozen retained train trajectories; all motion nodes run through beam encoding again. No old codebook or old codes used.",
-          "GT": "Immutable verified real observation nodes, projection labels, targets and padding reused from identical frozen QC set. Pose/target/whitelist independently recomputed in verify.py.",
+          "K256": "Newly fitted on all QC-retained train real macro edges; each trajectory total weight1; all 256 motion centers constrained non-tiny. All labels regenerated.",
+          "RVQ": "Unchanged dataset-fitted v3 codebook and encoded labels copied to independent output parts. GT nodes, targets, masks, codes and decoded values unchanged; independently verified again.",
+          "GT": "Same exact true first-to-terminal original observation node indices in both branches; raw videos/poses unchanged. Immutable internal GT preparation refers to previous release, explicitly; training label parts and books are independent copies.",
           "source_verification_sha256": "6825cf79fa39ddfb020afa511b000259bab0e74125545dd365180fed0586ebd5",
           "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
-          "producer_sha256": "79903916f60d48106589db9dceb11bc8c97927ebb86f46ee1149c1fe1b9360fc"
+          "producer_sha256": "e3fcc57fd82c4d11718267fc3a5a95791a59eb475fec20cbcbfa02e4059a8156"
         }
       },
       "STOP": "three layer IDs all zero; paired with <apos_1299> pointing affordance",
-      "reader": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/reader.py"
+      "reader": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/reader.py"
     },
     "layer_usage_png": "site/assets/encoding_rvq_layers.png"
   },
@@ -3494,28 +3615,40 @@
           17.36040799984242
         ],
         "k256_fde_m": {
-          "n": 26825,
-          "mean": 0.10734494359232034,
-          "p50": 0.07769830883535908,
-          "p95": 0.29477466394335816
-        },
-        "rvq_fde_m": {
-          "n": 26825,
-          "mean": 0.11705116590753673,
-          "p50": 0.09150464568804516,
-          "p95": 0.30249855664473957
+          "mean": 0.1991517311160678,
+          "p50": 0.14444500115716322,
+          "p90": 0.43196189724922757,
+          "p95": 0.5597032103611315,
+          "p99": 0.8609148634595316,
+          "max": 2.3649439083019925,
+          "n": 26825
         },
         "k256_terminal_heading_deg": {
-          "n": 26825,
-          "mean": 0.8819386377708843,
-          "p50": 0.6893004124011404,
-          "p95": 2.3068530197296857
+          "mean": 1.6219181861385754,
+          "p50": 1.2748039469309802,
+          "p90": 3.404712382974633,
+          "p95": 4.258487432076752,
+          "p99": 6.546721316990435,
+          "max": 15.938255078638676,
+          "n": 26825
+        },
+        "rvq_fde_m": {
+          "mean": 0.11705116590753673,
+          "p50": 0.09150464568804516,
+          "p90": 0.23063018519361858,
+          "p95": 0.30249855664473957,
+          "p99": 0.48422609438950964,
+          "max": 1.4301030848177114,
+          "n": 26825
         },
         "rvq_terminal_heading_deg": {
-          "n": 26825,
           "mean": 0.7462963387728347,
           "p50": 0.5686357948914392,
-          "p95": 2.0361675534457544
+          "p90": 1.6297855653114028,
+          "p95": 2.0361675534457544,
+          "p99": 2.994373259807468,
+          "max": 7.44088344213135,
+          "n": 26825
         }
       },
       "medium": {
@@ -3525,28 +3658,40 @@
           35.707782609799885
         ],
         "k256_fde_m": {
-          "n": 26825,
-          "mean": 0.2775903962450445,
-          "p50": 0.2132416633330286,
-          "p95": 0.7143103639500689
-        },
-        "rvq_fde_m": {
-          "n": 26825,
-          "mean": 0.2654818923328215,
-          "p50": 0.20251525495924366,
-          "p95": 0.6962666715150521
+          "mean": 0.5056352776979063,
+          "p50": 0.38695184132084526,
+          "p90": 1.0548429094133671,
+          "p95": 1.3444223387696983,
+          "p99": 1.983338974463822,
+          "max": 6.103621900215225,
+          "n": 26825
         },
         "k256_terminal_heading_deg": {
-          "n": 26825,
-          "mean": 1.0717131195727627,
-          "p50": 0.8683974582576713,
-          "p95": 2.746194181056913
+          "mean": 1.9463209531144765,
+          "p50": 1.5705896861420459,
+          "p90": 4.108901467750341,
+          "p95": 5.027043215178468,
+          "p99": 7.094240387608072,
+          "max": 13.449352801504473,
+          "n": 26825
+        },
+        "rvq_fde_m": {
+          "mean": 0.2654818923328215,
+          "p50": 0.20251525495924366,
+          "p90": 0.5425236736139444,
+          "p95": 0.6962666715150521,
+          "p99": 1.0785191963633614,
+          "max": 2.7250612539420587,
+          "n": 26825
         },
         "rvq_terminal_heading_deg": {
-          "n": 26825,
           "mean": 0.9415826938081339,
           "p50": 0.7424423446581025,
-          "p95": 2.4831736772735478
+          "p90": 2.0072130657982363,
+          "p95": 2.4831736772735478,
+          "p99": 3.605475204370079,
+          "max": 8.560080677791838,
+          "n": 26825
         }
       },
       "long": {
@@ -3556,28 +3701,40 @@
           96.65478570553987
         ],
         "k256_fde_m": {
-          "n": 26825,
-          "mean": 0.5932713309816091,
-          "p50": 0.4572541359643608,
-          "p95": 1.541630620347775
-        },
-        "rvq_fde_m": {
-          "n": 26825,
-          "mean": 0.5222140615618565,
-          "p50": 0.3991157336213761,
-          "p95": 1.3801054855720758
+          "mean": 1.0672992863670405,
+          "p50": 0.8121409033128641,
+          "p90": 2.249062958145529,
+          "p95": 2.8502755107179696,
+          "p99": 4.237870273146041,
+          "max": 10.308409792690412,
+          "n": 26825
         },
         "k256_terminal_heading_deg": {
-          "n": 26825,
-          "mean": 1.2494327991049972,
-          "p50": 1.027465526108337,
-          "p95": 3.148954881789471
+          "mean": 2.2373511185477697,
+          "p50": 1.8178869558074444,
+          "p90": 4.688509163497315,
+          "p95": 5.699775389633756,
+          "p99": 8.013344152866836,
+          "max": 16.143134117979102,
+          "n": 26825
+        },
+        "rvq_fde_m": {
+          "mean": 0.5222140615618565,
+          "p50": 0.3991157336213761,
+          "p90": 1.0789829361329346,
+          "p95": 1.3801054855720758,
+          "p99": 2.085116985665099,
+          "max": 6.7708191952494765,
+          "n": 26825
         },
         "rvq_terminal_heading_deg": {
-          "n": 26825,
           "mean": 1.0743478883801647,
           "p50": 0.8649060906949233,
-          "p95": 2.778512540245374
+          "p90": 2.2571890766960854,
+          "p95": 2.778512540245374,
+          "p99": 3.9746922914604115,
+          "max": 8.306809597186005,
+          "n": 26825
         }
       }
     }
@@ -3602,9 +3759,9 @@
         "window_weighted": {
           "kpos": {
             "n": 5086945,
-            "mean": 0.0034334776792547734,
-            "p50": 0.0030044295151123723,
-            "p95": 0.00867682890400081
+            "mean": 0.005441190719065755,
+            "p50": 0.004340174413977271,
+            "p95": 0.013813227328387986
           },
           "rpos": {
             "n": 5086945,
@@ -3614,9 +3771,9 @@
           },
           "kyaw": {
             "n": 5086945,
-            "mean": 0.05489548344846658,
-            "p50": 0.000251503721594576,
-            "p95": 0.3142927749002007
+            "mean": 0.10615002628996892,
+            "p50": 0.0004297505022994565,
+            "p95": 0.5729980325544395
           },
           "ryaw": {
             "n": 5086945,
@@ -3640,9 +3797,9 @@
         "trajectory_weighted": {
           "kpos": {
             "n": 80475,
-            "mean": 0.003515690926260719,
-            "p50": 0.0034223865686361316,
-            "p95": 0.00458760454888742
+            "mean": 0.005639264572128379,
+            "p50": 0.005409142854211119,
+            "p95": 0.0077943515692877165
           },
           "rpos": {
             "n": 80475,
@@ -3652,9 +3809,9 @@
           },
           "kyaw": {
             "n": 80475,
-            "mean": 0.0591823919739581,
-            "p50": 0.053592625909912914,
-            "p95": 0.1030776922294671
+            "mean": 0.11534752651430714,
+            "p50": 0.10545895988169936,
+            "p95": 0.201558141658897
           },
           "ryaw": {
             "n": 80475,
@@ -3668,9 +3825,9 @@
         "window_weighted": {
           "kpos": {
             "n": 5006470,
-            "mean": 0.005168897370283676,
-            "p50": 0.0042464612106553196,
-            "p95": 0.013113066849522062
+            "mean": 0.008387734944227372,
+            "p50": 0.006652014721151806,
+            "p95": 0.022173642530286218
           },
           "rpos": {
             "n": 5006470,
@@ -3680,9 +3837,9 @@
           },
           "kyaw": {
             "n": 5006470,
-            "mean": 0.08712153858828037,
-            "p50": 0.0008193559402068422,
-            "p95": 0.45954235934232607
+            "mean": 0.16909138074260316,
+            "p50": 0.0012686697445143938,
+            "p95": 0.8670080867519839
           },
           "ryaw": {
             "n": 5006470,
@@ -3706,9 +3863,9 @@
         "trajectory_weighted": {
           "kpos": {
             "n": 80475,
-            "mean": 0.0052939605458326,
-            "p50": 0.005093451544380853,
-            "p95": 0.007137901721037587
+            "mean": 0.008642760876678776,
+            "p50": 0.008311711543405069,
+            "p95": 0.011963497457136166
           },
           "rpos": {
             "n": 80475,
@@ -3718,9 +3875,9 @@
           },
           "kyaw": {
             "n": 80475,
-            "mean": 0.09320766545512225,
-            "p50": 0.08414962277285887,
-            "p95": 0.16668388813823554
+            "mean": 0.18252446031586023,
+            "p50": 0.16659718746322918,
+            "p95": 0.32809470685472475
           },
           "ryaw": {
             "n": 80475,
@@ -3734,9 +3891,9 @@
         "window_weighted": {
           "kpos": {
             "n": 4925995,
-            "mean": 0.00683112705738703,
-            "p50": 0.005612508992898641,
-            "p95": 0.01685198443715676
+            "mean": 0.011206359134097434,
+            "p50": 0.009075564015582367,
+            "p95": 0.02814916194590493
           },
           "rpos": {
             "n": 4925995,
@@ -3746,9 +3903,9 @@
           },
           "kyaw": {
             "n": 4925995,
-            "mean": 0.11900460066043406,
-            "p50": 0.0015917125500017732,
-            "p95": 0.5822321212435645
+            "mean": 0.22731043816726687,
+            "p50": 0.0035972206896811255,
+            "p95": 1.0743964869446319
           },
           "ryaw": {
             "n": 4925995,
@@ -3772,9 +3929,9 @@
         "trajectory_weighted": {
           "kpos": {
             "n": 80475,
-            "mean": 0.007001143362372226,
-            "p50": 0.006698945580082062,
-            "p95": 0.009786228969413837
+            "mean": 0.01154323383628202,
+            "p50": 0.0110934306829566,
+            "p95": 0.016309614580440716
           },
           "rpos": {
             "n": 80475,
@@ -3784,9 +3941,9 @@
           },
           "kyaw": {
             "n": 80475,
-            "mean": 0.12625514898418216,
-            "p50": 0.11457846099084489,
-            "p95": 0.22871512212326633
+            "mean": 0.2433085250395141,
+            "p50": 0.22273233089527666,
+            "p95": 0.44385361961080316
           },
           "ryaw": {
             "n": 80475,
@@ -3800,9 +3957,9 @@
         "window_weighted": {
           "kpos": {
             "n": 4845520,
-            "mean": 0.008449850172747304,
-            "p50": 0.0069869877024469895,
-            "p95": 0.020573628554112443
+            "mean": 0.013962541130135044,
+            "p50": 0.011473692737034167,
+            "p95": 0.03365208803006713
           },
           "rpos": {
             "n": 4845520,
@@ -3812,9 +3969,9 @@
           },
           "kyaw": {
             "n": 4845520,
-            "mean": 0.15036598439031973,
-            "p50": 0.0051275774937644715,
-            "p95": 0.681121653357154
+            "mean": 0.282707199907184,
+            "p50": 0.007712464136370838,
+            "p95": 1.2336507118332207
           },
           "ryaw": {
             "n": 4845520,
@@ -3838,9 +3995,9 @@
         "trajectory_weighted": {
           "kpos": {
             "n": 80475,
-            "mean": 0.00866093067682718,
-            "p50": 0.008266813187782489,
-            "p95": 0.012396295915958037
+            "mean": 0.014402640864007294,
+            "p50": 0.01380967151418701,
+            "p95": 0.020720196075228188
           },
           "rpos": {
             "n": 80475,
@@ -3850,9 +4007,9 @@
           },
           "kyaw": {
             "n": 80475,
-            "mean": 0.1585152195519218,
-            "p50": 0.14500914373441942,
-            "p95": 0.2895654645598956
+            "mean": 0.3007671214884788,
+            "p50": 0.2757294715440083,
+            "p95": 0.5558615803307599
           },
           "ryaw": {
             "n": 80475,
@@ -3866,9 +4023,9 @@
         "window_weighted": {
           "kpos": {
             "n": 4765045,
-            "mean": 0.010115969542777652,
-            "p50": 0.008528589760215644,
-            "p95": 0.024302721195490623
+            "mean": 0.01677524555595685,
+            "p50": 0.013954007164059081,
+            "p95": 0.039703371012583526
           },
           "rpos": {
             "n": 4765045,
@@ -3878,9 +4035,9 @@
           },
           "kyaw": {
             "n": 4765045,
-            "mean": 0.18150285313870773,
-            "p50": 0.03201585603950019,
-            "p95": 0.759209206968103
+            "mean": 0.33706269587452314,
+            "p50": 0.059196675567597806,
+            "p95": 1.3668171453782239
           },
           "ryaw": {
             "n": 4765045,
@@ -3904,9 +4061,9 @@
         "trajectory_weighted": {
           "kpos": {
             "n": 80475,
-            "mean": 0.010368409903488677,
-            "p50": 0.009868971599732409,
-            "p95": 0.015103672835807783
+            "mean": 0.017342870321015877,
+            "p50": 0.016563748107570598,
+            "p95": 0.025443526585830246
           },
           "rpos": {
             "n": 80475,
@@ -3916,9 +4073,9 @@
           },
           "kyaw": {
             "n": 80475,
-            "mean": 0.19080436697678513,
-            "p50": 0.17501449001694666,
-            "p95": 0.35075555918195545
+            "mean": 0.35775283597168167,
+            "p50": 0.32755220064872576,
+            "p95": 0.6687213155401469
           },
           "ryaw": {
             "n": 80475,
@@ -3936,14 +4093,14 @@
       "site/assets/encoding_k256_scatter.png",
       "site/assets/encoding_k256_usage_heatmap.png",
       "site/assets/encoding_rvq_layers.png",
-      "site/assets/encoding_rvq_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_dbfa2bbd.gif",
-      "site/assets/encoding_rvq_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_ff0d9ad3.gif",
-      "site/assets/encoding_k256_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_a739909d.gif",
-      "site/assets/encoding_k256_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_47cd1e22.gif",
-      "site/assets/encoding_similar__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_fe66a029.gif",
-      "site/assets/encoding_similar__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_9ac86e50.gif",
-      "site/assets/encoding_difficult_top95_fde__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_0244befc.gif",
-      "site/assets/encoding_difficult_top95_fde__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_b69c6509.gif"
+      "site/assets/encoding_rvq_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_7531af6a.gif",
+      "site/assets/encoding_rvq_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_9b48c97f.gif",
+      "site/assets/encoding_k256_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_47cd1e22.gif",
+      "site/assets/encoding_k256_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_4ff24aa0.gif",
+      "site/assets/encoding_similar__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_19c304a9.gif",
+      "site/assets/encoding_similar__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_51096441.gif",
+      "site/assets/encoding_difficult_top95_fde__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_d7e1ff6b.gif",
+      "site/assets/encoding_difficult_top95_fde__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_c2e57ecc.gif"
     ],
     "csv": [
       "report_data/k256_code_usage.csv",
@@ -3955,50 +4112,34 @@
       {
         "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
         "split": "train",
-        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_dbfa2bbd",
-        "gt_route_length_m": 61.18108995009078,
-        "gt_initial_heading_deg": -141.18481286728587,
-        "gt_final_heading_deg": -55.29421736365005,
-        "aligned_common_nodes": 121,
-        "k256_fde_m_recomputed": 5.68459038138161,
-        "rvq_fde_m_recomputed": 0.27153683406242407,
-        "fde_difference_k256_minus_rvq_m": 5.413053547319186,
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_7531af6a",
+        "gt_route_length_m": 80.60758966299173,
+        "gt_initial_heading_deg": -29.522318515715924,
+        "gt_final_heading_deg": -48.518028599995866,
+        "aligned_common_nodes": 168,
+        "k256_fde_m_recomputed": 10.308409792690412,
+        "rvq_fde_m_recomputed": 0.6629251690898309,
+        "fde_difference_k256_minus_rvq_m": 9.64548462360058,
         "classification_threshold_m": 0.1,
         "category": "rvq_better",
-        "path": "site/assets/encoding_rvq_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_dbfa2bbd.gif",
-        "figure_path": "figures/rvq_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_dbfa2bbd.gif"
+        "path": "site/assets/encoding_rvq_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_7531af6a.gif",
+        "figure_path": "figures/rvq_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_7531af6a.gif"
       },
       {
         "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
         "split": "train",
-        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_ff0d9ad3",
-        "gt_route_length_m": 54.44864754970144,
-        "gt_initial_heading_deg": -93.24951853732428,
-        "gt_final_heading_deg": 39.49988576643721,
-        "aligned_common_nodes": 111,
-        "k256_fde_m_recomputed": 4.1125500836396345,
-        "rvq_fde_m_recomputed": 0.1376560634604463,
-        "fde_difference_k256_minus_rvq_m": 3.974894020179188,
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_9b48c97f",
+        "gt_route_length_m": 80.11058067548521,
+        "gt_initial_heading_deg": -120.92290058068461,
+        "gt_final_heading_deg": 146.15004505944458,
+        "aligned_common_nodes": 167,
+        "k256_fde_m_recomputed": 9.01815721621066,
+        "rvq_fde_m_recomputed": 0.714366937575381,
+        "fde_difference_k256_minus_rvq_m": 8.30379027863528,
         "classification_threshold_m": 0.1,
         "category": "rvq_better",
-        "path": "site/assets/encoding_rvq_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_ff0d9ad3.gif",
-        "figure_path": "figures/rvq_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_ff0d9ad3.gif"
-      },
-      {
-        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
-        "split": "train",
-        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_a739909d",
-        "gt_route_length_m": 41.55491260675449,
-        "gt_initial_heading_deg": -17.645730280151128,
-        "gt_final_heading_deg": 163.2304850770428,
-        "aligned_common_nodes": 72,
-        "k256_fde_m_recomputed": 0.44314749706751533,
-        "rvq_fde_m_recomputed": 4.573689214434901,
-        "fde_difference_k256_minus_rvq_m": -4.130541717367386,
-        "classification_threshold_m": 0.1,
-        "category": "k256_better",
-        "path": "site/assets/encoding_k256_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_a739909d.gif",
-        "figure_path": "figures/k256_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_a739909d.gif"
+        "path": "site/assets/encoding_rvq_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_9b48c97f.gif",
+        "figure_path": "figures/rvq_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_9b48c97f.gif"
       },
       {
         "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
@@ -4008,77 +4149,93 @@
         "gt_initial_heading_deg": 6.475408515114763,
         "gt_final_heading_deg": -114.7779835085439,
         "aligned_common_nodes": 137,
-        "k256_fde_m_recomputed": 0.5986226354328573,
+        "k256_fde_m_recomputed": 0.4713502265791266,
         "rvq_fde_m_recomputed": 4.728641154494185,
-        "fde_difference_k256_minus_rvq_m": -4.130018519061328,
+        "fde_difference_k256_minus_rvq_m": -4.257290927915059,
         "classification_threshold_m": 0.1,
         "category": "k256_better",
-        "path": "site/assets/encoding_k256_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_47cd1e22.gif",
-        "figure_path": "figures/k256_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_47cd1e22.gif"
+        "path": "site/assets/encoding_k256_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_47cd1e22.gif",
+        "figure_path": "figures/k256_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_47cd1e22.gif"
       },
       {
         "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
         "split": "train",
-        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_fe66a029",
-        "gt_route_length_m": 5.169165194762238,
-        "gt_initial_heading_deg": 65.51307817465302,
-        "gt_final_heading_deg": 28.343269634841043,
-        "aligned_common_nodes": 22,
-        "k256_fde_m_recomputed": 0.059300761998729724,
-        "rvq_fde_m_recomputed": 0.05930110391196613,
-        "fde_difference_k256_minus_rvq_m": -3.4191323640409e-07,
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_4ff24aa0",
+        "gt_route_length_m": 88.0959536379907,
+        "gt_initial_heading_deg": -96.19759088101591,
+        "gt_final_heading_deg": 106.14005765862566,
+        "aligned_common_nodes": 154,
+        "k256_fde_m_recomputed": 1.5123127194070896,
+        "rvq_fde_m_recomputed": 4.948894818772525,
+        "fde_difference_k256_minus_rvq_m": -3.436582099365435,
+        "classification_threshold_m": 0.15123127194070898,
+        "category": "k256_better",
+        "path": "site/assets/encoding_k256_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_4ff24aa0.gif",
+        "figure_path": "figures/k256_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_4ff24aa0.gif"
+      },
+      {
+        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+        "split": "train",
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_19c304a9",
+        "gt_route_length_m": 6.0030017853018816,
+        "gt_initial_heading_deg": 54.7407350181753,
+        "gt_final_heading_deg": -21.11947139194645,
+        "aligned_common_nodes": 14,
+        "k256_fde_m_recomputed": 0.11865058295411977,
+        "rvq_fde_m_recomputed": 0.11865156828839064,
+        "fde_difference_k256_minus_rvq_m": -9.853342708698865e-07,
         "classification_threshold_m": 0.1,
         "category": "similar",
-        "path": "site/assets/encoding_similar__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_fe66a029.gif",
-        "figure_path": "figures/similar__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_fe66a029.gif"
+        "path": "site/assets/encoding_similar__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_19c304a9.gif",
+        "figure_path": "figures/similar__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_19c304a9.gif"
       },
       {
         "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
         "split": "train",
-        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_9ac86e50",
-        "gt_route_length_m": 21.678533671386766,
-        "gt_initial_heading_deg": -62.324093168657406,
-        "gt_final_heading_deg": 171.0330707191328,
-        "aligned_common_nodes": 68,
-        "k256_fde_m_recomputed": 0.18715580654109373,
-        "rvq_fde_m_recomputed": 0.187148405297165,
-        "fde_difference_k256_minus_rvq_m": 7.40124392872854e-06,
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_51096441",
+        "gt_route_length_m": 26.39819093605871,
+        "gt_initial_heading_deg": -119.0678880510895,
+        "gt_final_heading_deg": 122.61083154727841,
+        "aligned_common_nodes": 73,
+        "k256_fde_m_recomputed": 0.46600836819936114,
+        "rvq_fde_m_recomputed": 0.4660022757420533,
+        "fde_difference_k256_minus_rvq_m": 6.092457307871335e-06,
         "classification_threshold_m": 0.1,
         "category": "similar",
-        "path": "site/assets/encoding_similar__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_9ac86e50.gif",
-        "figure_path": "figures/similar__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_9ac86e50.gif"
+        "path": "site/assets/encoding_similar__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_51096441.gif",
+        "figure_path": "figures/similar__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_51096441.gif"
       },
       {
         "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
         "split": "train",
-        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_0244befc",
-        "gt_route_length_m": 66.99832704939067,
-        "gt_initial_heading_deg": 110.0714317286398,
-        "gt_final_heading_deg": -55.14227845125186,
-        "aligned_common_nodes": 131,
-        "k256_fde_m_recomputed": 3.633958376659729,
-        "rvq_fde_m_recomputed": 6.7708191952494765,
-        "fde_difference_k256_minus_rvq_m": -3.1368608185897475,
-        "classification_threshold_m": 0.36339583766597294,
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_d7e1ff6b",
+        "gt_route_length_m": 94.29585933838695,
+        "gt_initial_heading_deg": 120.85703922120237,
+        "gt_final_heading_deg": -129.52308297506022,
+        "aligned_common_nodes": 177,
+        "k256_fde_m_recomputed": 9.177106575920076,
+        "rvq_fde_m_recomputed": 1.4847885244310777,
+        "fde_difference_k256_minus_rvq_m": 7.692318051488998,
+        "classification_threshold_m": 0.14847885244310777,
         "category": "difficult_top95_fde",
-        "path": "site/assets/encoding_difficult_top95_fde__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_0244befc.gif",
-        "figure_path": "figures/difficult_top95_fde__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_0244befc.gif"
+        "path": "site/assets/encoding_difficult_top95_fde__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_d7e1ff6b.gif",
+        "figure_path": "figures/difficult_top95_fde__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_d7e1ff6b.gif"
       },
       {
         "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
         "split": "train",
-        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_b69c6509",
-        "gt_route_length_m": 74.39962623123321,
-        "gt_initial_heading_deg": 154.07174284766444,
-        "gt_final_heading_deg": -129.43546767157486,
-        "aligned_common_nodes": 130,
-        "k256_fde_m_recomputed": 5.833269570206161,
-        "rvq_fde_m_recomputed": 4.342982432265122,
-        "fde_difference_k256_minus_rvq_m": 1.4902871379410394,
-        "classification_threshold_m": 0.43429824322651217,
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_c2e57ecc",
+        "gt_route_length_m": 77.29778286408231,
+        "gt_initial_heading_deg": -135.02942510202814,
+        "gt_final_heading_deg": -48.07873531789089,
+        "aligned_common_nodes": 154,
+        "k256_fde_m_recomputed": 8.657014579079368,
+        "rvq_fde_m_recomputed": 0.6949391664483595,
+        "fde_difference_k256_minus_rvq_m": 7.962075412631008,
+        "classification_threshold_m": 0.1,
         "category": "difficult_top95_fde",
-        "path": "site/assets/encoding_difficult_top95_fde__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_b69c6509.gif",
-        "figure_path": "figures/difficult_top95_fde__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_b69c6509.gif"
+        "path": "site/assets/encoding_difficult_top95_fde__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_c2e57ecc.gif",
+        "figure_path": "figures/difficult_top95_fde__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_c2e57ecc.gif"
       }
     ]
   }

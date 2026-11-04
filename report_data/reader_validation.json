@@ -66,9 +66,9 @@
       ],
       "actual_frame_indices": [
         0,
-        1,
         2,
-        3
+        3,
+        5
       ],
       "torch_dataloader_batch_size": 4,
       "torch_dataloader_batch_contains_real_images": true

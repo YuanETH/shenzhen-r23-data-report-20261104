@@ -10,8 +10,8 @@
     "island_count": 6,
     "triangles": 4959,
     "vertices": 14877,
-    "grid_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/navmesh_grid.npz",
-    "grid_triangles_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/navmesh_triangles.npz"
+    "grid_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/navmesh_grid.npz",
+    "grid_triangles_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/report_data/navmesh_triangles.npz"
   },
   "grid": {
     "cell_size_m": 0.25,
@@ -415,10 +415,10 @@
     }
   ],
   "source": {
-    "scores_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/qc/trajectory_scores.jsonl.gz",
-    "frozen_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/qc/frozen_retained.jsonl.gz",
+    "scores_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/qc/trajectory_scores.jsonl.gz",
+    "frozen_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/qc/frozen_retained.jsonl.gz",
     "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
-    "summary_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/qc/summary.json",
+    "summary_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/qc/summary.json",
     "summary_frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa"
   }
 }

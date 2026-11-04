@@ -1,0 +1,76 @@
+{
+  "status": "passed",
+  "definition": "translation<=0.10m AND abs(wrapped_yaw)<=10deg; tolerances1e-8m and1e-7deg; STOP excluded",
+  "all_256_motion_centers_checked": true,
+  "tiny_motion_centers": 0,
+  "preserves_original_first_and_terminal_frames": true,
+  "exact_same_real_observation_indices_as_RVQ": true,
+  "counts": {
+    "k256_trajectories": 80475,
+    "k256_samples": 5167420,
+    "k256_stop": 80475,
+    "k256_merged_skipped_frames": 1701277,
+    "k256_raw_motion_edges": 6788222,
+    "k256_raw_micro_edges": 1738833,
+    "k256_raw_terminal_micro_edges": 56380,
+    "k256_raw_first_micro_edges": 80475,
+    "k256_motion_edges_checked": 5086945,
+    "k256_terminal_edges_checked": 80475,
+    "k256_GT_micro_residual": 0,
+    "k256_decoded_micro_residual": 0,
+    "k256_terminal_micro_residual": 0,
+    "k256_first_micro_residual": 0,
+    "k256_last3_motion_edges_checked": 241425,
+    "k256_last3_micro_residual": 0
+  },
+  "terminal_distributions": {
+    "k256_terminal_gt_translation_m": {
+      "mean": 0.24422362000877873,
+      "p50": 0.2184531762980211,
+      "p90": 0.45741734244378685,
+      "p95": 0.49058122388783243,
+      "p99": 0.5292469441097188,
+      "max": 0.5794256325513987,
+      "n": 80475
+    },
+    "k256_terminal_gt_yaw_deg": {
+      "mean": 0.36391889507319275,
+      "p50": 5.088887490341627e-14,
+      "p90": 5.597776239375789e-13,
+      "p95": 2.500270573716837,
+      "p99": 8.412118870654258,
+      "max": 18.94733967159008,
+      "n": 80475
+    },
+    "k256_terminal_decoded_translation_m": {
+      "mean": 0.24487500866068965,
+      "p50": 0.21451919928535546,
+      "p90": 0.44661622809329893,
+      "p95": 0.498771108411016,
+      "p99": 0.5259655790635184,
+      "max": 0.5781135359118575,
+      "n": 80475
+    },
+    "k256_terminal_decoded_yaw_deg": {
+      "mean": 0.3587710560543645,
+      "p50": 0.00107447166394798,
+      "p90": 0.005137587503990311,
+      "p95": 3.6854769958458773,
+      "p99": 7.623220670113448,
+      "max": 14.83197470427847,
+      "n": 80475
+    },
+    "k256_terminal_yaw_drift_deg": {
+      "mean": 1.9351967526002738,
+      "p50": 1.531356630213653,
+      "p90": 4.1153845303875185,
+      "p95": 5.091778223863512,
+      "p99": 7.335773373845043,
+      "max": 16.143134117979102,
+      "n": 80475
+    }
+  },
+  "frozen_qc_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+  "codebook_sha256": "685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d",
+  "producer_sha256": "8f55fe971f40611f8395256cd0537e5f668f59da611e37dea78742851ea3d658"
+}
