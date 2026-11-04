@@ -1,0 +1,12 @@
+{
+  "status": "unchanged_reused",
+  "previous_release": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2",
+  "scope": "This revision changes only codec fitting, labels, readers bindings and related evaluation/report artifacts. Previously completed QC, actual video evidence, real-node GT sampling, coverage and sample videos are reused for the exact same frozen set. No new visual census is claimed.",
+  "unchanged_inputs": {
+    "qc/frozen_retained.jsonl.gz": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+    "qc/trajectory_scores.jsonl.gz": "a334361f28596ada56fe90189382e6136cb3ecb13ecd90dc81300ec0b75e925b",
+    "qc/summary.json": "cece3989856b17411d33374b4235fa52a7c809496c7e006db5aa891b8e2580a9",
+    "AI_VISUAL_REVIEW.json": "f41815f241cf6aa1b05d49a3df25ad9c4663a8055fce4b8c2638384ff44e1188"
+  },
+  "previous_hashes_match": true
+}

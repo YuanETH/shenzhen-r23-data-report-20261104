@@ -1,0 +1,271 @@
+{
+  "sha256": "da11ccffdb9e98f6071b662bcc2bafee2e26ae79937537302e05a8c62151dfa8",
+  "producer_sha256": "66290475cc17504c41a5f8d4dddbe8bf853f0a4b7f2500d706dee24418c4dc71",
+  "shape": [
+    256,
+    3
+  ],
+  "seed": 20261105,
+  "frozen_qc_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+  "fit_trajectories_sha256": "95299590116e22b7520c06b893b02ea7885017ad9db36845d174de080f06e0ec",
+  "trajectories": 80475,
+  "motion_samples": 6788222,
+  "weight_policy": "each train trajectory sums to 1; no length buckets; all original adjacent deltas",
+  "normalization": "weighted mean and weighted population std of forward_m,left_m,ccw_yaw_rad; std floor1e-6",
+  "motion_ids": "1..256",
+  "STOP": 0,
+  "dtype": "uint16",
+  "sampling": "original adjacent real observation frames; includes micro actions",
+  "logs": [
+    {
+      "iteration": 1,
+      "weighted_mse": 0.0008658090705221427,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 2,
+      "weighted_mse": 0.0007143469722585101,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 3,
+      "weighted_mse": 0.000691100553606175,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 4,
+      "weighted_mse": 0.0006767188922185209,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 5,
+      "weighted_mse": 0.00066749957350761,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 6,
+      "weighted_mse": 0.0006621141289189285,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 7,
+      "weighted_mse": 0.0006581351698371847,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 8,
+      "weighted_mse": 0.0006550203053620914,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 9,
+      "weighted_mse": 0.0006521171020915323,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 10,
+      "weighted_mse": 0.0006502953772651312,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 11,
+      "weighted_mse": 0.0006486708593124693,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 12,
+      "weighted_mse": 0.0006477165111821209,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 13,
+      "weighted_mse": 0.0006473053583315755,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 14,
+      "weighted_mse": 0.0006468914882676612,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 15,
+      "weighted_mse": 0.000646640440843267,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 16,
+      "weighted_mse": 0.0006464751245433588,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 17,
+      "weighted_mse": 0.0006463361488811685,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 18,
+      "weighted_mse": 0.000646211502508047,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 19,
+      "weighted_mse": 0.0006460956523206039,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 20,
+      "weighted_mse": 0.0006459961836972594,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 21,
+      "weighted_mse": 0.0006459050184809923,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 22,
+      "weighted_mse": 0.0006458145445594021,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 23,
+      "weighted_mse": 0.0006457238637540745,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 24,
+      "weighted_mse": 0.0006456301467110694,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 25,
+      "weighted_mse": 0.0006455334843049285,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 26,
+      "weighted_mse": 0.000645438254970257,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 27,
+      "weighted_mse": 0.0006453434003767055,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 28,
+      "weighted_mse": 0.0006452470768020288,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 29,
+      "weighted_mse": 0.0006451489678671214,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 30,
+      "weighted_mse": 0.000645048440601754,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 31,
+      "weighted_mse": 0.0006449515485055953,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 32,
+      "weighted_mse": 0.0006448444754509286,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 33,
+      "weighted_mse": 0.0006447255491399966,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 34,
+      "weighted_mse": 0.0006445960891767664,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 35,
+      "weighted_mse": 0.0006444587078753753,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 36,
+      "weighted_mse": 0.0006443447976122866,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 37,
+      "weighted_mse": 0.0006442553954538623,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 38,
+      "weighted_mse": 0.0006441848501198979,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 39,
+      "weighted_mse": 0.0006441207459293982,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 40,
+      "weighted_mse": 0.0006440569127583031,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 41,
+      "weighted_mse": 0.0006439953312340165,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 42,
+      "weighted_mse": 0.0006439352195386408,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 43,
+      "weighted_mse": 0.0006438813691566578,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 44,
+      "weighted_mse": 0.0006438317633759834,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 45,
+      "weighted_mse": 0.000643784869796278,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 46,
+      "weighted_mse": 0.0006437378051188289,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 47,
+      "weighted_mse": 0.0006436904413860407,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 48,
+      "weighted_mse": 0.0006436455785632802,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 49,
+      "weighted_mse": 0.0006436030061761592,
+      "empty_clusters": 0
+    },
+    {
+      "iteration": 50,
+      "weighted_mse": 0.0006435624126485733,
+      "empty_clusters": 0
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "dataset_class": "training_adapter.TrainingDataset",
-  "module_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/training_adapter.py",
+  "module_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/training_adapter.py",
   "branches": [
     "k256",
     "rvq"
@@ -11,12 +11,12 @@
   "batch_collation": "list; image history lengths vary, apply the target model processor in its collator",
   "codebooks": {
     "k256": {
-      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/k256/codebook.npz",
-      "sha256": "965b23d9e04805c6e4b86ae4363bab75732d49082923c5165bbea68c1e3cb7ae"
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/k256/codebook.npz",
+      "sha256": "da11ccffdb9e98f6071b662bcc2bafee2e26ae79937537302e05a8c62151dfa8"
     },
     "rvq": {
-      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/deps/codebook.npz",
-      "sha256": "415dbdf0f5da122557bbdfe9db698d2bde52662b614472c53b8ee615259b2177"
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/deps/codebook.npz",
+      "sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f"
     }
   },
   "validated_reader_settings": {

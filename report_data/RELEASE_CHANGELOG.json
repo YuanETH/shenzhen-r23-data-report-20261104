@@ -1,17 +1,18 @@
 {
   "date": "2026-11-04",
   "source": "oss://ss-oss1/data/user/yuanxu/vln_data/shenzhen-r23-data-20261028/",
-  "output_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2",
+  "output_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit",
   "source_modified": false,
   "source_deleted": false,
-  "publication_status": "See PUBLICATION_STATE.json and PUBLIC_REPORT_VALIDATION.json for actual published state.",
+  "public_report_authorized": true,
+  "publication_status": "see PUBLICATION_STATE.json and PUBLIC_REPORT_VALIDATION.json; completion requires verified public access",
   "completed_steps": [
     "restore_and_verify",
     "final_state_inventory",
     "per_trajectory_qc",
     "physical_filter",
     "trajectory_balanced_k256_fit",
-    "fixed_codebook_macro_rvq",
+    "trajectory_balanced_rvq_refit_and_reencode",
     "whole_release_recompute",
     "aligned_offline_evaluation",
     "actual_reader_batches",
@@ -37,32 +38,5 @@
     "unresolved_gt_frames": 0,
     "unresolved_rvq_trajectories": 0,
     "unresolved_rvq_frames": 0
-  },
-  "public_report_authorized": true,
-  "qc_correction": {
-    "status": "passed",
-    "definition": "sum(abs(turn))-abs(sum(turn))=2*min(positive,negative)",
-    "old_release": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104",
-    "old_scores_sha256": "bfcb8b78333aa660ce3ce87c51088445517f3673f1400ebdd9e10c56d08184aa",
-    "new_scores_sha256": "a334361f28596ada56fe90189382e6136cb3ecb13ecd90dc81300ec0b75e925b",
-    "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
-    "trajectories_recomputed": 93319,
-    "selection_changes": 431,
-    "old_retained": 80906,
-    "new_retained": 80475,
-    "changes_by_new_reason": {
-      "extended_reversal_gt_10": 383,
-      "quality_score<7.0": 48
-    },
-    "video_pixel_evidence": "Reused actual source samples, SHA/PTS/identity validations from previous audit; original arrays reread for all motion metrics. No video re-encoding or source mutation.",
-    "seconds": 88.55276727676392
-  },
-  "encoding_provenance": {
-    "K256": "Refitted on corrected frozen train set; all original adjacent actions re-encoded.",
-    "RVQ": "Same retained real nodes, targets, beam result and fixed codebook as previous verified release. Surviving whole trajectories physically repackaged; metadata scores updated. Full independent recompute verification required after this stage.",
-    "source_verification_sha256": "263c2069c1d970411832ea7c971c1abbf018219a5491fda4c58c5d6adf0e5277",
-    "source_rvq_index_sha256": "064d6032654a7ebabd9991cdc17e50dd1435e4efe58e72ae9ea081250b6061c9",
-    "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
-    "producer_sha256": "e261b09652422240176777631f7b873c741011ac86b05e025222f7218eff1518"
   }
 }

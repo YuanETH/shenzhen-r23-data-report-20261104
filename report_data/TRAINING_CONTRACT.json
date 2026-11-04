@@ -5,18 +5,17 @@
     "body_delta": "forward_m,left_m,ccw_yaw_rad; orientation at current observation",
     "camera": "recorded Habitat Rz@Ry@Rx mount, actual optical axis and pinhole intrinsics"
   },
-  "splits": "Preserved from collection state. All fit IDs listed under k256/fit_trajectories.json. No eval/probe is synthesized.",
+  "splits": "Preserved from collection state. Both fit ID lists are k256/fit_trajectories.json and rvq/fit_trajectories.json. No eval/probe is synthesized.",
   "qc": {
     "score": "round(max(0,10-.9*M-T-V),2), hard cap4.9",
     "keep": "no hard error, no unresolved suspicious, rounded quality_score>=7",
     "review": "advisory only; not automatic exclusion",
-    "details": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/qc_core.py",
-    "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
-    "reversal_definition": "accumulated absolute turn - absolute net turn = 2*min(positive cumulative turn, absolute negative cumulative turn); applied to score and both >10 degree hard rules"
+    "details": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/qc_core.py",
+    "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa"
   },
   "k256": {
-    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/k256/codebook.npz",
-    "sha256": "965b23d9e04805c6e4b86ae4363bab75732d49082923c5165bbea68c1e3cb7ae",
+    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/k256/codebook.npz",
+    "sha256": "da11ccffdb9e98f6071b662bcc2bafee2e26ae79937537302e05a8c62151dfa8",
     "motion_ids": "1..256",
     "stop": 0,
     "dtype": "uint16",
@@ -27,8 +26,8 @@
     "decode_entry": "k256.decode(codes,k256.load_book())"
   },
   "rvq": {
-    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/deps/codebook.npz",
-    "sha256": "415dbdf0f5da122557bbdfe9db698d2bde52662b614472c53b8ee615259b2177",
+    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/deps/codebook.npz",
+    "sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f",
     "shape": [
       3,
       256,
@@ -51,6 +50,8 @@
       1,
       1
     ],
+    "fit_metadata": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/rvq/CODEBOOK.json",
+    "fitting": "from scratch on all frozen retained train trajectories; per-trajectory weight1; masked future padding; STOP excluded",
     "horizon": 5,
     "target": "five absolute local poses relative to current selected real observation, never chained increments",
     "nodes": "continuous selected real first-to-terminal image frames; timestamps preserved; omitted frames absent from current and history",
@@ -80,15 +81,15 @@
     "visibility_claim": "frustum projection only"
   },
   "reader": {
-    "entry": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/reader.py",
+    "entry": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/reader.py",
     "dataset": "reader.NavigationDataset",
+    "training_adapter": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/training_adapter.py",
+    "adapter_config": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/TRAINING_ADAPTER_CONFIG.json",
+    "adapter_validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/TRAINING_ADAPTER_VALIDATION.json",
+    "codec_storage": "Annotation JSON uses integer lists; TrainingDataset.codec_ids is NumPy uint16. Reader action_token is a Python integer, not a model vocabulary ID.",
     "images": "RGB uint8 HxWx3 arrays; list is history in chronological order followed by current selected observation",
     "tokenizer": "map by token string with tokenizer.encode(...,add_special_tokens=False); require atomic registered tokens; source token IDs are not model IDs",
-    "VeOmni": "Generic explicit PyTorch Dataset supplied; no VeOmni installation or trainer integration claimed.",
-    "training_adapter": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/training_adapter.py",
-    "adapter_config": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/TRAINING_ADAPTER_CONFIG.json",
-    "adapter_validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/TRAINING_ADAPTER_VALIDATION.json",
-    "codec_storage": "Annotation JSON integer lists preserve 0..256; TrainingDataset.codec_ids is explicitly NumPy uint16. Python reader action_token is an int, not a model vocabulary ID."
+    "VeOmni": "Generic explicit PyTorch Dataset supplied; no VeOmni installation or trainer integration claimed."
   },
   "evaluation": "Paired cohort only: complete trajectories successfully supervised in both branches. Both branches compared at identical true retained macro nodes. K256 rolls all original adjacent decoded actions between those nodes; RVQ rolls only decoded[0] per decision. Local H5 compares the same five actual future node frames; padding excluded. Metrics distributions are across per-trajectory metric values; no length weighting.",
   "not_performed": [
@@ -96,5 +97,5 @@
     "model quality evaluation",
     "real robot test"
   ],
-  "source_protection": "Original OSS and prior release remain unchanged. Only the explicitly authorized static report, selected sample media and public statistics are published; full training data is not uploaded."
+  "source_protection": "Original OSS and prior products unmodified; independent source restore. No deletion; only the explicitly authorized static report, selected media and public statistics are published. Full training data is not uploaded."
 }

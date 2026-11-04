@@ -1,8 +1,8 @@
 {
-  "K256": "Refitted on corrected frozen train set; all original adjacent actions re-encoded.",
-  "RVQ": "Same retained real nodes, targets, beam result and fixed codebook as previous verified release. Surviving whole trajectories physically repackaged; metadata scores updated. Full independent recompute verification required after this stage.",
-  "source_verification_sha256": "263c2069c1d970411832ea7c971c1abbf018219a5491fda4c58c5d6adf0e5277",
-  "source_rvq_index_sha256": "064d6032654a7ebabd9991cdc17e50dd1435e4efe58e72ae9ea081250b6061c9",
+  "K256": "From-scratch fit on all frozen retained train trajectories; all original adjacent actions re-encoded with new book.",
+  "RVQ": "From-scratch three-stage codebook fit on all frozen retained train trajectories; all motion nodes run through beam encoding again. No old codebook or old codes used.",
+  "GT": "Immutable verified real observation nodes, projection labels, targets and padding reused from identical frozen QC set. Pose/target/whitelist independently recomputed in verify.py.",
+  "source_verification_sha256": "6825cf79fa39ddfb020afa511b000259bab0e74125545dd365180fed0586ebd5",
   "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
-  "producer_sha256": "e261b09652422240176777631f7b873c741011ac86b05e025222f7218eff1518"
+  "producer_sha256": "79903916f60d48106589db9dceb11bc8c97927ebb86f46ee1149c1fe1b9360fc"
 }

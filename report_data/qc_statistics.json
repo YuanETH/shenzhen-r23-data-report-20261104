@@ -2,7 +2,7 @@
   "schema_version": 1,
   "generated_at_utc": "2026-11-04T08:15:24.492445+00:00",
   "source": {
-    "frozen_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/qc/frozen_retained.jsonl.gz",
+    "frozen_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/qc/frozen_retained.jsonl.gz",
     "sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
     "retained_count": 80475,
     "input_rows": 80475,
@@ -1498,13 +1498,13 @@
   },
   "plots": [
     {
-      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/qc_distributions.png",
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/qc_distributions.png",
       "title": "冻结保留集 QC 分布",
       "explanation": "本次冻结集分箱分布；各分布有效 N 与缺失数见对应 JSON/CSV 和图题。",
       "metric": "multiple"
     },
     {
-      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/qc_movement_windows.png",
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/qc_movement_windows.png",
       "title": "路径切向窗口分类",
       "explanation": "将 XY 路径切为互不重叠的固定弧长窗口；窗口端点落在相邻真实路径段内时按弧长线性插值。在窗口内部累计相邻路径切向的最短角差绝对值；不使用body yaw。窗口为左闭右开，恰在边界的拐角只计入后一窗口。分类：<10°直行，10–<30°缓弯，30–<60°转弯，≥60°大转。每条路线不足一个完整窗口的余段丢弃并计数；窗口不重叠。",
       "metric": "movement_windows"
