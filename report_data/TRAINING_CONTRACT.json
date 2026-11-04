@@ -1,0 +1,100 @@
+{
+  "status": "validated_data_and_offline_codec_only",
+  "coordinate_system": {
+    "pose": "NWU x-forward/north,y-left/west,z-up,yaw CCW radians",
+    "body_delta": "forward_m,left_m,ccw_yaw_rad; orientation at current observation",
+    "camera": "recorded Habitat Rz@Ry@Rx mount, actual optical axis and pinhole intrinsics"
+  },
+  "splits": "Preserved from collection state. All fit IDs listed under k256/fit_trajectories.json. No eval/probe is synthesized.",
+  "qc": {
+    "score": "round(max(0,10-.9*M-T-V),2), hard cap4.9",
+    "keep": "no hard error, no unresolved suspicious, rounded quality_score>=7",
+    "review": "advisory only; not automatic exclusion",
+    "details": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/qc_core.py",
+    "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+    "reversal_definition": "accumulated absolute turn - absolute net turn = 2*min(positive cumulative turn, absolute negative cumulative turn); applied to score and both >10 degree hard rules"
+  },
+  "k256": {
+    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/k256/codebook.npz",
+    "sha256": "965b23d9e04805c6e4b86ae4363bab75732d49082923c5165bbea68c1e3cb7ae",
+    "motion_ids": "1..256",
+    "stop": 0,
+    "dtype": "uint16",
+    "fit": "each retained nonleaking train trajectory equal total weight; original adjacent real frames",
+    "supervision": "current original image -> next original image; terminal original frame -> STOP",
+    "micro_actions": "retained by design",
+    "encode_entry": "k256.encode(body_deltas_Nx3,k256.load_book())",
+    "decode_entry": "k256.decode(codes,k256.load_book())"
+  },
+  "rvq": {
+    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/deps/codebook.npz",
+    "sha256": "415dbdf0f5da122557bbdfe9db698d2bde52662b614472c53b8ee615259b2177",
+    "shape": [
+      3,
+      256,
+      15
+    ],
+    "scale": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "horizon": 5,
+    "target": "five absolute local poses relative to current selected real observation, never chained increments",
+    "nodes": "continuous selected real first-to-terminal image frames; timestamps preserved; omitted frames absent from current and history",
+    "GT_minimum": "translation>0.10m OR yaw>10deg",
+    "max_span": "1.2m/60deg/8 recorded seconds",
+    "position_fit": "3cm finite segment, independent monotone progression",
+    "heading_fit": "3deg ordinary; necessary fallback10deg and reverse excursion<=10deg",
+    "objective": [
+      "min unresolved edges",
+      "min fallback edges",
+      "nearest nominal20cm/15deg"
+    ],
+    "padding": "repeat actual terminal pose; future_valid_mask marks real targets",
+    "beam": 8,
+    "retry_beam": 32,
+    "decoded_minimum": "each valid adjacent decoded step translation>0.05m OR yaw>5deg",
+    "unresolved": "whole RVQ trajectory excluded, retained diagnostic only",
+    "stop": "complete000 AND <apos_1299> iff original terminal; only complete000 decodes to zeros; any single zero code ordinary",
+    "deployment": "execute decoded[0] once, then reobserve/update retained-node history/replan; recorded duration is not control duration",
+    "encode_entry": "deps/codec_torch.py encode(target_Nx5x3,valid_Nx5,books,device,beam=8); retry policy in encoding.py",
+    "decode_entry": "deps/reader_macro_h5.py decode(books,codes)"
+  },
+  "projection": {
+    "object": "real object-goal annotated AABB center, positive camera depth plus image bounds, vocabulary48x27; region goals have <opos_0> with no_object_target status",
+    "pointing": "corresponding true route at source height+3cm,5cm lattice,4m lookahead; furthest first contiguous in-frustum segment; existing special rotation tokens when no projectable route; terminal1299",
+    "occlusion_checked": false,
+    "visibility_claim": "frustum projection only"
+  },
+  "reader": {
+    "entry": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/reader.py",
+    "dataset": "reader.NavigationDataset",
+    "images": "RGB uint8 HxWx3 arrays; list is history in chronological order followed by current selected observation",
+    "tokenizer": "map by token string with tokenizer.encode(...,add_special_tokens=False); require atomic registered tokens; source token IDs are not model IDs",
+    "VeOmni": "Generic explicit PyTorch Dataset supplied; no VeOmni installation or trainer integration claimed.",
+    "training_adapter": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/training_adapter.py",
+    "adapter_config": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/TRAINING_ADAPTER_CONFIG.json",
+    "adapter_validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/TRAINING_ADAPTER_VALIDATION.json",
+    "codec_storage": "Annotation JSON integer lists preserve 0..256; TrainingDataset.codec_ids is explicitly NumPy uint16. Python reader action_token is an int, not a model vocabulary ID."
+  },
+  "evaluation": "Paired cohort only: complete trajectories successfully supervised in both branches. Both branches compared at identical true retained macro nodes. K256 rolls all original adjacent decoded actions between those nodes; RVQ rolls only decoded[0] per decision. Local H5 compares the same five actual future node frames; padding excluded. Metrics distributions are across per-trajectory metric values; no length weighting.",
+  "not_performed": [
+    "policy optimization",
+    "model quality evaluation",
+    "real robot test"
+  ],
+  "source_protection": "Original OSS and prior release remain unchanged. Only the explicitly authorized static report, selected sample media and public statistics are published; full training data is not uploaded."
+}

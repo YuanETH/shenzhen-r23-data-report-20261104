@@ -1,0 +1,118 @@
+{
+  "datasets": [
+    {
+      "dataset": "shenzhen_office_r23_k3_bin1_20261028",
+      "split": "train",
+      "counts": {
+        "original_trajectories": 1970,
+        "original_frames": 143283,
+        "qc_filtered": 1967,
+        "qc_retained": 3,
+        "qc_filtered_frames": 143121,
+        "qc_retained_frames": 162,
+        "duplicates": 1970,
+        "dedup_filtered": 1760,
+        "k256_trajectories": 3,
+        "k256_samples": 162,
+        "k256_stop": 3,
+        "qc_retained_trajectories": 3,
+        "raw_frames": 162,
+        "trajectories": 3,
+        "samples": 122,
+        "stop": 3,
+        "merged_skipped_frames": 40,
+        "unresolved_gt_trajectories": 0,
+        "unresolved_gt_frames": 0,
+        "unresolved_rvq_trajectories": 0,
+        "unresolved_rvq_frames": 0
+      }
+    },
+    {
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "counts": {
+        "original_trajectories": 91346,
+        "original_frames": 7863582,
+        "qc_filtered": 10874,
+        "qc_retained": 80472,
+        "qc_filtered_frames": 995047,
+        "qc_retained_frames": 6868535,
+        "duplicates": 0,
+        "dedup_filtered": 0,
+        "k256_trajectories": 80472,
+        "k256_samples": 6868535,
+        "k256_stop": 80472,
+        "qc_retained_trajectories": 80472,
+        "raw_frames": 6868535,
+        "trajectories": 80472,
+        "samples": 5167298,
+        "stop": 80472,
+        "merged_skipped_frames": 1701237,
+        "unresolved_gt_trajectories": 0,
+        "unresolved_gt_frames": 0,
+        "unresolved_rvq_trajectories": 0,
+        "unresolved_rvq_frames": 0
+      }
+    },
+    {
+      "dataset": "shenzhen_r23_smoke_20261028",
+      "split": "train",
+      "counts": {
+        "original_trajectories": 3,
+        "original_frames": 93,
+        "qc_filtered": 3,
+        "qc_retained": 0,
+        "qc_filtered_frames": 93,
+        "qc_retained_frames": 0,
+        "duplicates": 3,
+        "dedup_filtered": 3,
+        "k256_trajectories": 0,
+        "k256_samples": 0,
+        "k256_stop": 0,
+        "trajectories": 0,
+        "samples": 0,
+        "stop": 0,
+        "merged_skipped_frames": 0,
+        "unresolved_gt_trajectories": 0,
+        "unresolved_gt_frames": 0,
+        "unresolved_rvq_trajectories": 0,
+        "unresolved_rvq_frames": 0,
+        "qc_retained_trajectories": 0,
+        "raw_frames": 0
+      }
+    }
+  ],
+  "totals": {
+    "k256_trajectories": 80475,
+    "k256_samples": 6868697,
+    "k256_stop": 80475,
+    "rvq_trajectories": 80475,
+    "rvq_samples": 5167420,
+    "rvq_stop": 80475,
+    "merged_skipped_frames": 1701277,
+    "original_trajectories": 93319,
+    "original_frames": 8006958,
+    "qc_filtered": 12844,
+    "qc_filtered_frames": 1138261,
+    "qc_retained": 80475,
+    "qc_retained_frames": 6868697,
+    "duplicates": 1973,
+    "dedup_filtered": 1763,
+    "unresolved_gt_trajectories": 0,
+    "unresolved_gt_frames": 0,
+    "unresolved_rvq_trajectories": 0,
+    "unresolved_rvq_frames": 0
+  },
+  "primary_reasons": {
+    "duplicate_train_identity_or_full_trajectory": 1763,
+    "extended_turn_gt_95": 7964,
+    "extended_reversal_gt_10": 1235,
+    "suspicious/contrast_lt_7": 1817,
+    "quality_score<7.0": 65,
+    "retained": 80475
+  },
+  "target_entity_types": {
+    "object": 91598,
+    "region": 1721
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_3b3d9307",
+  "euclidean_distance_m": 2.392203672796037,
+  "navmesh_geodesic_distance_m": 9.11357307434082,
+  "actual_route_m": 9.960056954129627,
+  "geodesic_to_euclidean_ratio": 3.809697802064138,
+  "actual_to_geodesic_ratio": 1.0928816692293908,
+  "navmesh_sha256": "1e9e3276e8040161d3df878698442ad307c3f576a677f7aa8b54f000dcd4657a",
+  "scope": "This selected case only. Shortest feasible path explains obstacle detour; not a global efficiency metric."
+}

@@ -1,0 +1,409 @@
+{
+  "schema_version": 1,
+  "selection_rule": "冻结保留集统计分位数/规则边界优先，完整轨迹去重。目标距离远例为固定排序间隔候选池选择，非全局极值。",
+  "limitations": "样例只用于呈现具体事实，不外推全量异常率。低对比度可疑不等于确认缺面。地图来自实际NavMesh。",
+  "examples": [
+    {
+      "category": "保留集分数下沿",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_230e6c5b",
+      "status": "retained",
+      "quality_score": 7.0,
+      "path_length_m": 3.627162630552256,
+      "duration_sec": 11.5,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [],
+        "review": [
+          "extended_turn_gt_75",
+          "stationary_and_cv_high"
+        ],
+        "extended_reversal_deg": 5.088887490341627e-14,
+        "last3_reversal_deg": 5.088887490341627e-14,
+        "extended_terminal_turn_deg": 92.00998630145416,
+        "black_component_fraction": 0.0,
+        "primary_reason": "retained"
+      },
+      "decision": "无硬错误及未排除可疑项，分数达到7分；按保留集最低分选择。",
+      "video_path": "assets/samples/sample-01.mp4",
+      "map_path": "assets/samples/sample-01.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_230e6c5b/3973da5e238a4aadba6336a9d51151a1/rgb.mp4",
+      "source_video_sha256": "fd8d0b3e54406310744d9ebafac4de759899ea5f9dd165c8fb51920c7cd552b0",
+      "published_video_sha256": "fd8d0b3e54406310744d9ebafac4de759899ea5f9dd165c8fb51920c7cd552b0",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 24,
+      "video_duration_sec": 12.0
+    },
+    {
+      "category": "短路线",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_25a632b8",
+      "status": "retained",
+      "quality_score": 9.71,
+      "path_length_m": 5.007556440364703,
+      "duration_sec": 8.0,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [],
+        "review": [],
+        "extended_reversal_deg": 0.0,
+        "last3_reversal_deg": 0.0,
+        "extended_terminal_turn_deg": 25.891304690182345,
+        "black_component_fraction": 0.0008680555555555555,
+        "primary_reason": "retained"
+      },
+      "decision": "按保留集路线长度P5附近选择，每例来自不同轨迹。",
+      "video_path": "assets/samples/sample-02.mp4",
+      "map_path": "assets/samples/sample-02.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_25a632b8/89d1230a6cc14c328e19568c21be639f/rgb.mp4",
+      "source_video_sha256": "b12856584e26c62d89e7539b9258d4e0d5c651e6cb0b0fe98f99965fa0d3acb5",
+      "published_video_sha256": "b12856584e26c62d89e7539b9258d4e0d5c651e6cb0b0fe98f99965fa0d3acb5",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 17,
+      "video_duration_sec": 8.5
+    },
+    {
+      "category": "中路线",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_51c4a7db",
+      "status": "retained",
+      "quality_score": 9.97,
+      "path_length_m": 25.546172578354074,
+      "duration_sec": 27.5,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [],
+        "review": [],
+        "extended_reversal_deg": 1.6892818802745518e-13,
+        "last3_reversal_deg": 3.053332494204976e-13,
+        "extended_terminal_turn_deg": 2.371307187239764e-13,
+        "black_component_fraction": 0.0013020833333333333,
+        "primary_reason": "retained"
+      },
+      "decision": "按保留集路线长度P50附近选择，每例来自不同轨迹。",
+      "video_path": "assets/samples/sample-03.mp4",
+      "map_path": "assets/samples/sample-03.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_51c4a7db/42db48f923c34d4094e830e8cd471e4b/rgb.mp4",
+      "source_video_sha256": "09a1cfc72c94698240919eaa155429bc196d84a208fd9aa58ce051b28733f9dc",
+      "published_video_sha256": "09a1cfc72c94698240919eaa155429bc196d84a208fd9aa58ce051b28733f9dc",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 56,
+      "video_duration_sec": 28.0
+    },
+    {
+      "category": "长路线",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_64326f22",
+      "status": "retained",
+      "quality_score": 9.78,
+      "path_length_m": 65.88280378490894,
+      "duration_sec": 84.5,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [],
+        "review": [],
+        "extended_reversal_deg": 0.0,
+        "last3_reversal_deg": 2.0355549961366507e-13,
+        "extended_terminal_turn_deg": 6.237197470084226e-14,
+        "black_component_fraction": 0.0,
+        "primary_reason": "retained"
+      },
+      "decision": "按保留集路线长度P95附近选择，每例来自不同轨迹。",
+      "video_path": "assets/samples/sample-04.mp4",
+      "map_path": "assets/samples/sample-04.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_64326f22/971cac602d684fb5a46a285e701ec8f5/rgb.mp4",
+      "source_video_sha256": "472115d3722ba077fcc00fe8491633f7d6a7911a307e06b066b4fc41dab0ace5",
+      "published_video_sha256": "472115d3722ba077fcc00fe8491633f7d6a7911a307e06b066b4fc41dab0ace5",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 170,
+      "video_duration_sec": 85.0
+    },
+    {
+      "category": "合理绕行（NavMesh复核）",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_3b3d9307",
+      "status": "retained",
+      "quality_score": 8.89,
+      "path_length_m": 9.960056954129627,
+      "duration_sec": 28.0,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [],
+        "review": [
+          "short_tortuous_route",
+          "stationary_and_cv_high"
+        ],
+        "extended_reversal_deg": 5.088887490341627e-14,
+        "last3_reversal_deg": 5.088887490341627e-14,
+        "extended_terminal_turn_deg": 3.81666561775622e-13,
+        "black_component_fraction": 0.0013020833333333333,
+        "primary_reason": "retained"
+      },
+      "decision": "直线距离2.39m；实际NavMesh最短可行路程9.11m；本轨迹9.96m，比最短可行路径长9.3%。地图与实际画面显示绕行办公家具，不能仅凭直线比删除。",
+      "video_path": "assets/samples/sample-05.mp4",
+      "map_path": "assets/samples/sample-05.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_3b3d9307/e50f82c105664afe840760eec127c3be/rgb.mp4",
+      "source_video_sha256": "02a32558d55b94f28530a07abfc25926c650c61d27db6d8734b935bc3417f6e6",
+      "published_video_sha256": "02a32558d55b94f28530a07abfc25926c650c61d27db6d8734b935bc3417f6e6",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 57,
+      "video_duration_sec": 28.5
+    },
+    {
+      "category": "保留集较大末段转向",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_e0ebbacc",
+      "status": "retained",
+      "quality_score": 7.34,
+      "path_length_m": 10.273445841277649,
+      "duration_sec": 25.0,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [],
+        "review": [
+          "extended_turn_gt_75",
+          "stationary_and_cv_high"
+        ],
+        "extended_reversal_deg": 0.0,
+        "last3_reversal_deg": 0.0,
+        "extended_terminal_turn_deg": 94.99405785919396,
+        "black_component_fraction": 0.0,
+        "primary_reason": "retained"
+      },
+      "decision": "按保留集扩展末段累计绝对转角最大值选择；未超过95°硬阈值。",
+      "video_path": "assets/samples/sample-06.mp4",
+      "map_path": "assets/samples/sample-06.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_e0ebbacc/c37bb8d626f440efa569660b30322d42/rgb.mp4",
+      "source_video_sha256": "75283e640042f9fd34f952665a76a54f817f70cb00f93835548199c87c3d55ac",
+      "published_video_sha256": "75283e640042f9fd34f952665a76a54f817f70cb00f93835548199c87c3d55ac",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 51,
+      "video_duration_sec": 25.5
+    },
+    {
+      "category": "目标几何距离较远",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_3e8ec575",
+      "status": "retained",
+      "quality_score": 8.74,
+      "path_length_m": 13.1322085982029,
+      "duration_sec": 25.0,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [],
+        "review": [
+          "stationary_and_cv_high"
+        ],
+        "extended_reversal_deg": 0.0,
+        "last3_reversal_deg": 3.053332494204976e-13,
+        "extended_terminal_turn_deg": 1.526666247102488e-13,
+        "black_component_fraction": 0.002170138888888889,
+        "primary_reason": "retained"
+      },
+      "decision": "按固定排序每约80条取1条的候选池中，终点到目标AABB水平最近距离最大者选择；不是保留集全局最大。",
+      "video_path": "assets/samples/sample-07.mp4",
+      "map_path": "assets/samples/sample-07.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_3e8ec575/c77e723ea251429d87f2b67013f28af7/rgb.mp4",
+      "source_video_sha256": "7d6fc98c8993bd8ab87945acee1dce61c2d9396c06f74b4696b6397579b10c86",
+      "published_video_sha256": "7d6fc98c8993bd8ab87945acee1dce61c2d9396c06f74b4696b6397579b10c86",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 51,
+      "video_duration_sec": 25.5
+    },
+    {
+      "category": "本批最大近黑连片（未达硬阈值）",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_6e536c59",
+      "status": "retained",
+      "quality_score": 8.26,
+      "path_length_m": 64.06365509113786,
+      "duration_sec": 80.0,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [],
+        "review": [
+          "extended_turn_gt_75"
+        ],
+        "extended_reversal_deg": 0.0,
+        "last3_reversal_deg": 0.0,
+        "extended_terminal_turn_deg": 75.70221172650122,
+        "black_component_fraction": 0.055121527777777776,
+        "primary_reason": "retained"
+      },
+      "decision": "实际首中末抽帧最大近黑连片为5.51%，距离10%硬阈值仍有差距；本批无近黑硬过滤案例。",
+      "video_path": "assets/samples/sample-08.mp4",
+      "map_path": "assets/samples/sample-08.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_6e536c59/2616d3f78ed5489786920a075bcd5a9b/rgb.mp4",
+      "source_video_sha256": "ee1ba2d4aa28d71b9a5195ca4ee024fdaa726c19d8d33ddd39f8c5c754f31767",
+      "published_video_sha256": "ee1ba2d4aa28d71b9a5195ca4ee024fdaa726c19d8d33ddd39f8c5c754f31767",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 161,
+      "video_duration_sec": 80.5
+    },
+    {
+      "category": "刚低于7分",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_f7a72e42",
+      "status": "filtered",
+      "quality_score": 6.99,
+      "path_length_m": 6.934586579072294,
+      "duration_sec": 17.5,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [],
+        "review": [
+          "extended_turn_gt_75",
+          "stationary_and_cv_high"
+        ],
+        "extended_reversal_deg": 3.057452781273219e-13,
+        "last3_reversal_deg": 0.0,
+        "extended_terminal_turn_deg": 93.54066478932852,
+        "black_component_fraction": 0.00043402777777777775,
+        "primary_reason": "quality_score<7.0"
+      },
+      "decision": "按无硬错误/未排除可疑项、仅分数不足7的最高分选择。",
+      "video_path": "assets/samples/sample-09.mp4",
+      "map_path": "assets/samples/sample-09.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_f7a72e42/76f450a6cb714ced9b0c9aa2499af6cd/rgb.mp4",
+      "source_video_sha256": "5f2dff6d0bdd3d30a824e399635ed34d08ab02528091437c39694fd3137fcedf",
+      "published_video_sha256": "5f2dff6d0bdd3d30a824e399635ed34d08ab02528091437c39694fd3137fcedf",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 36,
+      "video_duration_sec": 18.0
+    },
+    {
+      "category": "转向抵消过滤",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_38434960",
+      "status": "filtered",
+      "quality_score": 4.9,
+      "path_length_m": 16.159637950048275,
+      "duration_sec": 29.5,
+      "flags": {
+        "hard_errors": [
+          "extended_reversal_gt_10",
+          "extended_turn_gt_95"
+        ],
+        "suspicious": [],
+        "review": [
+          "extended_reversal_gt_5",
+          "extended_turn_gt_75",
+          "stationary_and_cv_high"
+        ],
+        "extended_reversal_deg": 10.005148334359234,
+        "last3_reversal_deg": 1.0177774980683254e-13,
+        "extended_terminal_turn_deg": 105.46112052710947,
+        "black_component_fraction": 0.002170138888888889,
+        "primary_reason": "extended_reversal_gt_10"
+      },
+      "decision": "抵消角=累计绝对转角−绝对净转角=2×min(正向累计,负向累计绝对值)，超过10°硬过滤。",
+      "video_path": "assets/samples/sample-10.mp4",
+      "map_path": "assets/samples/sample-10.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_38434960/bedb20a689f04071927a5648f2e0e58f/rgb.mp4",
+      "source_video_sha256": "05a804d7c8aeea7301a82f26569301492696c47e8956ff61db4c20465e29ce4b",
+      "published_video_sha256": "05a804d7c8aeea7301a82f26569301492696c47e8956ff61db4c20465e29ce4b",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 60,
+      "video_duration_sec": 30.0
+    },
+    {
+      "category": "大末段转向过滤",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_ea40228f",
+      "status": "filtered",
+      "quality_score": 4.9,
+      "path_length_m": 33.85456958201597,
+      "duration_sec": 57.0,
+      "flags": {
+        "hard_errors": [
+          "extended_turn_gt_95"
+        ],
+        "suspicious": [],
+        "review": [
+          "extended_turn_gt_75",
+          "stationary_and_cv_high"
+        ],
+        "extended_reversal_deg": 1.2079758735976614e-12,
+        "last3_reversal_deg": 1.0177774980683254e-13,
+        "extended_terminal_turn_deg": 95.00056766321313,
+        "black_component_fraction": 0.0,
+        "primary_reason": "extended_turn_gt_95"
+      },
+      "decision": "扩展末段累计绝对转角超过95°硬过滤。",
+      "video_path": "assets/samples/sample-11.mp4",
+      "map_path": "assets/samples/sample-11.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_ea40228f/e6b3c4fc67324280b92050bc2a344c7b/rgb.mp4",
+      "source_video_sha256": "8431478565f39b5c4c26dca0e679ccbbc69c55ad7c13b55e65a7ba9adde8d326",
+      "published_video_sha256": "8431478565f39b5c4c26dca0e679ccbbc69c55ad7c13b55e65a7ba9adde8d326",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 115,
+      "video_duration_sec": 57.5
+    },
+    {
+      "category": "未排除低对比度可疑项",
+      "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+      "split": "train",
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_7b799e5c",
+      "status": "filtered",
+      "quality_score": 8.3,
+      "path_length_m": 3.7542090933671215,
+      "duration_sec": 12.0,
+      "flags": {
+        "hard_errors": [],
+        "suspicious": [
+          "contrast_lt_7"
+        ],
+        "review": [
+          "stationary_and_cv_high"
+        ],
+        "extended_reversal_deg": 0.0,
+        "last3_reversal_deg": 0.0,
+        "extended_terminal_turn_deg": 46.91977610808105,
+        "black_component_fraction": 0.0,
+        "primary_reason": "suspicious/contrast_lt_7"
+      },
+      "decision": "抽帧最低亮度标准差小于7，尚未通过针对性视觉证据排除；不等同确认缺面。",
+      "video_path": "assets/samples/sample-12.mp4",
+      "map_path": "assets/samples/sample-12.png",
+      "source_video": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output/shenzhen_office_r23_k3_bin1_pair600_20261028/videos/train/shenzhen_office_v9_semantic/shenzhen_office__shenzhen_office_v9_semantic__semantic_7b799e5c/a1d1a17e0c26473aaf1cab0c8923b076/rgb.mp4",
+      "source_video_sha256": "d4b9ede68f06695be5c527a37d02df5a8387a3ef53bbe4cd65c648fd47d5a53d",
+      "published_video_sha256": "d4b9ede68f06695be5c527a37d02df5a8387a3ef53bbe4cd65c648fd47d5a53d",
+      "floor_handling": "按NWU高度0.25m分箱分图；高度箱变化的相邻点不直接连线。真实NavMesh网格为底图，坐标单位米；不是轨迹包围盒。",
+      "video_frame_count": 25,
+      "video_duration_sec": 12.5
+    }
+  ],
+  "absent_categories": [
+    {
+      "category": "近黑连片过滤",
+      "reason": "本批没有符合条件的实际命中；未构造该类别。"
+    },
+    {
+      "category": "确认严重缺面过滤",
+      "reason": "本批没有符合条件的实际命中；未构造该类别。"
+    }
+  ]
+}

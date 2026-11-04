@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "navmesh": {
+    "available": true,
+    "path": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/navmeshes/office_preinflated_radius_0p30_1e9e3276/8e/8eeb0d96e99f5522c4ccdd1e31d490a0a1ee25453a182c4bd29fae06bd4659a8.navmesh",
+    "sha256": "1e9e3276e8040161d3df878698442ad307c3f576a677f7aa8b54f000dcd4657a",
+    "metadata_path": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/navmeshes/office_preinflated_radius_0p30_1e9e3276/8e/8eeb0d96e99f5522c4ccdd1e31d490a0a1ee25453a182c4bd29fae06bd4659a8.navmesh.json",
+    "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+    "area_m2_from_topology_metadata": 1280.1861572265625,
+    "island_count": 6,
+    "triangles": 4959,
+    "vertices": 14877,
+    "grid_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/navmesh_grid.npz",
+    "grid_triangles_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/navmesh_triangles.npz"
+  },
+  "grid": {
+    "cell_size_m": 0.25,
+    "neighbor_radius_m": 0.5,
+    "height_tolerance_m": 0.25,
+    "cell_count": 20447,
+    "grid_area_estimate_m2": 1277.9375,
+    "coordinate_frame": "NWU [north, west, up]",
+    "rasterization": "NavMesh triangle projected to NWU horizontal plane; cell centers inside triangles; height bins 0.25 m and distinct floors retained",
+    "trajectory_coverage": "Densify each route segment at <=0.25m horizontal spacing; cover all NavMesh grid cell centers within 0.5m horizontal and <=0.25m height of any densified position",
+    "point_mapping": "Original trajectory frame point maps if any grid cell center is within 0.5m horizontal and <=0.25m vertical",
+    "area_is_grid_estimate_not_continuous_geometry": true
+  },
+  "grid_area_validation": {
+    "metadata_navigable_area_m2": 1280.1861572265625,
+    "rasterized_grid_area_m2": 1277.9375,
+    "relative_difference_fraction": -0.0017565079999256243,
+    "note": "0.25m cell-center raster estimate differs from Habitat topology area metadata by this relative amount."
+  },
+  "aggregation": {
+    "weighting": "scene_equal_weight",
+    "scenes_in_batch": 1,
+    "scope_note": "Denominator includes only the scene(s) represented by this collection; it is not the full source asset library."
+  },
+  "random_growth_seeds": [
+    20261104,
+    20261105,
+    20261106
+  ],
+  "scene_count": 1,
+  "completed_route_count": 93319,
+  "retained_route_count": 80475,
+  "unmappable_points": {
+    "before_filter": {
+      "mapped_points": 8006748,
+      "total_points": 8006958,
+      "unmappable_points": 210,
+      "unmappable_fraction": 2.6227188902452093e-05
+    },
+    "after_filter": {
+      "mapped_points": 6868511,
+      "total_points": 6868697,
+      "unmappable_points": 186,
+      "unmappable_fraction": 2.7079371822632443e-05
+    }
+  },
+  "before_filter": {
+    "covered_cells": 20349,
+    "covered_grid_area_m2": 1271.8125,
+    "navmesh_coverage_fraction": 0.9952071208490243,
+    "multi_route_cells": 20310,
+    "multi_route_area_fraction_of_covered": 0.9980834439038774,
+    "route_cell_occupancies": 42126300,
+    "occupancy_excess_after_first": 42105951,
+    "repeated_occupancy_fraction": 0.9995169525925609,
+    "max_route_count_on_cell": 27325
+  },
+  "after_filter": {
+    "covered_cells": 20347,
+    "covered_grid_area_m2": 1271.6875,
+    "navmesh_coverage_fraction": 0.9951093069888003,
+    "multi_route_cells": 20306,
+    "multi_route_area_fraction_of_covered": 0.9979849609279009,
+    "route_cell_occupancies": 36199628,
+    "occupancy_excess_after_first": 36179281,
+    "repeated_occupancy_fraction": 0.9994379224007496,
+    "max_route_count_on_cell": 22537
+  },
+  "filtering_coverage_loss": {
+    "before_filter_covered_cells": 20349,
+    "after_filter_covered_cells": 20347,
+    "retained_fraction_of_pre_filter_covered_cells": 0.9999017150719937,
+    "lost_pre_filter_covered_cells": 2,
+    "lost_pre_filter_coverage_fraction": 9.828492800629023e-05
+  },
+  "random_growth": [
+    {
+      "population": "all_completed",
+      "seed": 20261104,
+      "route_fraction": 0.1,
+      "route_count": 9332,
+      "covered_cells": 20157,
+      "covered_grid_area_m2": 1259.8125,
+      "navmesh_coverage_fraction": 0.9858169902675209
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261104,
+      "route_fraction": 0.25,
+      "route_count": 23330,
+      "covered_cells": 20287,
+      "covered_grid_area_m2": 1267.9375,
+      "navmesh_coverage_fraction": 0.9921748911820805
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261104,
+      "route_fraction": 0.5,
+      "route_count": 46660,
+      "covered_cells": 20304,
+      "covered_grid_area_m2": 1269.0,
+      "navmesh_coverage_fraction": 0.9930063089939845
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261104,
+      "route_fraction": 0.75,
+      "route_count": 69990,
+      "covered_cells": 20311,
+      "covered_grid_area_m2": 1269.4375,
+      "navmesh_coverage_fraction": 0.9933486575047684
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261104,
+      "route_fraction": 1.0,
+      "route_count": 93319,
+      "covered_cells": 20349,
+      "covered_grid_area_m2": 1271.8125,
+      "navmesh_coverage_fraction": 0.9952071208490243
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261105,
+      "route_fraction": 0.1,
+      "route_count": 9332,
+      "covered_cells": 20126,
+      "covered_grid_area_m2": 1257.875,
+      "navmesh_coverage_fraction": 0.984300875434049
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261105,
+      "route_fraction": 0.25,
+      "route_count": 23330,
+      "covered_cells": 20269,
+      "covered_grid_area_m2": 1266.8125,
+      "navmesh_coverage_fraction": 0.9912945664400645
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261105,
+      "route_fraction": 0.5,
+      "route_count": 46660,
+      "covered_cells": 20306,
+      "covered_grid_area_m2": 1269.125,
+      "navmesh_coverage_fraction": 0.9931041228542085
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261105,
+      "route_fraction": 0.75,
+      "route_count": 69990,
+      "covered_cells": 20345,
+      "covered_grid_area_m2": 1271.5625,
+      "navmesh_coverage_fraction": 0.9950114931285763
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261105,
+      "route_fraction": 1.0,
+      "route_count": 93319,
+      "covered_cells": 20349,
+      "covered_grid_area_m2": 1271.8125,
+      "navmesh_coverage_fraction": 0.9952071208490243
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261106,
+      "route_fraction": 0.1,
+      "route_count": 9332,
+      "covered_cells": 20167,
+      "covered_grid_area_m2": 1260.4375,
+      "navmesh_coverage_fraction": 0.9863060595686409
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261106,
+      "route_fraction": 0.25,
+      "route_count": 23330,
+      "covered_cells": 20276,
+      "covered_grid_area_m2": 1267.25,
+      "navmesh_coverage_fraction": 0.9916369149508485
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261106,
+      "route_fraction": 0.5,
+      "route_count": 46660,
+      "covered_cells": 20341,
+      "covered_grid_area_m2": 1271.3125,
+      "navmesh_coverage_fraction": 0.9948158654081284
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261106,
+      "route_fraction": 0.75,
+      "route_count": 69990,
+      "covered_cells": 20347,
+      "covered_grid_area_m2": 1271.6875,
+      "navmesh_coverage_fraction": 0.9951093069888003
+    },
+    {
+      "population": "all_completed",
+      "seed": 20261106,
+      "route_fraction": 1.0,
+      "route_count": 93319,
+      "covered_cells": 20349,
+      "covered_grid_area_m2": 1271.8125,
+      "navmesh_coverage_fraction": 0.9952071208490243
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261104,
+      "route_fraction": 0.1,
+      "route_count": 8048,
+      "covered_cells": 20162,
+      "covered_grid_area_m2": 1260.125,
+      "navmesh_coverage_fraction": 0.9860615249180809
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261104,
+      "route_fraction": 0.25,
+      "route_count": 20119,
+      "covered_cells": 20309,
+      "covered_grid_area_m2": 1269.3125,
+      "navmesh_coverage_fraction": 0.9932508436445444
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261104,
+      "route_fraction": 0.5,
+      "route_count": 40238,
+      "covered_cells": 20333,
+      "covered_grid_area_m2": 1270.8125,
+      "navmesh_coverage_fraction": 0.9944246099672324
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261104,
+      "route_fraction": 0.75,
+      "route_count": 60357,
+      "covered_cells": 20341,
+      "covered_grid_area_m2": 1271.3125,
+      "navmesh_coverage_fraction": 0.9948158654081284
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261104,
+      "route_fraction": 1.0,
+      "route_count": 80475,
+      "covered_cells": 20347,
+      "covered_grid_area_m2": 1271.6875,
+      "navmesh_coverage_fraction": 0.9951093069888003
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261105,
+      "route_fraction": 0.1,
+      "route_count": 8048,
+      "covered_cells": 20128,
+      "covered_grid_area_m2": 1258.0,
+      "navmesh_coverage_fraction": 0.984398689294273
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261105,
+      "route_fraction": 0.25,
+      "route_count": 20119,
+      "covered_cells": 20284,
+      "covered_grid_area_m2": 1267.75,
+      "navmesh_coverage_fraction": 0.9920281703917445
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261105,
+      "route_fraction": 0.5,
+      "route_count": 40238,
+      "covered_cells": 20336,
+      "covered_grid_area_m2": 1271.0,
+      "navmesh_coverage_fraction": 0.9945713307575683
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261105,
+      "route_fraction": 0.75,
+      "route_count": 60357,
+      "covered_cells": 20342,
+      "covered_grid_area_m2": 1271.375,
+      "navmesh_coverage_fraction": 0.9948647723382403
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261105,
+      "route_fraction": 1.0,
+      "route_count": 80475,
+      "covered_cells": 20347,
+      "covered_grid_area_m2": 1271.6875,
+      "navmesh_coverage_fraction": 0.9951093069888003
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261106,
+      "route_fraction": 0.1,
+      "route_count": 8048,
+      "covered_cells": 20085,
+      "covered_grid_area_m2": 1255.3125,
+      "navmesh_coverage_fraction": 0.9822956912994572
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261106,
+      "route_fraction": 0.25,
+      "route_count": 20119,
+      "covered_cells": 20297,
+      "covered_grid_area_m2": 1268.5625,
+      "navmesh_coverage_fraction": 0.9926639604832005
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261106,
+      "route_fraction": 0.5,
+      "route_count": 40238,
+      "covered_cells": 20338,
+      "covered_grid_area_m2": 1271.125,
+      "navmesh_coverage_fraction": 0.9946691446177923
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261106,
+      "route_fraction": 0.75,
+      "route_count": 60357,
+      "covered_cells": 20344,
+      "covered_grid_area_m2": 1271.5,
+      "navmesh_coverage_fraction": 0.9949625861984643
+    },
+    {
+      "population": "qc_retained",
+      "seed": 20261106,
+      "route_fraction": 1.0,
+      "route_count": 80475,
+      "covered_cells": 20347,
+      "covered_grid_area_m2": 1271.6875,
+      "navmesh_coverage_fraction": 0.9951093069888003
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+      "completed_route_count": 93319,
+      "retained_route_count": 80475,
+      "before_filter": {
+        "covered_cells": 20349,
+        "covered_grid_area_m2": 1271.8125,
+        "navmesh_coverage_fraction": 0.9952071208490243,
+        "multi_route_cells": 20310,
+        "multi_route_area_fraction_of_covered": 0.9980834439038774,
+        "route_cell_occupancies": 42126300,
+        "occupancy_excess_after_first": 42105951,
+        "repeated_occupancy_fraction": 0.9995169525925609,
+        "max_route_count_on_cell": 27325
+      },
+      "after_filter": {
+        "covered_cells": 20347,
+        "covered_grid_area_m2": 1271.6875,
+        "navmesh_coverage_fraction": 0.9951093069888003,
+        "multi_route_cells": 20306,
+        "multi_route_area_fraction_of_covered": 0.9979849609279009,
+        "route_cell_occupancies": 36199628,
+        "occupancy_excess_after_first": 36179281,
+        "repeated_occupancy_fraction": 0.9994379224007496,
+        "max_route_count_on_cell": 22537
+      },
+      "filtering_coverage_loss": {
+        "before_filter_covered_cells": 20349,
+        "after_filter_covered_cells": 20347,
+        "retained_fraction_of_pre_filter_covered_cells": 0.9999017150719937,
+        "lost_pre_filter_covered_cells": 2,
+        "lost_pre_filter_coverage_fraction": 9.828492800629023e-05
+      },
+      "height_bin_cell_counts": {
+        "0": 20447
+      }
+    }
+  ],
+  "definitions_and_limits": [
+    "Grid area is a 0.25m NavMesh cell-center estimate, not continuous polygon area.",
+    "Repeated occupancy means multiple routes touch the same covered grid cell; repeated corridor traversal is not automatically invalid.",
+    "A top-down overlap across distinct height bins is not evidence of collision or wall crossing.",
+    "Possible near-duplicate trajectories are not removed by this coverage calculation."
+  ],
+  "plots": [
+    {
+      "path": "site/assets/coverage/navmesh_coverage_before_after.png",
+      "title": "真实 NavMesh 网格覆盖：筛选前后",
+      "explanation": "NavMesh 网格底图按每个0.25m高度层分别统计多条路线占用数；筛选前为所有完成轨迹，筛选后为冻结QC保留集。",
+      "metric": "每个网格被路线占用次数",
+      "statistical_unit": "0.25m NavMesh 网格 cell",
+      "missing": 0
+    }
+  ],
+  "source": {
+    "scores_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/qc/trajectory_scores.jsonl.gz",
+    "frozen_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/qc/frozen_retained.jsonl.gz",
+    "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+    "summary_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/qc/summary.json",
+    "summary_frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa"
+  }
+}

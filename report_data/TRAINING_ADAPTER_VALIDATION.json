@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "checks": {
+    "k256": {
+      "0": {
+        "batches": 2,
+        "batch_size": 4,
+        "real_image_samples": 8,
+        "duplicate_episode_frame_pairs": 0,
+        "independent_image_pixel_match": true,
+        "codec_dtype": "uint16",
+        "target_tokenizer": "not supplied; not claimed tested"
+      },
+      "2": {
+        "batches": 2,
+        "batch_size": 4,
+        "real_image_samples": 8,
+        "duplicate_episode_frame_pairs": 0,
+        "independent_image_pixel_match": true,
+        "codec_dtype": "uint16",
+        "target_tokenizer": "not supplied; not claimed tested"
+      }
+    },
+    "rvq": {
+      "0": {
+        "batches": 2,
+        "batch_size": 4,
+        "real_image_samples": 8,
+        "duplicate_episode_frame_pairs": 0,
+        "independent_image_pixel_match": true,
+        "codec_dtype": "uint16",
+        "target_tokenizer": "not supplied; not claimed tested"
+      },
+      "2": {
+        "batches": 2,
+        "batch_size": 4,
+        "real_image_samples": 8,
+        "duplicate_episode_frame_pairs": 0,
+        "independent_image_pixel_match": true,
+        "codec_dtype": "uint16",
+        "target_tokenizer": "not supplied; not claimed tested"
+      }
+    }
+  },
+  "producer_sha256": "3e2e0edbe5d53ff8d512fac459bc26a019e328fce364138e044bc8b653329408",
+  "target_tokenizer_tested": false,
+  "trainer_registration": "Explicit Dataset import is supplied; no external trainer or VeOmni registration performed."
+}

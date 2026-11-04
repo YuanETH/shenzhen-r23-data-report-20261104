@@ -1,0 +1,4 @@
+﻿dataset,split,original_trajectories,qc_retained,qc_filtered,k256_trajectories,k256_samples,rvq_trajectories,rvq_samples,rvq_trajectories_legacy,rvq_samples_legacy,unresolved_gt_trajectories,unresolved_rvq_trajectories,merged_skipped_frames
+shenzhen_office_r23_k3_bin1_20261028,train,1970,3,1967,3,162,,,3,122,0,0,40
+shenzhen_office_r23_k3_bin1_pair600_20261028,train,91346,80472,10874,80472,6868535,,,80472,5167298,0,0,1701237
+shenzhen_r23_smoke_20261028,train,3,0,3,0,0,,,0,0,0,0,0

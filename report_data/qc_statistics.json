@@ -1,0 +1,1517 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-04T08:15:24.492445+00:00",
+  "source": {
+    "frozen_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/qc/frozen_retained.jsonl.gz",
+    "sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+    "retained_count": 80475,
+    "input_rows": 80475,
+    "npz_errors": {}
+  },
+  "population": {
+    "retained_count": 80475,
+    "completed_count": 93319,
+    "retained_scene_count": 1,
+    "rules_coverage": 93319,
+    "ai_visual_review_coverage": 66,
+    "retained_video_hours": 953.9856944444444,
+    "duration_basis": "sum(raw_frames / reported source video FPS); source video sampling duration, not simulator wall time",
+    "retained_target_entity_types": {
+      "object": 78811,
+      "region": 1664
+    }
+  },
+  "metrics": {
+    "path_length_m": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 29.415368613901023,
+      "median": 25.546172578354074,
+      "p95": 65.88302277041333,
+      "min": 3.0000962187788085,
+      "max": 96.65478570553987,
+      "bins": [
+        {
+          "label": "0–<1",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "1–<2",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "2–<5",
+          "count": 4014,
+          "fraction": 0.04987884436160298
+        },
+        {
+          "label": "5–<10",
+          "count": 8919,
+          "fraction": 0.11082945013979496
+        },
+        {
+          "label": "10–<20",
+          "count": 18471,
+          "fraction": 0.229524697110904
+        },
+        {
+          "label": "20–<40",
+          "count": 26735,
+          "fraction": 0.3322149735942839
+        },
+        {
+          "label": "40–<80",
+          "count": 21326,
+          "fraction": 0.26500155327741537
+        },
+        {
+          "label": "80–<160",
+          "count": 1010,
+          "fraction": 0.012550481515998758
+        },
+        {
+          "label": "≥160",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "路线水平长度",
+      "unit": "m",
+      "level": "trajectory",
+      "definition": "NWU 水平面 XY 相邻观测点欧氏距离之和；数组 NPZ 重算。"
+    },
+    "action_count": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 84.35193538365952,
+      "median": 78.0,
+      "p95": 165.0,
+      "min": 9.0,
+      "max": 253.0,
+      "bins": [
+        {
+          "label": "0–<1",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "1–<10",
+          "count": 3,
+          "fraction": 3.727865796831314e-05
+        },
+        {
+          "label": "10–<20",
+          "count": 1711,
+          "fraction": 0.021261261261261263
+        },
+        {
+          "label": "20–<40",
+          "count": 10542,
+          "fraction": 0.13099720410065238
+        },
+        {
+          "label": "40–<80",
+          "count": 29201,
+          "fraction": 0.36285803044423737
+        },
+        {
+          "label": "80–<160",
+          "count": 34062,
+          "fraction": 0.4232618825722274
+        },
+        {
+          "label": "160–<320",
+          "count": 4956,
+          "fraction": 0.06158434296365331
+        },
+        {
+          "label": "320–<640",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥640",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "原始动作数",
+      "unit": "动作/轨迹",
+      "level": "trajectory",
+      "definition": "raw_frames−1；使用原始相邻观测，不按RVQ合并后节点计数。"
+    },
+    "quality_score": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 9.035166324945635,
+      "median": 8.96,
+      "p95": 9.94,
+      "min": 7.0,
+      "max": 10.0,
+      "bins": [
+        {
+          "label": "0–<4.9",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "4.9–<6",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "6–<7",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "7–<8",
+          "count": 8896,
+          "fraction": 0.11054364709537123
+        },
+        {
+          "label": "8–<9",
+          "count": 34081,
+          "fraction": 0.42349798073936007
+        },
+        {
+          "label": "9–<10",
+          "count": 36011,
+          "fraction": 0.44748058403230817
+        },
+        {
+          "label": "≥10",
+          "count": 1487,
+          "fraction": 0.018477788132960547
+        }
+      ],
+      "title": "QC质量分",
+      "unit": "分",
+      "level": "trajectory",
+      "definition": "冻结保留记录中的本次完整评分，保留两位小数后按阈值比较。"
+    },
+    "stop_to_goal_aabb_distance_m": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 0.881268705976388,
+      "median": 0.926369277912997,
+      "p95": 1.0,
+      "min": 0.0,
+      "max": 1.0000000007880867,
+      "bins": [
+        {
+          "label": "0–<0.1",
+          "count": 1689,
+          "fraction": 0.020987884436160297
+        },
+        {
+          "label": "0.1–<0.25",
+          "count": 163,
+          "fraction": 0.0020254737496116807
+        },
+        {
+          "label": "0.25–<0.5",
+          "count": 2283,
+          "fraction": 0.0283690587138863
+        },
+        {
+          "label": "0.5–<1",
+          "count": 69927,
+          "fraction": 0.868928238583411
+        },
+        {
+          "label": "1–<2",
+          "count": 6413,
+          "fraction": 0.07968934451693073
+        },
+        {
+          "label": "2–<5",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "5–<10",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥10",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "终点到目标注释AABB水平距离",
+      "unit": "m",
+      "level": "trajectory",
+      "definition": "将 Habitat XYZ 目标注释 AABB（含 object 与 region 目标）按 NWU=[−Z,−X,Y] 变换到 NWU XY 后，计算真实终点到水平矩形最近点的欧氏距离；非中心距离、非3D网格表面距离、非成功半径。"
+    },
+    "raw_frame_speed_mps": {
+      "n": 6788222,
+      "missing": 0,
+      "mean": 0.6974438341007954,
+      "median": 0.4818185831087592,
+      "p95": 1.9613521263852234,
+      "min": 0.0,
+      "max": 1.999998876792606,
+      "bins": [
+        {
+          "label": "0–<0.05",
+          "count": 2048879,
+          "fraction": 0.3018285200454552
+        },
+        {
+          "label": "0.05–<0.1",
+          "count": 170687,
+          "fraction": 0.02514458130567916
+        },
+        {
+          "label": "0.1–<0.25",
+          "count": 552008,
+          "fraction": 0.08131849547642962
+        },
+        {
+          "label": "0.25–<0.5",
+          "count": 681537,
+          "fraction": 0.10039992799292657
+        },
+        {
+          "label": "0.5–<1",
+          "count": 1265401,
+          "fraction": 0.18641125761650104
+        },
+        {
+          "label": "1–<1.5",
+          "count": 617635,
+          "fraction": 0.09098627004243527
+        },
+        {
+          "label": "1.5–<2",
+          "count": 1452075,
+          "fraction": 0.21391094752057313
+        },
+        {
+          "label": "2–<3",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥3",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "原始帧间速度",
+      "unit": "m/s",
+      "level": "moving interval",
+      "definition": "每段水平位移/真实 timestamps_sec 间隔；含静止段。"
+    },
+    "path_mean_speed_mps": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 0.6581425948413614,
+      "median": 0.6588114533116021,
+      "p95": 0.9763712488910135,
+      "min": 0.150380333211304,
+      "max": 1.5207784407224103,
+      "bins": [
+        {
+          "label": "0–<0.05",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "0.05–<0.1",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "0.1–<0.25",
+          "count": 902,
+          "fraction": 0.011208449829139485
+        },
+        {
+          "label": "0.25–<0.5",
+          "count": 17869,
+          "fraction": 0.22204411307859584
+        },
+        {
+          "label": "0.5–<1",
+          "count": 58776,
+          "fraction": 0.730363466915191
+        },
+        {
+          "label": "1–<1.5",
+          "count": 2927,
+          "fraction": 0.03637154395775086
+        },
+        {
+          "label": "1.5–<2",
+          "count": 1,
+          "fraction": 1.2426219322771047e-05
+        },
+        {
+          "label": "2–<3",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥3",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "轨迹平均速度",
+      "unit": "m/s",
+      "level": "trajectory",
+      "definition": "水平路径长度/(末帧−首帧真实时间)。"
+    },
+    "frame_speed_cv": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 1.0158496608891294,
+      "median": 1.0127358935738187,
+      "p95": 1.2361647073715254,
+      "min": 0.4581163933007596,
+      "max": 1.6259459414320003,
+      "bins": [
+        {
+          "label": "0–<0.25",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "0.25–<0.5",
+          "count": 6,
+          "fraction": 7.455731593662628e-05
+        },
+        {
+          "label": "0.5–<0.75",
+          "count": 1549,
+          "fraction": 0.019248213730972352
+        },
+        {
+          "label": "0.75–<1",
+          "count": 35674,
+          "fraction": 0.4432929481205343
+        },
+        {
+          "label": "1–<1.25",
+          "count": 39897,
+          "fraction": 0.49576887232059647
+        },
+        {
+          "label": "1.25–<1.5",
+          "count": 3303,
+          "fraction": 0.04104380242311277
+        },
+        {
+          "label": "1.5–<2",
+          "count": 46,
+          "fraction": 0.0005716060888474681
+        },
+        {
+          "label": "2–<3",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥3",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "逐轨迹帧速度变异系数",
+      "unit": "无量纲",
+      "level": "trajectory",
+      "definition": "单条轨迹各原始帧间水平速度的总体标准差/均值；直接复用冻结QC字段。"
+    },
+    "camera_angle_deg": {
+      "n": 4739343,
+      "missing": 0,
+      "mean": 1.1704331897086826,
+      "median": 1.1388422595561942,
+      "p95": 1.1388422595570085,
+      "min": 0.00010332769135309398,
+      "max": 31.13329749529453,
+      "bins": [
+        {
+          "label": "0–<5",
+          "count": 4732567,
+          "fraction": 0.9985702659630248
+        },
+        {
+          "label": "5–<10",
+          "count": 371,
+          "fraction": 7.828089252033456e-05
+        },
+        {
+          "label": "10–<20",
+          "count": 2238,
+          "fraction": 0.0004722173516455762
+        },
+        {
+          "label": "20–<30",
+          "count": 3079,
+          "fraction": 0.0006496681080056877
+        },
+        {
+          "label": "30–<45",
+          "count": 1088,
+          "fraction": 0.00022956768480356877
+        },
+        {
+          "label": "45–<60",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "60–<90",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "90–<120",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "120–<150",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "150–<180",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥180",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "移动方向相对相机光轴夹角",
+      "unit": "度",
+      "level": "moving interval",
+      "definition": "移动段全局 XY 切向与 body yaw + Habitat 相机安装光轴 yaw 的最短夹角绝对值；speed≥0.05m/s；按区间等权。"
+    },
+    "body_angle_deg": {
+      "n": 4739343,
+      "missing": 0,
+      "mean": 0.03371307890852658,
+      "median": 1.2722218725854067e-13,
+      "p95": 1.2722218725854068e-12,
+      "min": 0.0,
+      "max": 29.994455235738336,
+      "bins": [
+        {
+          "label": "0–<5",
+          "count": 4732582,
+          "fraction": 0.9985734309586793
+        },
+        {
+          "label": "5–<10",
+          "count": 448,
+          "fraction": 9.452787021323419e-05
+        },
+        {
+          "label": "10–<20",
+          "count": 2183,
+          "fraction": 0.0004606123675792193
+        },
+        {
+          "label": "20–<30",
+          "count": 4130,
+          "fraction": 0.0008714288035282528
+        },
+        {
+          "label": "30–<45",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "45–<60",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "60–<90",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "90–<120",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "120–<150",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "150–<180",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥180",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "移动方向相对机身前向夹角",
+      "unit": "度",
+      "level": "moving interval",
+      "definition": "移动段全局 XY 切向与 pose yaw 前向的最短夹角绝对值；speed≥0.05m/s；按区间等权。"
+    },
+    "extended_terminal_turn_deg": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 27.062512515246823,
+      "median": 8.651108733580766e-13,
+      "p95": 86.7307269517036,
+      "min": 0.0,
+      "max": 94.99405785919396,
+      "bins": [
+        {
+          "label": "0–<10",
+          "count": 45454,
+          "fraction": 0.5648213730972351
+        },
+        {
+          "label": "10–<20",
+          "count": 113,
+          "fraction": 0.0014041627834731282
+        },
+        {
+          "label": "20–<30",
+          "count": 3625,
+          "fraction": 0.04504504504504504
+        },
+        {
+          "label": "30–<45",
+          "count": 4468,
+          "fraction": 0.05552034793414104
+        },
+        {
+          "label": "45–<60",
+          "count": 6373,
+          "fraction": 0.07919229574401988
+        },
+        {
+          "label": "60–<90",
+          "count": 17871,
+          "fraction": 0.22206896551724137
+        },
+        {
+          "label": "90–<120",
+          "count": 2571,
+          "fraction": 0.03194780987884436
+        },
+        {
+          "label": "120–<180",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "180–<270",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "270–<360",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥360",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "扩展末段累计转角",
+      "unit": "度",
+      "level": "trajectory",
+      "definition": "冻结QC定义：末段窗口=max(最后2秒,最后1m)，yaw增量按真实时间裁切后累计绝对角。"
+    },
+    "last2_net_turn_deg": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 0.6890848901970474,
+      "median": 1.0177774980683254e-13,
+      "p95": 3.706107415485959,
+      "min": 0.0,
+      "max": 29.99687189655616,
+      "bins": [
+        {
+          "label": "0–<10",
+          "count": 79117,
+          "fraction": 0.9831251941596769
+        },
+        {
+          "label": "10–<20",
+          "count": 286,
+          "fraction": 0.0035538987263125195
+        },
+        {
+          "label": "20–<30",
+          "count": 1072,
+          "fraction": 0.013320907114010563
+        },
+        {
+          "label": "30–<45",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "45–<60",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "60–<90",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "90–<120",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "120–<180",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "180–<270",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "270–<360",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥360",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "最后2秒净转角",
+      "unit": "度",
+      "level": "trajectory",
+      "definition": "最后2秒真实时间窗口内累计有符号yaw转角绝对值；窗口边界按真实时间裁切。"
+    },
+    "extended_reversal_deg": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 0.014421023844398138,
+      "median": 0.0,
+      "p95": 7.602580625417424e-13,
+      "min": 0.0,
+      "max": 9.44602538291431,
+      "bins": [
+        {
+          "label": "0–<2",
+          "count": 80247,
+          "fraction": 0.9971668219944082
+        },
+        {
+          "label": "2–<5",
+          "count": 130,
+          "fraction": 0.0016154085119602362
+        },
+        {
+          "label": "5–<10",
+          "count": 98,
+          "fraction": 0.0012177694936315625
+        },
+        {
+          "label": "10–<15",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "15–<30",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "30–<60",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "60–<90",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "90–<180",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "180–<360",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥360",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "扩展末段方向抵消角",
+      "unit": "度",
+      "level": "trajectory",
+      "definition": "末段窗口中 2×min(正向累计角,负向累计角绝对值)，反映双向转动抵消。"
+    },
+    "last3_reversal_deg": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 0.0011882478884810118,
+      "median": 5.088887490341627e-14,
+      "p95": 7.124442486478278e-13,
+      "min": 0.0,
+      "max": 6.635901046160021,
+      "bins": [
+        {
+          "label": "0–<2",
+          "count": 80472,
+          "fraction": 0.9999627213420317
+        },
+        {
+          "label": "2–<5",
+          "count": 1,
+          "fraction": 1.2426219322771047e-05
+        },
+        {
+          "label": "5–<10",
+          "count": 2,
+          "fraction": 2.4852438645542095e-05
+        },
+        {
+          "label": "10–<15",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "15–<30",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "30–<60",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "60–<90",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "90–<180",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "180–<360",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥360",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "最后3秒方向抵消角",
+      "unit": "度",
+      "level": "trajectory",
+      "definition": "独立最后3秒窗口中 2×min(正向累计角,负向累计角绝对值)。"
+    },
+    "max_black_component_px": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 0.9606958682820752,
+      "median": 0.0,
+      "p95": 5.0,
+      "min": 0.0,
+      "max": 127.0,
+      "bins": [
+        {
+          "label": "0–<1",
+          "count": 58477,
+          "fraction": 0.7266480273376825
+        },
+        {
+          "label": "1–<5",
+          "count": 17154,
+          "fraction": 0.21315936626281454
+        },
+        {
+          "label": "5–<10",
+          "count": 3364,
+          "fraction": 0.041801801801801805
+        },
+        {
+          "label": "10–<25",
+          "count": 1308,
+          "fraction": 0.01625349487418453
+        },
+        {
+          "label": "25–<50",
+          "count": 142,
+          "fraction": 0.0017645231438334886
+        },
+        {
+          "label": "50–<100",
+          "count": 28,
+          "fraction": 0.0003479341410375893
+        },
+        {
+          "label": "100–<200",
+          "count": 2,
+          "fraction": 2.4852438645542095e-05
+        },
+        {
+          "label": "200–<400",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "400–<800",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "800–<1200",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "1200–<2304",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥2304",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "64×36最大近黑连片面积",
+      "unit": "像素",
+      "level": "trajectory",
+      "definition": "冻结视频采样记录的最大连通近黑比例×64×36；不是全帧全视频统计。"
+    },
+    "goal_category": {
+      "n": 80475,
+      "missing": 0,
+      "mean": null,
+      "median": null,
+      "p95": null,
+      "min": null,
+      "max": null,
+      "bins": [
+        {
+          "label": "air purifier",
+          "count": 1186,
+          "fraction": 0.014737496116806461
+        },
+        {
+          "label": "bed",
+          "count": 139,
+          "fraction": 0.0017272444858651755
+        },
+        {
+          "label": "bookcase",
+          "count": 1290,
+          "fraction": 0.01602982292637465
+        },
+        {
+          "label": "box",
+          "count": 446,
+          "fraction": 0.005542093817955887
+        },
+        {
+          "label": "cabinet",
+          "count": 5455,
+          "fraction": 0.06778502640571606
+        },
+        {
+          "label": "chair",
+          "count": 15215,
+          "fraction": 0.18906492699596147
+        },
+        {
+          "label": "coffee maker",
+          "count": 455,
+          "fraction": 0.005653929791860826
+        },
+        {
+          "label": "coffee table",
+          "count": 618,
+          "fraction": 0.007679403541472507
+        },
+        {
+          "label": "coffee_maker",
+          "count": 455,
+          "fraction": 0.005653929791860826
+        },
+        {
+          "label": "column",
+          "count": 5202,
+          "fraction": 0.06464119291705499
+        },
+        {
+          "label": "computer_tower",
+          "count": 289,
+          "fraction": 0.0035911773842808325
+        },
+        {
+          "label": "conference table",
+          "count": 1153,
+          "fraction": 0.014327430879155017
+        },
+        {
+          "label": "counter",
+          "count": 483,
+          "fraction": 0.006001863932898415
+        },
+        {
+          "label": "cupboard",
+          "count": 789,
+          "fraction": 0.009804287045666356
+        },
+        {
+          "label": "desk",
+          "count": 7811,
+          "fraction": 0.09706119913016464
+        },
+        {
+          "label": "door",
+          "count": 3145,
+          "fraction": 0.03908045977011494
+        },
+        {
+          "label": "elevator_door",
+          "count": 663,
+          "fraction": 0.008238583410997204
+        },
+        {
+          "label": "equipment_case",
+          "count": 306,
+          "fraction": 0.0038024231127679405
+        },
+        {
+          "label": "glass_partition",
+          "count": 1547,
+          "fraction": 0.01922336129232681
+        },
+        {
+          "label": "kitchen",
+          "count": 439,
+          "fraction": 0.0054551102826964895
+        },
+        {
+          "label": "mat",
+          "count": 1070,
+          "fraction": 0.01329605467536502
+        },
+        {
+          "label": "microwave",
+          "count": 609,
+          "fraction": 0.0075675675675675675
+        },
+        {
+          "label": "monitor",
+          "count": 840,
+          "fraction": 0.01043802423112768
+        },
+        {
+          "label": "nightstand",
+          "count": 146,
+          "fraction": 0.0018142280211245728
+        },
+        {
+          "label": "office",
+          "count": 973,
+          "fraction": 0.012090711401056229
+        },
+        {
+          "label": "plant",
+          "count": 10063,
+          "fraction": 0.12504504504504504
+        },
+        {
+          "label": "refrigerator",
+          "count": 443,
+          "fraction": 0.005504815159987574
+        },
+        {
+          "label": "robot",
+          "count": 1388,
+          "fraction": 0.017247592420006213
+        },
+        {
+          "label": "shelving",
+          "count": 1253,
+          "fraction": 0.015570052811432122
+        },
+        {
+          "label": "side table",
+          "count": 757,
+          "fraction": 0.009406648027337683
+        },
+        {
+          "label": "sink",
+          "count": 104,
+          "fraction": 0.0012923268095681889
+        },
+        {
+          "label": "sofa",
+          "count": 2047,
+          "fraction": 0.025436470953712334
+        },
+        {
+          "label": "stairs",
+          "count": 1301,
+          "fraction": 0.016166511338925132
+        },
+        {
+          "label": "stool",
+          "count": 1251,
+          "fraction": 0.01554520037278658
+        },
+        {
+          "label": "table",
+          "count": 5068,
+          "fraction": 0.06297607952780367
+        },
+        {
+          "label": "table_frame",
+          "count": 294,
+          "fraction": 0.003653308480894688
+        },
+        {
+          "label": "training_block",
+          "count": 2467,
+          "fraction": 0.030655483069276172
+        },
+        {
+          "label": "trash_can",
+          "count": 413,
+          "fraction": 0.005132028580304443
+        },
+        {
+          "label": "utilityroom/toolroom",
+          "count": 252,
+          "fraction": 0.003131407269338304
+        },
+        {
+          "label": "wardrobe",
+          "count": 78,
+          "fraction": 0.0009692451071761416
+        },
+        {
+          "label": "water dispenser",
+          "count": 472,
+          "fraction": 0.005865175520347934
+        },
+        {
+          "label": "whiteboard",
+          "count": 1259,
+          "fraction": 0.015644610127368747
+        },
+        {
+          "label": "window",
+          "count": 841,
+          "fraction": 0.010450450450450451
+        }
+      ],
+      "title": "目标类别",
+      "unit": "类别",
+      "level": "trajectory",
+      "definition": "冻结记录 goal.canonical_category；缺失类别单独统计。"
+    },
+    "height_change_m": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 0.02851346293909278,
+      "median": 0.02500000223517418,
+      "p95": 0.07439891640096907,
+      "min": 0.0,
+      "max": 0.09999999962747097,
+      "bins": [
+        {
+          "label": "0–<0.05",
+          "count": 61419,
+          "fraction": 0.7632059645852749
+        },
+        {
+          "label": "0.05–<0.1",
+          "count": 19056,
+          "fraction": 0.23679403541472507
+        },
+        {
+          "label": "0.1–<0.25",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "0.25–<0.5",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "0.5–<1",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "1–<2",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "2–<4",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥4",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "垂直高度变化范围",
+      "unit": "m",
+      "level": "trajectory",
+      "definition": "数组 poses 的 NWU z 最大值−最小值；不等同于楼层数。"
+    },
+    "tortuosity": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 1.379581156660583,
+      "median": 1.2332267220997872,
+      "p95": 2.295470831653483,
+      "min": 0.9999999999999996,
+      "max": 15.727349988864999,
+      "bins": [
+        {
+          "label": "1–<1.01",
+          "count": 3086,
+          "fraction": 0.03834731283007145
+        },
+        {
+          "label": "1.01–<1.05",
+          "count": 6027,
+          "fraction": 0.0748928238583411
+        },
+        {
+          "label": "1.05–<1.1",
+          "count": 9253,
+          "fraction": 0.1149798073936005
+        },
+        {
+          "label": "1.1–<1.25",
+          "count": 24068,
+          "fraction": 0.29907424666045357
+        },
+        {
+          "label": "1.25–<1.5",
+          "count": 21477,
+          "fraction": 0.2668779123951538
+        },
+        {
+          "label": "1.5–<2",
+          "count": 9701,
+          "fraction": 0.12054675365020193
+        },
+        {
+          "label": "2–<3",
+          "count": 4700,
+          "fraction": 0.05840323081702392
+        },
+        {
+          "label": "3–<5",
+          "count": 1436,
+          "fraction": 0.01784405094749922
+        },
+        {
+          "label": "≥5",
+          "count": 200,
+          "fraction": 0.0024852438645542093
+        }
+      ],
+      "title": "路径曲折度",
+      "unit": "无量纲",
+      "level": "trajectory",
+      "definition": "水平路线长度/首末点水平直线距离；静止轨迹记为缺失。"
+    },
+    "clearance_m": {
+      "n": 80475,
+      "missing": 0,
+      "mean": 0.11221206194825374,
+      "median": 0.07634632289409637,
+      "p95": 0.30432812273502363,
+      "min": 0.0,
+      "max": 1.1992186307907104,
+      "bins": [
+        {
+          "label": "0–<0.1",
+          "count": 45809,
+          "fraction": 0.5692326809568189
+        },
+        {
+          "label": "0.1–<0.2",
+          "count": 17016,
+          "fraction": 0.21144454799627213
+        },
+        {
+          "label": "0.2–<0.3",
+          "count": 13421,
+          "fraction": 0.16677228953091022
+        },
+        {
+          "label": "0.3–<0.5",
+          "count": 3891,
+          "fraction": 0.048350419384902144
+        },
+        {
+          "label": "0.5–<0.75",
+          "count": 262,
+          "fraction": 0.0032556694625660142
+        },
+        {
+          "label": "0.75–<1",
+          "count": 70,
+          "fraction": 0.0008698353525939732
+        },
+        {
+          "label": "1–<1.5",
+          "count": 6,
+          "fraction": 7.455731593662628e-05
+        },
+        {
+          "label": "1.5–<2",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "2–<3",
+          "count": 0,
+          "fraction": 0.0
+        },
+        {
+          "label": "≥3",
+          "count": 0,
+          "fraction": 0.0
+        }
+      ],
+      "title": "路线最小净空",
+      "unit": "m",
+      "level": "trajectory",
+      "definition": "sidecar clearances_m 的最小值；仅对有可读真实sidecar的路线统计。"
+    }
+  },
+  "categories": {
+    "counts": {
+      "air purifier": 1186,
+      "bed": 139,
+      "bookcase": 1290,
+      "box": 446,
+      "cabinet": 5455,
+      "chair": 15215,
+      "coffee maker": 455,
+      "coffee table": 618,
+      "coffee_maker": 455,
+      "column": 5202,
+      "computer_tower": 289,
+      "conference table": 1153,
+      "counter": 483,
+      "cupboard": 789,
+      "desk": 7811,
+      "door": 3145,
+      "elevator_door": 663,
+      "equipment_case": 306,
+      "glass_partition": 1547,
+      "kitchen": 439,
+      "mat": 1070,
+      "microwave": 609,
+      "monitor": 840,
+      "nightstand": 146,
+      "office": 973,
+      "plant": 10063,
+      "refrigerator": 443,
+      "robot": 1388,
+      "shelving": 1253,
+      "side table": 757,
+      "sink": 104,
+      "sofa": 2047,
+      "stairs": 1301,
+      "stool": 1251,
+      "table": 5068,
+      "table_frame": 294,
+      "training_block": 2467,
+      "trash_can": 413,
+      "utilityroom/toolroom": 252,
+      "wardrobe": 78,
+      "water dispenser": 472,
+      "whiteboard": 1259,
+      "window": 841
+    },
+    "n": 80475,
+    "missing": 0
+  },
+  "movement_windows": {
+    "0.5m": {
+      "window_n": 4694494,
+      "class_counts": {
+        "straight": 4370087,
+        "gentle_turn": 47817,
+        "turn": 122428,
+        "large_turn": 154162
+      },
+      "routes_with_dropped_tail": 80475,
+      "total_dropped_tail_m": 19954.789203685068,
+      "definition": "将 XY 路径切为互不重叠的固定弧长窗口；窗口端点落在相邻真实路径段内时按弧长线性插值。在窗口内部累计相邻路径切向的最短角差绝对值；不使用body yaw。窗口为左闭右开，恰在边界的拐角只计入后一窗口。分类：<10°直行，10–<30°缓弯，30–<60°转弯，≥60°大转。每条路线不足一个完整窗口的余段丢弃并计数；窗口不重叠。"
+    },
+    "1.0m": {
+      "window_n": 2327427,
+      "class_counts": {
+        "straight": 2016236,
+        "gentle_turn": 45898,
+        "turn": 115540,
+        "large_turn": 149753
+      },
+      "routes_with_dropped_tail": 80475,
+      "total_dropped_tail_m": 39774.78920368525,
+      "definition": "将 XY 路径切为互不重叠的固定弧长窗口；窗口端点落在相邻真实路径段内时按弧长线性插值。在窗口内部累计相邻路径切向的最短角差绝对值；不使用body yaw。窗口为左闭右开，恰在边界的拐角只计入后一窗口。分类：<10°直行，10–<30°缓弯，30–<60°转弯，≥60°大转。每条路线不足一个完整窗口的余段丢弃并计数；窗口不重叠。"
+    },
+    "2.0m": {
+      "window_n": 1143266,
+      "class_counts": {
+        "straight": 864937,
+        "gentle_turn": 39609,
+        "turn": 92086,
+        "large_turn": 146634
+      },
+      "routes_with_dropped_tail": 80475,
+      "total_dropped_tail_m": 80669.78920368395,
+      "definition": "将 XY 路径切为互不重叠的固定弧长窗口；窗口端点落在相邻真实路径段内时按弧长线性插值。在窗口内部累计相邻路径切向的最短角差绝对值；不使用body yaw。窗口为左闭右开，恰在边界的拐角只计入后一窗口。分类：<10°直行，10–<30°缓弯，30–<60°转弯，≥60°大转。每条路线不足一个完整窗口的余段丢弃并计数；窗口不重叠。"
+    },
+    "5.0m": {
+      "window_n": 432956,
+      "class_counts": {
+        "straight": 229888,
+        "gentle_turn": 23736,
+        "turn": 45423,
+        "large_turn": 133909
+      },
+      "routes_with_dropped_tail": 80475,
+      "total_dropped_tail_m": 202421.789203687,
+      "definition": "将 XY 路径切为互不重叠的固定弧长窗口；窗口端点落在相邻真实路径段内时按弧长线性插值。在窗口内部累计相邻路径切向的最短角差绝对值；不使用body yaw。窗口为左闭右开，恰在边界的拐角只计入后一窗口。分类：<10°直行，10–<30°缓弯，30–<60°转弯，≥60°大转。每条路线不足一个完整窗口的余段丢弃并计数；窗口不重叠。"
+    }
+  },
+  "missingness": {
+    "path_length_m": {
+      "n": 80475,
+      "missing": 0
+    },
+    "action_count": {
+      "n": 80475,
+      "missing": 0
+    },
+    "quality_score": {
+      "n": 80475,
+      "missing": 0
+    },
+    "stop_to_goal_aabb_distance_m": {
+      "n": 80475,
+      "missing": 0
+    },
+    "raw_frame_speed_mps": {
+      "n": 6788222,
+      "missing": 0
+    },
+    "path_mean_speed_mps": {
+      "n": 80475,
+      "missing": 0
+    },
+    "frame_speed_cv": {
+      "n": 80475,
+      "missing": 0
+    },
+    "camera_angle_deg": {
+      "n": 4739343,
+      "missing": 0
+    },
+    "body_angle_deg": {
+      "n": 4739343,
+      "missing": 0
+    },
+    "extended_terminal_turn_deg": {
+      "n": 80475,
+      "missing": 0
+    },
+    "last2_net_turn_deg": {
+      "n": 80475,
+      "missing": 0
+    },
+    "extended_reversal_deg": {
+      "n": 80475,
+      "missing": 0
+    },
+    "last3_reversal_deg": {
+      "n": 80475,
+      "missing": 0
+    },
+    "max_black_component_px": {
+      "n": 80475,
+      "missing": 0
+    },
+    "goal_category": {
+      "n": 80475,
+      "missing": 0
+    },
+    "height_change_m": {
+      "n": 80475,
+      "missing": 0
+    },
+    "tortuosity": {
+      "n": 80475,
+      "missing": 0
+    },
+    "clearance_m": {
+      "n": 80475,
+      "missing": 0
+    }
+  },
+  "plots": [
+    {
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/qc_distributions.png",
+      "title": "冻结保留集 QC 分布",
+      "explanation": "本次冻结集分箱分布；各分布有效 N 与缺失数见对应 JSON/CSV 和图题。",
+      "metric": "multiple"
+    },
+    {
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/qc_movement_windows.png",
+      "title": "路径切向窗口分类",
+      "explanation": "将 XY 路径切为互不重叠的固定弧长窗口；窗口端点落在相邻真实路径段内时按弧长线性插值。在窗口内部累计相邻路径切向的最短角差绝对值；不使用body yaw。窗口为左闭右开，恰在边界的拐角只计入后一窗口。分类：<10°直行，10–<30°缓弯，30–<60°转弯，≥60°大转。每条路线不足一个完整窗口的余段丢弃并计数；窗口不重叠。",
+      "metric": "movement_windows"
+    }
+  ],
+  "limitations": [
+    "视频画面统计沿用冻结QC采样帧指标；不代表全视频解码。",
+    "路线窗口切向变化来自真实离散路径段，窗口彼此不重叠；短余段单独计数。"
+  ]
+}

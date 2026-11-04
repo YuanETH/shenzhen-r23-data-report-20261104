@@ -1,0 +1,207 @@
+﻿metric,title,unit,level,valid_n,missing_n,bin,count,fraction
+path_length_m,路线水平长度,m,trajectory,80475,0,0–<1,0,0.0
+path_length_m,路线水平长度,m,trajectory,80475,0,1–<2,0,0.0
+path_length_m,路线水平长度,m,trajectory,80475,0,2–<5,4014,0.04987884436160298
+path_length_m,路线水平长度,m,trajectory,80475,0,5–<10,8919,0.11082945013979496
+path_length_m,路线水平长度,m,trajectory,80475,0,10–<20,18471,0.229524697110904
+path_length_m,路线水平长度,m,trajectory,80475,0,20–<40,26735,0.3322149735942839
+path_length_m,路线水平长度,m,trajectory,80475,0,40–<80,21326,0.26500155327741537
+path_length_m,路线水平长度,m,trajectory,80475,0,80–<160,1010,0.012550481515998758
+path_length_m,路线水平长度,m,trajectory,80475,0,≥160,0,0.0
+action_count,原始动作数,动作/轨迹,trajectory,80475,0,0–<1,0,0.0
+action_count,原始动作数,动作/轨迹,trajectory,80475,0,1–<10,3,3.727865796831314e-05
+action_count,原始动作数,动作/轨迹,trajectory,80475,0,10–<20,1711,0.021261261261261263
+action_count,原始动作数,动作/轨迹,trajectory,80475,0,20–<40,10542,0.13099720410065238
+action_count,原始动作数,动作/轨迹,trajectory,80475,0,40–<80,29201,0.36285803044423737
+action_count,原始动作数,动作/轨迹,trajectory,80475,0,80–<160,34062,0.4232618825722274
+action_count,原始动作数,动作/轨迹,trajectory,80475,0,160–<320,4956,0.06158434296365331
+action_count,原始动作数,动作/轨迹,trajectory,80475,0,320–<640,0,0.0
+action_count,原始动作数,动作/轨迹,trajectory,80475,0,≥640,0,0.0
+quality_score,QC质量分,分,trajectory,80475,0,0–<4.9,0,0.0
+quality_score,QC质量分,分,trajectory,80475,0,4.9–<6,0,0.0
+quality_score,QC质量分,分,trajectory,80475,0,6–<7,0,0.0
+quality_score,QC质量分,分,trajectory,80475,0,7–<8,8896,0.11054364709537123
+quality_score,QC质量分,分,trajectory,80475,0,8–<9,34081,0.42349798073936007
+quality_score,QC质量分,分,trajectory,80475,0,9–<10,36011,0.44748058403230817
+quality_score,QC质量分,分,trajectory,80475,0,≥10,1487,0.018477788132960547
+stop_to_goal_aabb_distance_m,终点到目标注释AABB水平距离,m,trajectory,80475,0,0–<0.1,1689,0.020987884436160297
+stop_to_goal_aabb_distance_m,终点到目标注释AABB水平距离,m,trajectory,80475,0,0.1–<0.25,163,0.0020254737496116807
+stop_to_goal_aabb_distance_m,终点到目标注释AABB水平距离,m,trajectory,80475,0,0.25–<0.5,2283,0.0283690587138863
+stop_to_goal_aabb_distance_m,终点到目标注释AABB水平距离,m,trajectory,80475,0,0.5–<1,69927,0.868928238583411
+stop_to_goal_aabb_distance_m,终点到目标注释AABB水平距离,m,trajectory,80475,0,1–<2,6413,0.07968934451693073
+stop_to_goal_aabb_distance_m,终点到目标注释AABB水平距离,m,trajectory,80475,0,2–<5,0,0.0
+stop_to_goal_aabb_distance_m,终点到目标注释AABB水平距离,m,trajectory,80475,0,5–<10,0,0.0
+stop_to_goal_aabb_distance_m,终点到目标注释AABB水平距离,m,trajectory,80475,0,≥10,0,0.0
+raw_frame_speed_mps,原始帧间速度,m/s,moving interval,6788222,0,0–<0.05,2048879,0.3018285200454552
+raw_frame_speed_mps,原始帧间速度,m/s,moving interval,6788222,0,0.05–<0.1,170687,0.02514458130567916
+raw_frame_speed_mps,原始帧间速度,m/s,moving interval,6788222,0,0.1–<0.25,552008,0.08131849547642962
+raw_frame_speed_mps,原始帧间速度,m/s,moving interval,6788222,0,0.25–<0.5,681537,0.10039992799292657
+raw_frame_speed_mps,原始帧间速度,m/s,moving interval,6788222,0,0.5–<1,1265401,0.18641125761650104
+raw_frame_speed_mps,原始帧间速度,m/s,moving interval,6788222,0,1–<1.5,617635,0.09098627004243527
+raw_frame_speed_mps,原始帧间速度,m/s,moving interval,6788222,0,1.5–<2,1452075,0.21391094752057313
+raw_frame_speed_mps,原始帧间速度,m/s,moving interval,6788222,0,2–<3,0,0.0
+raw_frame_speed_mps,原始帧间速度,m/s,moving interval,6788222,0,≥3,0,0.0
+path_mean_speed_mps,轨迹平均速度,m/s,trajectory,80475,0,0–<0.05,0,0.0
+path_mean_speed_mps,轨迹平均速度,m/s,trajectory,80475,0,0.05–<0.1,0,0.0
+path_mean_speed_mps,轨迹平均速度,m/s,trajectory,80475,0,0.1–<0.25,902,0.011208449829139485
+path_mean_speed_mps,轨迹平均速度,m/s,trajectory,80475,0,0.25–<0.5,17869,0.22204411307859584
+path_mean_speed_mps,轨迹平均速度,m/s,trajectory,80475,0,0.5–<1,58776,0.730363466915191
+path_mean_speed_mps,轨迹平均速度,m/s,trajectory,80475,0,1–<1.5,2927,0.03637154395775086
+path_mean_speed_mps,轨迹平均速度,m/s,trajectory,80475,0,1.5–<2,1,1.2426219322771047e-05
+path_mean_speed_mps,轨迹平均速度,m/s,trajectory,80475,0,2–<3,0,0.0
+path_mean_speed_mps,轨迹平均速度,m/s,trajectory,80475,0,≥3,0,0.0
+frame_speed_cv,逐轨迹帧速度变异系数,无量纲,trajectory,80475,0,0–<0.25,0,0.0
+frame_speed_cv,逐轨迹帧速度变异系数,无量纲,trajectory,80475,0,0.25–<0.5,6,7.455731593662628e-05
+frame_speed_cv,逐轨迹帧速度变异系数,无量纲,trajectory,80475,0,0.5–<0.75,1549,0.019248213730972352
+frame_speed_cv,逐轨迹帧速度变异系数,无量纲,trajectory,80475,0,0.75–<1,35674,0.4432929481205343
+frame_speed_cv,逐轨迹帧速度变异系数,无量纲,trajectory,80475,0,1–<1.25,39897,0.49576887232059647
+frame_speed_cv,逐轨迹帧速度变异系数,无量纲,trajectory,80475,0,1.25–<1.5,3303,0.04104380242311277
+frame_speed_cv,逐轨迹帧速度变异系数,无量纲,trajectory,80475,0,1.5–<2,46,0.0005716060888474681
+frame_speed_cv,逐轨迹帧速度变异系数,无量纲,trajectory,80475,0,2–<3,0,0.0
+frame_speed_cv,逐轨迹帧速度变异系数,无量纲,trajectory,80475,0,≥3,0,0.0
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,0–<5,4732567,0.9985702659630248
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,5–<10,371,7.828089252033456e-05
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,10–<20,2238,0.0004722173516455762
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,20–<30,3079,0.0006496681080056877
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,30–<45,1088,0.00022956768480356877
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,45–<60,0,0.0
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,60–<90,0,0.0
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,90–<120,0,0.0
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,120–<150,0,0.0
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,150–<180,0,0.0
+camera_angle_deg,移动方向相对相机光轴夹角,度,moving interval,4739343,0,≥180,0,0.0
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,0–<5,4732582,0.9985734309586793
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,5–<10,448,9.452787021323419e-05
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,10–<20,2183,0.0004606123675792193
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,20–<30,4130,0.0008714288035282528
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,30–<45,0,0.0
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,45–<60,0,0.0
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,60–<90,0,0.0
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,90–<120,0,0.0
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,120–<150,0,0.0
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,150–<180,0,0.0
+body_angle_deg,移动方向相对机身前向夹角,度,moving interval,4739343,0,≥180,0,0.0
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,0–<10,45454,0.5648213730972351
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,10–<20,113,0.0014041627834731282
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,20–<30,3625,0.04504504504504504
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,30–<45,4468,0.05552034793414104
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,45–<60,6373,0.07919229574401988
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,60–<90,17871,0.22206896551724137
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,90–<120,2571,0.03194780987884436
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,120–<180,0,0.0
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,180–<270,0,0.0
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,270–<360,0,0.0
+extended_terminal_turn_deg,扩展末段累计转角,度,trajectory,80475,0,≥360,0,0.0
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,0–<10,79117,0.9831251941596769
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,10–<20,286,0.0035538987263125195
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,20–<30,1072,0.013320907114010563
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,30–<45,0,0.0
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,45–<60,0,0.0
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,60–<90,0,0.0
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,90–<120,0,0.0
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,120–<180,0,0.0
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,180–<270,0,0.0
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,270–<360,0,0.0
+last2_net_turn_deg,最后2秒净转角,度,trajectory,80475,0,≥360,0,0.0
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,0–<2,80247,0.9971668219944082
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,2–<5,130,0.0016154085119602362
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,5–<10,98,0.0012177694936315625
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,10–<15,0,0.0
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,15–<30,0,0.0
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,30–<60,0,0.0
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,60–<90,0,0.0
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,90–<180,0,0.0
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,180–<360,0,0.0
+extended_reversal_deg,扩展末段方向抵消角,度,trajectory,80475,0,≥360,0,0.0
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,0–<2,80472,0.9999627213420317
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,2–<5,1,1.2426219322771047e-05
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,5–<10,2,2.4852438645542095e-05
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,10–<15,0,0.0
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,15–<30,0,0.0
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,30–<60,0,0.0
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,60–<90,0,0.0
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,90–<180,0,0.0
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,180–<360,0,0.0
+last3_reversal_deg,最后3秒方向抵消角,度,trajectory,80475,0,≥360,0,0.0
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,0–<1,58477,0.7266480273376825
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,1–<5,17154,0.21315936626281454
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,5–<10,3364,0.041801801801801805
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,10–<25,1308,0.01625349487418453
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,25–<50,142,0.0017645231438334886
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,50–<100,28,0.0003479341410375893
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,100–<200,2,2.4852438645542095e-05
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,200–<400,0,0.0
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,400–<800,0,0.0
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,800–<1200,0,0.0
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,1200–<2304,0,0.0
+max_black_component_px,64×36最大近黑连片面积,像素,trajectory,80475,0,≥2304,0,0.0
+goal_category,目标类别,类别,trajectory,80475,0,air purifier,1186,0.014737496116806461
+goal_category,目标类别,类别,trajectory,80475,0,bed,139,0.0017272444858651755
+goal_category,目标类别,类别,trajectory,80475,0,bookcase,1290,0.01602982292637465
+goal_category,目标类别,类别,trajectory,80475,0,box,446,0.005542093817955887
+goal_category,目标类别,类别,trajectory,80475,0,cabinet,5455,0.06778502640571606
+goal_category,目标类别,类别,trajectory,80475,0,chair,15215,0.18906492699596147
+goal_category,目标类别,类别,trajectory,80475,0,coffee maker,455,0.005653929791860826
+goal_category,目标类别,类别,trajectory,80475,0,coffee table,618,0.007679403541472507
+goal_category,目标类别,类别,trajectory,80475,0,coffee_maker,455,0.005653929791860826
+goal_category,目标类别,类别,trajectory,80475,0,column,5202,0.06464119291705499
+goal_category,目标类别,类别,trajectory,80475,0,computer_tower,289,0.0035911773842808325
+goal_category,目标类别,类别,trajectory,80475,0,conference table,1153,0.014327430879155017
+goal_category,目标类别,类别,trajectory,80475,0,counter,483,0.006001863932898415
+goal_category,目标类别,类别,trajectory,80475,0,cupboard,789,0.009804287045666356
+goal_category,目标类别,类别,trajectory,80475,0,desk,7811,0.09706119913016464
+goal_category,目标类别,类别,trajectory,80475,0,door,3145,0.03908045977011494
+goal_category,目标类别,类别,trajectory,80475,0,elevator_door,663,0.008238583410997204
+goal_category,目标类别,类别,trajectory,80475,0,equipment_case,306,0.0038024231127679405
+goal_category,目标类别,类别,trajectory,80475,0,glass_partition,1547,0.01922336129232681
+goal_category,目标类别,类别,trajectory,80475,0,kitchen,439,0.0054551102826964895
+goal_category,目标类别,类别,trajectory,80475,0,mat,1070,0.01329605467536502
+goal_category,目标类别,类别,trajectory,80475,0,microwave,609,0.0075675675675675675
+goal_category,目标类别,类别,trajectory,80475,0,monitor,840,0.01043802423112768
+goal_category,目标类别,类别,trajectory,80475,0,nightstand,146,0.0018142280211245728
+goal_category,目标类别,类别,trajectory,80475,0,office,973,0.012090711401056229
+goal_category,目标类别,类别,trajectory,80475,0,plant,10063,0.12504504504504504
+goal_category,目标类别,类别,trajectory,80475,0,refrigerator,443,0.005504815159987574
+goal_category,目标类别,类别,trajectory,80475,0,robot,1388,0.017247592420006213
+goal_category,目标类别,类别,trajectory,80475,0,shelving,1253,0.015570052811432122
+goal_category,目标类别,类别,trajectory,80475,0,side table,757,0.009406648027337683
+goal_category,目标类别,类别,trajectory,80475,0,sink,104,0.0012923268095681889
+goal_category,目标类别,类别,trajectory,80475,0,sofa,2047,0.025436470953712334
+goal_category,目标类别,类别,trajectory,80475,0,stairs,1301,0.016166511338925132
+goal_category,目标类别,类别,trajectory,80475,0,stool,1251,0.01554520037278658
+goal_category,目标类别,类别,trajectory,80475,0,table,5068,0.06297607952780367
+goal_category,目标类别,类别,trajectory,80475,0,table_frame,294,0.003653308480894688
+goal_category,目标类别,类别,trajectory,80475,0,training_block,2467,0.030655483069276172
+goal_category,目标类别,类别,trajectory,80475,0,trash_can,413,0.005132028580304443
+goal_category,目标类别,类别,trajectory,80475,0,utilityroom/toolroom,252,0.003131407269338304
+goal_category,目标类别,类别,trajectory,80475,0,wardrobe,78,0.0009692451071761416
+goal_category,目标类别,类别,trajectory,80475,0,water dispenser,472,0.005865175520347934
+goal_category,目标类别,类别,trajectory,80475,0,whiteboard,1259,0.015644610127368747
+goal_category,目标类别,类别,trajectory,80475,0,window,841,0.010450450450450451
+height_change_m,垂直高度变化范围,m,trajectory,80475,0,0–<0.05,61419,0.7632059645852749
+height_change_m,垂直高度变化范围,m,trajectory,80475,0,0.05–<0.1,19056,0.23679403541472507
+height_change_m,垂直高度变化范围,m,trajectory,80475,0,0.1–<0.25,0,0.0
+height_change_m,垂直高度变化范围,m,trajectory,80475,0,0.25–<0.5,0,0.0
+height_change_m,垂直高度变化范围,m,trajectory,80475,0,0.5–<1,0,0.0
+height_change_m,垂直高度变化范围,m,trajectory,80475,0,1–<2,0,0.0
+height_change_m,垂直高度变化范围,m,trajectory,80475,0,2–<4,0,0.0
+height_change_m,垂直高度变化范围,m,trajectory,80475,0,≥4,0,0.0
+tortuosity,路径曲折度,无量纲,trajectory,80475,0,1–<1.01,3086,0.03834731283007145
+tortuosity,路径曲折度,无量纲,trajectory,80475,0,1.01–<1.05,6027,0.0748928238583411
+tortuosity,路径曲折度,无量纲,trajectory,80475,0,1.05–<1.1,9253,0.1149798073936005
+tortuosity,路径曲折度,无量纲,trajectory,80475,0,1.1–<1.25,24068,0.29907424666045357
+tortuosity,路径曲折度,无量纲,trajectory,80475,0,1.25–<1.5,21477,0.2668779123951538
+tortuosity,路径曲折度,无量纲,trajectory,80475,0,1.5–<2,9701,0.12054675365020193
+tortuosity,路径曲折度,无量纲,trajectory,80475,0,2–<3,4700,0.05840323081702392
+tortuosity,路径曲折度,无量纲,trajectory,80475,0,3–<5,1436,0.01784405094749922
+tortuosity,路径曲折度,无量纲,trajectory,80475,0,≥5,200,0.0024852438645542093
+clearance_m,路线最小净空,m,trajectory,80475,0,0–<0.1,45809,0.5692326809568189
+clearance_m,路线最小净空,m,trajectory,80475,0,0.1–<0.2,17016,0.21144454799627213
+clearance_m,路线最小净空,m,trajectory,80475,0,0.2–<0.3,13421,0.16677228953091022
+clearance_m,路线最小净空,m,trajectory,80475,0,0.3–<0.5,3891,0.048350419384902144
+clearance_m,路线最小净空,m,trajectory,80475,0,0.5–<0.75,262,0.0032556694625660142
+clearance_m,路线最小净空,m,trajectory,80475,0,0.75–<1,70,0.0008698353525939732
+clearance_m,路线最小净空,m,trajectory,80475,0,1–<1.5,6,7.455731593662628e-05
+clearance_m,路线最小净空,m,trajectory,80475,0,1.5–<2,0,0.0
+clearance_m,路线最小净空,m,trajectory,80475,0,2–<3,0,0.0
+clearance_m,路线最小净空,m,trajectory,80475,0,≥3,0,0.0

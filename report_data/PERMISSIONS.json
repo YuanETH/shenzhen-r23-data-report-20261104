@@ -1,0 +1,61 @@
+{
+  "status": "passed",
+  "counts": {
+    "files": 245909,
+    "directories": 187386
+  },
+  "ancestor_checks": [
+    {
+      "path": "/cpfs-normal/xuyuan/data-workspace",
+      "mode": "0o777",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/cpfs-normal/xuyuan",
+      "mode": "0o2751",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/cpfs-normal",
+      "mode": "0o777",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/",
+      "mode": "0o555",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104",
+      "mode": "0o777",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/data/pool/user-cache/xuyuan",
+      "mode": "0o711",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/data/pool/user-cache",
+      "mode": "0o755",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/data/pool",
+      "mode": "0o755",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/data",
+      "mode": "0o755",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/",
+      "mode": "0o555",
+      "other_can_traverse": true
+    }
+  ],
+  "unfixed": [],
+  "scope": "Only release tree, task-specific restored source/cache tree and traversal bits on the referenced cache ancestor. Original OSS/production/unrelated descendants unchanged."
+}

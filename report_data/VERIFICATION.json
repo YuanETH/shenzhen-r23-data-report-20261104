@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "whole_dataset_label_recompute": true,
+  "identity_stop_whitelist_checks": true,
+  "both_codebooks_verified": true,
+  "common_node_offline_metrics": true,
+  "counts": {
+    "k256_trajectories": 80475,
+    "k256_samples": 6868697,
+    "k256_stop": 80475,
+    "rvq_trajectories": 80475,
+    "rvq_samples": 5167420,
+    "rvq_stop": 80475,
+    "merged_skipped_frames": 1701277,
+    "original_trajectories": 93319,
+    "original_frames": 8006958,
+    "qc_filtered": 12844,
+    "qc_filtered_frames": 1138261,
+    "qc_retained": 80475,
+    "qc_retained_frames": 6868697,
+    "duplicates": 1973,
+    "dedup_filtered": 1763,
+    "unresolved_gt_trajectories": 0,
+    "unresolved_gt_frames": 0,
+    "unresolved_rvq_trajectories": 0,
+    "unresolved_rvq_frames": 0
+  },
+  "policy_training_performed": false,
+  "robot_test_performed": false
+}

@@ -1,0 +1,1283 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-04T07:56:24.961463+00:00",
+  "source": {
+    "verification_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/VERIFICATION.json",
+    "verification_sha256": "6825cf79fa39ddfb020afa511b000259bab0e74125545dd365180fed0586ebd5",
+    "offline_metrics_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/offline_metrics.jsonl.gz",
+    "offline_metrics_sha256": "144936cd8c76920fd1d0e8370b7ca715c4aeb5b0e1c207df118c89084c735c4e",
+    "k256_codebook_sha256": "965b23d9e04805c6e4b86ae4363bab75732d49082923c5165bbea68c1e3cb7ae",
+    "rvq_codebook_sha256": "415dbdf0f5da122557bbdfe9db698d2bde52662b614472c53b8ee615259b2177",
+    "encoding_provenance_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/ENCODING_PROVENANCE.json",
+    "encoding_provenance_sha256": "4908eca5319e1486db960134078a07621c3968d56dd64b9f0041458f0ade3271"
+  },
+  "definitions": {
+    "cohort": "K256 usage over all verified retained K256 outputs; RVQ usage over accepted RVQ non-STOP macro nodes; performance on paired complete trajectories only.",
+    "metric_weighting": "per-trajectory metrics; N/mean/P50/P95; route strata are paired-cohort path-length tertiles.",
+    "comparability": "Full open-loop, locally re-anchored H5, and global heading drift are separate; no policy or robot inference.",
+    "sampling": "H5 uses five true future macro-node targets with padding excluded."
+  },
+  "cohort": {
+    "k256_trajectories": 80475,
+    "k256_samples": 6868697,
+    "k256_stop": 80475,
+    "rvq_trajectories": 80475,
+    "rvq_samples": 5167420,
+    "rvq_stop": 80475,
+    "merged_skipped_frames": 1701277,
+    "original_trajectories": 93319,
+    "original_frames": 8006958,
+    "qc_filtered": 12844,
+    "qc_filtered_frames": 1138261,
+    "qc_retained": 80475,
+    "qc_retained_frames": 6868697,
+    "duplicates": 1973,
+    "dedup_filtered": 1763,
+    "unresolved_gt_trajectories": 0,
+    "unresolved_gt_frames": 0,
+    "unresolved_rvq_trajectories": 0,
+    "unresolved_rvq_frames": 0
+  },
+  "k256": {
+    "total_motion_tokens": 6788222,
+    "stop_tokens": 80475,
+    "raw_code_rows_including_stop": 6868697,
+    "entropy_bits": 6.516179656245045,
+    "effective_codes": 91.5304365397965,
+    "used_codes": 256,
+    "top10_share": 0.2740629284074681,
+    "top10_codes": [
+      {
+        "code": 153,
+        "count": 276824
+      },
+      {
+        "code": 7,
+        "count": 272990
+      },
+      {
+        "code": 106,
+        "count": 233053
+      },
+      {
+        "code": 1,
+        "count": 190666
+      },
+      {
+        "code": 43,
+        "count": 163536
+      },
+      {
+        "code": 130,
+        "count": 159062
+      },
+      {
+        "code": 158,
+        "count": 152388
+      },
+      {
+        "code": 127,
+        "count": 140676
+      },
+      {
+        "code": 39,
+        "count": 136280
+      },
+      {
+        "code": 103,
+        "count": 134925
+      }
+    ],
+    "actions": {
+      "thresholds": {
+        "STOP": "code==0",
+        "in_place_turn": "translation<0.02m and abs(yaw)>=10deg",
+        "low_displacement": "translation<0.05m after in-place-turn test",
+        "turn": "abs(yaw)>=10deg after preceding tests",
+        "straight": "otherwise"
+      },
+      "counts": {
+        "STOP": 80475,
+        "straight": 4633981,
+        "turn": 3768,
+        "in_place_turn": 908689,
+        "low_displacement": 1241784
+      }
+    },
+    "code_csv": "report_data/k256_code_usage.csv",
+    "scatter_png": "site/assets/encoding_k256_scatter.png",
+    "heatmap_png": "site/assets/encoding_k256_usage_heatmap.png",
+    "open_loop": {
+      "full_open_loop_position_m": {
+        "n": 80475,
+        "mean": 0.15171172551726475,
+        "p50": 0.09699722344854178,
+        "p95": 0.4688302779849871
+      },
+      "full_open_loop_terminal_position_m": {
+        "n": 80475,
+        "mean": 0.30317352683067267,
+        "p50": 0.18643402488552274,
+        "p95": 0.974867878751657
+      },
+      "full_open_loop_terminal_heading_deg": {
+        "n": 80475,
+        "mean": 1.0091981865301904,
+        "p50": 0.7931965827694141,
+        "p95": 2.6620075268944747
+      },
+      "local_h5_position_m": {
+        "n": 80475,
+        "mean": 0.007372697003059974,
+        "p50": 0.007109868168580149,
+        "p95": 0.010157120295231121
+      },
+      "local_h5_terminal_position_m": {
+        "n": 80475,
+        "mean": 0.010816156157472981,
+        "p50": 0.010314775708370414,
+        "p95": 0.015530267077972741
+      },
+      "local_h5_heading_deg": {
+        "n": 80475,
+        "mean": 0.11735263677457058,
+        "p50": 0.10626498377180785,
+        "p95": 0.2107946951951442
+      },
+      "first_macro_target_position_m": {
+        "n": 80475,
+        "mean": 0.003805307208588945,
+        "p50": 0.0037189058270786514,
+        "p95": 0.00491880004697444
+      },
+      "first_macro_target_heading_deg": {
+        "n": 80475,
+        "mean": 0.055825082759215744,
+        "p50": 0.05012168530262035,
+        "p95": 0.09698119403543122
+      }
+    },
+    "codebook": {
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/k256/codebook.npz",
+      "sha256": "965b23d9e04805c6e4b86ae4363bab75732d49082923c5165bbea68c1e3cb7ae",
+      "normalization": "stored mean/scale; decoded centers are forward,left,yaw rad"
+    },
+    "training_contract": {
+      "representation": "adjacent original frames; forward,left,ccw_yaw_rad",
+      "action_coordinate_system": "NWU body frame: forward, left, counter-clockwise yaw radians",
+      "observation_sampling": "every adjacent original real observation frame",
+      "motion_ids": [
+        1,
+        256
+      ],
+      "STOP": 0,
+      "dtype": "uint16",
+      "codebook_source": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/k256/codebook.npz",
+      "fit_scope": "each train trajectory sums to 1; no length buckets; all original adjacent deltas",
+      "fit_trajectories": 80475,
+      "fit_trajectory_manifest": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/k256/fit_trajectories.json",
+      "fit_manifest_sha256": "95299590116e22b7520c06b893b02ea7885017ad9db36845d174de080f06e0ec",
+      "evaluation_holdout_excluded": true,
+      "fit_metadata_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/k256/CODEBOOK.json",
+      "fit_metadata_sha256": "db2731aba6f34010127f7f96859cd8cb92705ed6600ecc3b9c2094726be64daf",
+      "reader": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/reader.py"
+    },
+    "original_single_step_errors": {
+      "definition": "decode each K256 code for original adjacent observations (codes[:-1]); compare body-frame forward/left displacement norm and wrapped CCW yaw error against body_delta of each original adjacent pose pair. STOP excluded.",
+      "sample_weighted": {
+        "position_error_m": {
+          "n": 6788222,
+          "mean": 0.0030403187832022662,
+          "p50": 0.002403974300250411,
+          "p95": 0.008332897815853356
+        },
+        "heading_error_deg": {
+          "n": 6788222,
+          "mean": 0.044512438619135286,
+          "p50": 0.0002849745796993375,
+          "p95": 0.2551592528820028
+        }
+      },
+      "trajectory_weighted": {
+        "mean_per_trajectory_position_error_m": {
+          "n": 80475,
+          "mean": 0.003095749120501979,
+          "p50": 0.003030282910913229,
+          "p95": 0.00394923035055399
+        },
+        "mean_per_trajectory_heading_error_deg": {
+          "n": 80475,
+          "mean": 0.04724044288970928,
+          "p50": 0.04356846585869789,
+          "p95": 0.0758652813732624
+        }
+      },
+      "cohort": {
+        "episodes": 80475,
+        "original_adjacent_motion_steps": 6788222
+      },
+      "codebook": {
+        "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/k256/codebook.npz",
+        "sha256": "965b23d9e04805c6e4b86ae4363bab75732d49082923c5165bbea68c1e3cb7ae"
+      },
+      "source_verification_sha256": "6825cf79fa39ddfb020afa511b000259bab0e74125545dd365180fed0586ebd5",
+      "shards": [
+        {
+          "group": 0,
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/k256_single_step_shards/part-000.npz",
+          "sha256": "7c3156e9205e2ae048fa2d57823e4d5c74384a97f9825318efd3eb8a6fafd2df",
+          "episodes": 10052,
+          "motion_steps": 844827
+        },
+        {
+          "group": 1,
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/k256_single_step_shards/part-001.npz",
+          "sha256": "f9ff5fa414081efa1363eb6ecb02e23f3af714c2f49baf1e5a588b46b07e9d36",
+          "episodes": 10072,
+          "motion_steps": 843791
+        },
+        {
+          "group": 2,
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/k256_single_step_shards/part-002.npz",
+          "sha256": "0f5cd1796deef0403b466cf55c8cfdc6cdba18c01250456a3a05b0d46190f048",
+          "episodes": 10053,
+          "motion_steps": 845938
+        },
+        {
+          "group": 3,
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/k256_single_step_shards/part-003.npz",
+          "sha256": "cb00a1670e19a8363a684c50d07f66ef274d1928a7edbb26326c99680882a755",
+          "episodes": 10062,
+          "motion_steps": 855093
+        },
+        {
+          "group": 4,
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/k256_single_step_shards/part-004.npz",
+          "sha256": "c6ea99d273e520f969ee41faac372086e8e3240fe1a27e02185ba460fa9b0557",
+          "episodes": 10060,
+          "motion_steps": 846395
+        },
+        {
+          "group": 5,
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/k256_single_step_shards/part-005.npz",
+          "sha256": "fa0ad80d4952c89a666cf2c678d632a4f933eb0197da41f7cc1122dbf11878f4",
+          "episodes": 10060,
+          "motion_steps": 852992
+        },
+        {
+          "group": 6,
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/k256_single_step_shards/part-006.npz",
+          "sha256": "815b2d1f7cbe10b91c1e4cd088c15f1eda79570a61762b5a5e419e2838f4dcf7",
+          "episodes": 10054,
+          "motion_steps": 843503
+        },
+        {
+          "group": 7,
+          "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/k256_single_step_shards/part-007.npz",
+          "sha256": "78f8c2bc0c06d5c0fa797a5925fbb10bf9a93757190da46d94a4eac704a37a90",
+          "episodes": 10062,
+          "motion_steps": 855683
+        }
+      ],
+      "shards_dir": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/report_data/k256_single_step_shards"
+    }
+  },
+  "rvq": {
+    "nodes": 5086945,
+    "stop_nodes": 80475,
+    "stop_episodes": 80475,
+    "stop_affordance_consistency": {
+      "checked_nodes": 5167420,
+      "matching_nodes": 5167420,
+      "matches": true,
+      "rule": "all-zero RVQ node iff pointing token is <apos_1299>"
+    },
+    "layer_usage": [
+      {
+        "layer": 1,
+        "total_tokens": 5086945,
+        "entropy_bits": 6.521911022841737,
+        "effective_codes": 91.89478096192511,
+        "used_codes": 248,
+        "top10_share": 0.26563310592113737,
+        "top10_codes": [
+          {
+            "code": 35,
+            "count": 421184
+          },
+          {
+            "code": 2,
+            "count": 192139
+          },
+          {
+            "code": 223,
+            "count": 112196
+          },
+          {
+            "code": 150,
+            "count": 102322
+          },
+          {
+            "code": 171,
+            "count": 100077
+          },
+          {
+            "code": 37,
+            "count": 92357
+          },
+          {
+            "code": 42,
+            "count": 87990
+          },
+          {
+            "code": 186,
+            "count": 86433
+          },
+          {
+            "code": 54,
+            "count": 78829
+          },
+          {
+            "code": 87,
+            "count": 77734
+          }
+        ]
+      },
+      {
+        "layer": 2,
+        "total_tokens": 5086945,
+        "entropy_bits": 6.83018063528861,
+        "effective_codes": 113.7861090967306,
+        "used_codes": 256,
+        "top10_share": 0.29623654275798145,
+        "top10_codes": [
+          {
+            "code": 127,
+            "count": 234652
+          },
+          {
+            "code": 177,
+            "count": 208363
+          },
+          {
+            "code": 120,
+            "count": 196187
+          },
+          {
+            "code": 55,
+            "count": 193048
+          },
+          {
+            "code": 14,
+            "count": 150639
+          },
+          {
+            "code": 79,
+            "count": 128047
+          },
+          {
+            "code": 86,
+            "count": 109220
+          },
+          {
+            "code": 99,
+            "count": 98832
+          },
+          {
+            "code": 130,
+            "count": 98419
+          },
+          {
+            "code": 71,
+            "count": 89532
+          }
+        ]
+      },
+      {
+        "layer": 3,
+        "total_tokens": 5086945,
+        "entropy_bits": 6.9136878131668995,
+        "effective_codes": 120.56671063472747,
+        "used_codes": 255,
+        "top10_share": 0.2768488749141184,
+        "top10_codes": [
+          {
+            "code": 24,
+            "count": 274454
+          },
+          {
+            "code": 88,
+            "count": 199854
+          },
+          {
+            "code": 0,
+            "count": 166001
+          },
+          {
+            "code": 17,
+            "count": 138289
+          },
+          {
+            "code": 161,
+            "count": 126606
+          },
+          {
+            "code": 33,
+            "count": 104489
+          },
+          {
+            "code": 45,
+            "count": 101321
+          },
+          {
+            "code": 147,
+            "count": 101149
+          },
+          {
+            "code": 35,
+            "count": 100193
+          },
+          {
+            "code": 124,
+            "count": 95959
+          }
+        ]
+      }
+    ],
+    "triples": {
+      "total": 5086945,
+      "unique": 143594,
+      "top10_share": 0.06991209851885562,
+      "top10": [
+        {
+          "codes": [
+            35,
+            177,
+            24
+          ],
+          "count": 56109
+        },
+        {
+          "codes": [
+            35,
+            127,
+            17
+          ],
+          "count": 45850
+        },
+        {
+          "codes": [
+            35,
+            120,
+            24
+          ],
+          "count": 39037
+        },
+        {
+          "codes": [
+            35,
+            127,
+            88
+          ],
+          "count": 37260
+        },
+        {
+          "codes": [
+            35,
+            177,
+            0
+          ],
+          "count": 36968
+        },
+        {
+          "codes": [
+            35,
+            120,
+            88
+          ],
+          "count": 32295
+        },
+        {
+          "codes": [
+            35,
+            55,
+            88
+          ],
+          "count": 30562
+        },
+        {
+          "codes": [
+            35,
+            55,
+            24
+          ],
+          "count": 27636
+        },
+        {
+          "codes": [
+            35,
+            127,
+            24
+          ],
+          "count": 26299
+        },
+        {
+          "codes": [
+            2,
+            55,
+            0
+          ],
+          "count": 23623
+        }
+      ],
+      "csv": "report_data/rvq_complete_triples.csv"
+    },
+    "macro_actions": {
+      "count": 5086945,
+      "translation_m": {
+        "n": 5086945,
+        "mean": 0.46534831164663804,
+        "p50": 0.37490765937672565,
+        "p95": 0.984958856992271
+      },
+      "signed_yaw_deg": {
+        "n": 5086945,
+        "mean": 0.07628880179580629,
+        "p50": 0.0,
+        "p95": 21.988127187495266
+      },
+      "duration_sec": {
+        "n": 5086945,
+        "mean": 0.6672199129339909,
+        "p50": 0.5,
+        "p95": 1.5
+      }
+    },
+    "merge": {
+      "accepted_raw_frames": 6868697,
+      "excluded_raw_frames": 0,
+      "all_qc_retained_raw_frames": 6868697,
+      "retained_macro_nodes": 5167420,
+      "successfully_skipped_frames": 1701277,
+      "unresolved_gt_episodes": 0,
+      "unresolved_rvq_episodes": 0,
+      "beam32_retry_nodes": 0,
+      "decoded_micro_nodes_after_retry": 0,
+      "heading_fallback_edges": 0,
+      "micro_thresholds": {
+        "GT_micro": "translation<=0.10m AND abs_yaw<=10deg; sampler tolerances 1e-8m/1e-7deg",
+        "decoded_micro": "translation<=0.05m AND abs_yaw<=5deg; valid predictions only, padding excluded"
+      },
+      "micro_rate_before_after": {
+        "before": {
+          "micro_edges": 1738833,
+          "total_edges": 6788222,
+          "fraction": 0.25615440979979737
+        },
+        "after": {
+          "micro_edges": 0,
+          "total_edges": 5086945,
+          "fraction": 0.0
+        }
+      },
+      "micro_population": "All QC-retained trajectories; GT original adjacent frames versus GT selected real macro-node endpoints. STOP excluded; each edge counted once.",
+      "micro_rate_5cm5deg_reference": {
+        "before": {
+          "micro_edges": 1047517,
+          "total_edges": 6788222,
+          "fraction": 0.15431389839636947
+        },
+        "after": {
+          "micro_edges": 0,
+          "total_edges": 5086945,
+          "fraction": 0.0
+        }
+      }
+    },
+    "open_loop": {
+      "full_open_loop_position_m": {
+        "n": 80475,
+        "mean": 0.29274885906559345,
+        "p50": 0.18785864714995734,
+        "p95": 0.8910406973957051
+      },
+      "full_open_loop_terminal_position_m": {
+        "n": 80475,
+        "mean": 0.579333467206061,
+        "p50": 0.34609441473887254,
+        "p95": 1.913926143644246
+      },
+      "full_open_loop_terminal_heading_deg": {
+        "n": 80475,
+        "mean": 1.8383024424798626,
+        "p50": 1.4079858194989312,
+        "p95": 5.012667619221813
+      },
+      "local_h5_position_m": {
+        "n": 80475,
+        "mean": 0.020285606257225156,
+        "p50": 0.019675055518746376,
+        "p95": 0.02985907029360533
+      },
+      "local_h5_terminal_position_m": {
+        "n": 80475,
+        "mean": 0.026221107033918358,
+        "p50": 0.025338271632790565,
+        "p95": 0.03936059102416039
+      },
+      "local_h5_heading_deg": {
+        "n": 80475,
+        "mean": 1.262903943729858,
+        "p50": 1.2011905908584595,
+        "p95": 2.207664394378663
+      },
+      "first_executed_action_position_m": {
+        "n": 80475,
+        "mean": 0.015560528640839283,
+        "p50": 0.015119969844818115,
+        "p95": 0.023370084539055827
+      },
+      "first_executed_action_heading_deg": {
+        "n": 80475,
+        "mean": 0.15205677100797782,
+        "p50": 0.1439099758863449,
+        "p95": 0.24843995869159702
+      }
+    },
+    "codebook": {
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/deps/codebook.npz",
+      "sha256": "415dbdf0f5da122557bbdfe9db698d2bde52662b614472c53b8ee615259b2177",
+      "shape": [
+        3,
+        256,
+        15
+      ]
+    },
+    "training_contract": {
+      "representation": "one continuous real-image macro observation sequence with five future GT-node targets per nonterminal decision",
+      "action_coordinate_system": "NWU body frame: forward, left, counter-clockwise yaw radians",
+      "observation_sampling": "continuous real image node sequence",
+      "prediction_points": 5,
+      "executed_points": "decoded[0] only then observe and replan",
+      "codebook_source": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/deps/codebook.npz",
+      "fitting_scope": "fixed dependency codebook; not refit in this release",
+      "beam_search": {
+        "beam": 8,
+        "retry_beam": 32,
+        "current_release_provenance": {
+          "K256": "Refitted on corrected frozen train set; all original adjacent actions re-encoded.",
+          "RVQ": "Same retained real nodes, targets, beam result and fixed codebook as previous verified release. Surviving whole trajectories physically repackaged; metadata scores updated. Full independent recompute verification required after this stage.",
+          "source_verification_sha256": "263c2069c1d970411832ea7c971c1abbf018219a5491fda4c58c5d6adf0e5277",
+          "source_rvq_index_sha256": "064d6032654a7ebabd9991cdc17e50dd1435e4efe58e72ae9ea081250b6061c9",
+          "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+          "producer_sha256": "e261b09652422240176777631f7b873c741011ac86b05e025222f7218eff1518"
+        }
+      },
+      "STOP": "three layer IDs all zero; paired with <apos_1299> pointing affordance",
+      "reader": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/reader.py"
+    },
+    "layer_usage_csv": "report_data/rvq_layer_code_usage.csv",
+    "layer_usage_png": "site/assets/encoding_rvq_layers.png"
+  },
+  "paired_route_length_strata": {
+    "tertile_bounds_m": [
+      17.36058960331665,
+      35.70807301878749
+    ],
+    "groups": {
+      "short": {
+        "n": 26825,
+        "length_range_m": [
+          3.0000962187788085,
+          17.36040799984242
+        ],
+        "k256_fde_m": {
+          "n": 26825,
+          "mean": 0.10420436441519684,
+          "p50": 0.07598609357821318,
+          "p95": 0.28794913721408943
+        },
+        "rvq_fde_m": {
+          "n": 26825,
+          "mean": 0.20596967410084213,
+          "p50": 0.15370901378396665,
+          "p95": 0.5492950423239317
+        },
+        "k256_terminal_heading_deg": {
+          "n": 26825,
+          "mean": 0.8486486766704046,
+          "p50": 0.6503580120967447,
+          "p95": 2.262793183884758
+        },
+        "rvq_terminal_heading_deg": {
+          "n": 26825,
+          "mean": 1.4374034157747886,
+          "p50": 1.0627707525895624,
+          "p95": 3.9971674498459233
+        }
+      },
+      "medium": {
+        "n": 26825,
+        "length_range_m": [
+          17.360680405053767,
+          35.707782609799885
+        ],
+        "k256_fde_m": {
+          "n": 26825,
+          "mean": 0.26220974514259937,
+          "p50": 0.20368535768313234,
+          "p95": 0.677204931481904
+        },
+        "rvq_fde_m": {
+          "n": 26825,
+          "mean": 0.4902327061213901,
+          "p50": 0.36931891758060953,
+          "p95": 1.2904468781778577
+        },
+        "k256_terminal_heading_deg": {
+          "n": 26825,
+          "mean": 1.0148544461030047,
+          "p50": 0.8174727013726908,
+          "p95": 2.618532014674282
+        },
+        "rvq_terminal_heading_deg": {
+          "n": 26825,
+          "mean": 1.878347815533607,
+          "p50": 1.4679572845549893,
+          "p95": 5.033653421908271
+        }
+      },
+      "long": {
+        "n": 26825,
+        "length_range_m": [
+          35.70865383676271,
+          96.65478570553987
+        ],
+        "k256_fde_m": {
+          "n": 26825,
+          "mean": 0.5431064709342219,
+          "p50": 0.42454641025686696,
+          "p95": 1.4055050745965172
+        },
+        "rvq_fde_m": {
+          "n": 26825,
+          "mean": 1.0417980213959512,
+          "p50": 0.7730957001037161,
+          "p95": 2.7954590484333357
+        },
+        "k256_terminal_heading_deg": {
+          "n": 26825,
+          "mean": 1.164091436817162,
+          "p50": 0.9508198161453167,
+          "p95": 2.9440916817424596
+        },
+        "rvq_terminal_heading_deg": {
+          "n": 26825,
+          "mean": 2.1991560961311927,
+          "p50": 1.7713033404865504,
+          "p95": 5.678452059463741
+        }
+      }
+    }
+  },
+  "comparable_physical_span": {
+    "paired_trajectories": 80475,
+    "span_m_per_trajectory": {
+      "n": 80475,
+      "mean": 2.1571733409402882,
+      "p50": 2.186968517489937,
+      "p95": 3.054794980831444
+    },
+    "duration_sec_per_trajectory": {
+      "n": 80475,
+      "mean": 3.1599033409960637,
+      "p50": 3.1652542372881354,
+      "p95": 3.47
+    },
+    "span_definition": "mean true path length from a decision node to its last valid future node in the five-point window (clipped to the true terminal near route end); elapsed true frozen timestamp; same GT windows for both decoders",
+    "h5_by_future_node_horizon": {
+      "1": {
+        "window_weighted": {
+          "kpos": {
+            "n": 5086945,
+            "mean": 0.0037067142845322292,
+            "p50": 0.003262041809333316,
+            "p95": 0.009232240556770065
+          },
+          "rpos": {
+            "n": 5086945,
+            "mean": 0.015396864162209608,
+            "p50": 0.009141165197493374,
+            "p95": 0.052966507603007855
+          },
+          "kyaw": {
+            "n": 5086945,
+            "mean": 0.05153860534434585,
+            "p50": 0.0003485271551854521,
+            "p95": 0.29219937342186203
+          },
+          "ryaw": {
+            "n": 5086945,
+            "mean": 0.14891156909477146,
+            "p50": 0.05148596596355612,
+            "p95": 0.5929150614706806
+          },
+          "span_m": {
+            "n": 5086945,
+            "mean": 0.46534841426508144,
+            "p50": 0.3749076593767242,
+            "p95": 0.9849588569922716
+          },
+          "span_sec": {
+            "n": 5086945,
+            "mean": 0.6672199129339909,
+            "p50": 0.5,
+            "p95": 1.5
+          }
+        },
+        "trajectory_weighted": {
+          "kpos": {
+            "n": 80475,
+            "mean": 0.003805307208588945,
+            "p50": 0.0037189058270786514,
+            "p95": 0.00491880004697444
+          },
+          "rpos": {
+            "n": 80475,
+            "mean": 0.015560528634635957,
+            "p50": 0.01511997090672993,
+            "p95": 0.023370084060378403
+          },
+          "kyaw": {
+            "n": 80475,
+            "mean": 0.055825082759215744,
+            "p50": 0.05012168530262035,
+            "p95": 0.09698119403543123
+          },
+          "ryaw": {
+            "n": 80475,
+            "mean": 0.15205677990623767,
+            "p50": 0.1439099815112277,
+            "p95": 0.24844012697374337
+          }
+        }
+      },
+      "2": {
+        "window_weighted": {
+          "kpos": {
+            "n": 5006470,
+            "mean": 0.00558846260481257,
+            "p50": 0.004641080815323804,
+            "p95": 0.014108569652979146
+          },
+          "rpos": {
+            "n": 5006470,
+            "mean": 0.017020489170716163,
+            "p50": 0.009875218612210187,
+            "p95": 0.05728572767924938
+          },
+          "kyaw": {
+            "n": 5006470,
+            "mean": 0.08192042210663428,
+            "p50": 0.001667808221794207,
+            "p95": 0.4314542083713707
+          },
+          "ryaw": {
+            "n": 5006470,
+            "mean": 0.9839002355433593,
+            "p50": 0.12150906533457773,
+            "p95": 4.543400854757462
+          },
+          "span_m": {
+            "n": 5006470,
+            "mean": 0.9410134284300261,
+            "p50": 0.7698883446664118,
+            "p95": 1.9677141199190082
+          },
+          "span_sec": {
+            "n": 5006470,
+            "mean": 1.3208357385543108,
+            "p50": 1.0,
+            "p95": 2.5
+          }
+        },
+        "trajectory_weighted": {
+          "kpos": {
+            "n": 80475,
+            "mean": 0.005729487655191532,
+            "p50": 0.005533510432839283,
+            "p95": 0.007692394393353584
+          },
+          "rpos": {
+            "n": 80475,
+            "mean": 0.0174133448187981,
+            "p50": 0.01677444729206934,
+            "p95": 0.026940238383201982
+          },
+          "kyaw": {
+            "n": 80475,
+            "mean": 0.08835824016433402,
+            "p50": 0.07897505467533725,
+            "p95": 0.15763590059094115
+          },
+          "ryaw": {
+            "n": 80475,
+            "mean": 1.0155565092432965,
+            "p50": 0.9380430455312723,
+            "p95": 1.9032180599429087
+          }
+        }
+      },
+      "3": {
+        "window_weighted": {
+          "kpos": {
+            "n": 4925995,
+            "mean": 0.0073537621904290525,
+            "p50": 0.0060920017868413764,
+            "p95": 0.018166871038273347
+          },
+          "rpos": {
+            "n": 4925995,
+            "mean": 0.01901937840829402,
+            "p50": 0.011239516931651724,
+            "p95": 0.06306866818240207
+          },
+          "kyaw": {
+            "n": 4925995,
+            "mean": 0.111974358128582,
+            "p50": 0.003619964251698654,
+            "p95": 0.5429352702202936
+          },
+          "ryaw": {
+            "n": 4925995,
+            "mean": 1.273242443298831,
+            "p50": 0.19476967437208362,
+            "p95": 5.674302254883693
+          },
+          "span_m": {
+            "n": 4925995,
+            "mean": 1.4247672188779577,
+            "p50": 1.2145153375171944,
+            "p95": 2.948612976015102
+          },
+          "span_sec": {
+            "n": 4925995,
+            "mean": 1.9720312342988573,
+            "p50": 1.5,
+            "p95": 3.0
+          }
+        },
+        "trajectory_weighted": {
+          "kpos": {
+            "n": 80475,
+            "mean": 0.007535764230364105,
+            "p50": 0.007246703832364899,
+            "p95": 0.010476795183581451
+          },
+          "rpos": {
+            "n": 80475,
+            "mean": 0.019583414324431343,
+            "p50": 0.018759986551885113,
+            "p95": 0.03071299890651503
+          },
+          "kyaw": {
+            "n": 80475,
+            "mean": 0.11982442925971633,
+            "p50": 0.10748781298887658,
+            "p95": 0.21753006655314358
+          },
+          "ryaw": {
+            "n": 80475,
+            "mean": 1.3093852339364334,
+            "p50": 1.1966270964142214,
+            "p95": 2.4986052163004557
+          }
+        }
+      },
+      "4": {
+        "window_weighted": {
+          "kpos": {
+            "n": 4845520,
+            "mean": 0.009043798078942927,
+            "p50": 0.007515104782637925,
+            "p95": 0.02216251992089655
+          },
+          "rpos": {
+            "n": 4845520,
+            "mean": 0.020738912050942256,
+            "p50": 0.013058337426950842,
+            "p95": 0.06649793462039084
+          },
+          "kyaw": {
+            "n": 4845520,
+            "mean": 0.14135364725834726,
+            "p50": 0.006153636280782014,
+            "p95": 0.6390834813097479
+          },
+          "ryaw": {
+            "n": 4845520,
+            "mean": 1.5004475277787415,
+            "p50": 0.308833833511322,
+            "p95": 7.114096398902815
+          },
+          "span_m": {
+            "n": 4845520,
+            "mean": 1.9149552254465985,
+            "p50": 1.6434634176666258,
+            "p95": 3.9282249982558817
+          },
+          "span_sec": {
+            "n": 4845520,
+            "mean": 2.622576317918407,
+            "p50": 2.5,
+            "p95": 4.0
+          }
+        },
+        "trajectory_weighted": {
+          "kpos": {
+            "n": 80475,
+            "mean": 0.009257151138309667,
+            "p50": 0.008875336278337346,
+            "p95": 0.013212418411516175
+          },
+          "rpos": {
+            "n": 80475,
+            "mean": 0.021466714727588473,
+            "p50": 0.02072022942964935,
+            "p95": 0.03224741667708309
+          },
+          "kyaw": {
+            "n": 80475,
+            "mean": 0.15027658511356767,
+            "p50": 0.13574622894647506,
+            "p95": 0.2759557517413174
+          },
+          "ryaw": {
+            "n": 80475,
+            "mean": 1.542522916491685,
+            "p50": 1.4455954584733546,
+            "p95": 2.8294483267198984
+          }
+        }
+      },
+      "5": {
+        "window_weighted": {
+          "kpos": {
+            "n": 4765045,
+            "mean": 0.010750202174036723,
+            "p50": 0.009063414440759116,
+            "p95": 0.02607813258393212
+          },
+          "rpos": {
+            "n": 4765045,
+            "mean": 0.02742277101558382,
+            "p50": 0.015562258117135573,
+            "p95": 0.0924761189679257
+          },
+          "kyaw": {
+            "n": 4765045,
+            "mean": 0.17023369777203753,
+            "p50": 0.028381632513584883,
+            "p95": 0.7102831425084936
+          },
+          "ryaw": {
+            "n": 4765045,
+            "mean": 2.3772703601892053,
+            "p50": 0.6011864205553523,
+            "p95": 11.248096227073894
+          },
+          "span_m": {
+            "n": 4765045,
+            "mean": 2.409719871331865,
+            "p50": 2.0069276211243476,
+            "p95": 4.904223164775713
+          },
+          "span_sec": {
+            "n": 4765045,
+            "mean": 3.2727729748617276,
+            "p50": 3.5,
+            "p95": 4.5
+          }
+        },
+        "trajectory_weighted": {
+          "kpos": {
+            "n": 80475,
+            "mean": 0.010998119439605086,
+            "p50": 0.010509062724140303,
+            "p95": 0.01603090712291356
+          },
+          "rpos": {
+            "n": 80475,
+            "mean": 0.028168435800273926,
+            "p50": 0.026929150221881804,
+            "p95": 0.04298836983330362
+          },
+          "kyaw": {
+            "n": 80475,
+            "mean": 0.18048776819357432,
+            "p50": 0.16365100797042043,
+            "p95": 0.3338863341267261
+          },
+          "ryaw": {
+            "n": 80475,
+            "mean": 2.414601701225332,
+            "p50": 2.298477833362724,
+            "p95": 4.256249511235276
+          }
+        }
+      }
+    },
+    "horizon_metric_note": "per-window and per-trajectory means are both reported; all branches use the same actual future macro-node target and span/time"
+  },
+  "outputs": {
+    "assets": [
+      "site/assets/encoding_k256_scatter.png",
+      "site/assets/encoding_k256_usage_heatmap.png",
+      "site/assets/encoding_rvq_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_96d848e7.gif",
+      "site/assets/encoding_rvq_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_47a437df.gif",
+      "site/assets/encoding_k256_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_e9a6ed50.gif",
+      "site/assets/encoding_k256_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_0244befc.gif",
+      "site/assets/encoding_similar__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_e6ee8e25.gif",
+      "site/assets/encoding_similar__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_2f9cce1b.gif",
+      "site/assets/encoding_difficult_top95_fde__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_b3cead24.gif",
+      "site/assets/encoding_difficult_top95_fde__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_62c9e5e1.gif",
+      "site/assets/encoding_rvq_layers.png"
+    ],
+    "csv": [
+      "report_data/k256_code_usage.csv",
+      "report_data/rvq_layer_code_usage.csv",
+      "report_data/rvq_complete_triples.csv"
+    ],
+    "case_gifs": [
+      {
+        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+        "split": "train",
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_96d848e7",
+        "gt_route_length_m": 84.74471271168531,
+        "gt_initial_heading_deg": -99.27257413195245,
+        "gt_final_heading_deg": -129.57676450035623,
+        "aligned_common_nodes": 147,
+        "k256_fde_m_recomputed": 4.457111168322985,
+        "rvq_fde_m_recomputed": 0.719594428502387,
+        "fde_difference_k256_minus_rvq_m": 3.737516739820598,
+        "classification_threshold_m": 0.1,
+        "category": "rvq_better",
+        "path": "site/assets/encoding_rvq_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_96d848e7.gif",
+        "figure_path": "figures/rvq_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_96d848e7.gif"
+      },
+      {
+        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+        "split": "train",
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_47a437df",
+        "gt_route_length_m": 76.63407153068307,
+        "gt_initial_heading_deg": -18.447492522825815,
+        "gt_final_heading_deg": -114.7779835085439,
+        "aligned_common_nodes": 121,
+        "k256_fde_m_recomputed": 4.675623940453597,
+        "rvq_fde_m_recomputed": 1.1843191724822182,
+        "fde_difference_k256_minus_rvq_m": 3.4913047679713785,
+        "classification_threshold_m": 0.11843191724822183,
+        "category": "rvq_better",
+        "path": "site/assets/encoding_rvq_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_47a437df.gif",
+        "figure_path": "figures/rvq_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_47a437df.gif"
+      },
+      {
+        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+        "split": "train",
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_e9a6ed50",
+        "gt_route_length_m": 92.87133460716802,
+        "gt_initial_heading_deg": -63.27577340537654,
+        "gt_final_heading_deg": -129.52243078961743,
+        "aligned_common_nodes": 169,
+        "k256_fde_m_recomputed": 1.0733959907288093,
+        "rvq_fde_m_recomputed": 13.155476643928665,
+        "fde_difference_k256_minus_rvq_m": -12.082080653199856,
+        "classification_threshold_m": 0.10733959907288093,
+        "category": "k256_better",
+        "path": "site/assets/encoding_k256_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_e9a6ed50.gif",
+        "figure_path": "figures/k256_better__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_e9a6ed50.gif"
+      },
+      {
+        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+        "split": "train",
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_0244befc",
+        "gt_route_length_m": 66.99832704939067,
+        "gt_initial_heading_deg": 110.0714317286398,
+        "gt_final_heading_deg": -55.14227845125186,
+        "aligned_common_nodes": 131,
+        "k256_fde_m_recomputed": 1.7720086538120796,
+        "rvq_fde_m_recomputed": 13.095204136373997,
+        "fde_difference_k256_minus_rvq_m": -11.323195482561918,
+        "classification_threshold_m": 0.17720086538120797,
+        "category": "k256_better",
+        "path": "site/assets/encoding_k256_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_0244befc.gif",
+        "figure_path": "figures/k256_better__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_0244befc.gif"
+      },
+      {
+        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+        "split": "train",
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_e6ee8e25",
+        "gt_route_length_m": 4.522301560381584,
+        "gt_initial_heading_deg": 128.43545590576122,
+        "gt_final_heading_deg": 48.66144486968673,
+        "aligned_common_nodes": 20,
+        "k256_fde_m_recomputed": 0.10647333728832775,
+        "rvq_fde_m_recomputed": 0.10647222110549434,
+        "fde_difference_k256_minus_rvq_m": 1.1161828334105284e-06,
+        "classification_threshold_m": 0.1,
+        "category": "similar",
+        "path": "site/assets/encoding_similar__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_e6ee8e25.gif",
+        "figure_path": "figures/similar__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_e6ee8e25.gif"
+      },
+      {
+        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+        "split": "train",
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_2f9cce1b",
+        "gt_route_length_m": 11.530143517920791,
+        "gt_initial_heading_deg": -153.0135586145305,
+        "gt_final_heading_deg": 171.31594961105682,
+        "aligned_common_nodes": 38,
+        "k256_fde_m_recomputed": 0.36059919799787177,
+        "rvq_fde_m_recomputed": 0.3605970901066295,
+        "fde_difference_k256_minus_rvq_m": 2.107891242275617e-06,
+        "classification_threshold_m": 0.1,
+        "category": "similar",
+        "path": "site/assets/encoding_similar__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_2f9cce1b.gif",
+        "figure_path": "figures/similar__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_2f9cce1b.gif"
+      },
+      {
+        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+        "split": "train",
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_b3cead24",
+        "gt_route_length_m": 72.14598387448362,
+        "gt_initial_heading_deg": -73.10251235482544,
+        "gt_final_heading_deg": -129.47280000207286,
+        "aligned_common_nodes": 145,
+        "k256_fde_m_recomputed": 2.150804614720289,
+        "rvq_fde_m_recomputed": 12.825636420462791,
+        "fde_difference_k256_minus_rvq_m": -10.674831805742503,
+        "classification_threshold_m": 0.2150804614720289,
+        "category": "difficult_top95_fde",
+        "path": "site/assets/encoding_difficult_top95_fde__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_b3cead24.gif",
+        "figure_path": "figures/difficult_top95_fde__01__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_b3cead24.gif"
+      },
+      {
+        "dataset": "shenzhen_office_r23_k3_bin1_pair600_20261028",
+        "split": "train",
+        "episode_id": "shenzhen_office__shenzhen_office_v9_semantic__semantic_62c9e5e1",
+        "gt_route_length_m": 89.76379772455272,
+        "gt_initial_heading_deg": -117.37119552643449,
+        "gt_final_heading_deg": 90.37880197960499,
+        "aligned_common_nodes": 147,
+        "k256_fde_m_recomputed": 1.5005505628212774,
+        "rvq_fde_m_recomputed": 11.359510833349866,
+        "fde_difference_k256_minus_rvq_m": -9.858960270528588,
+        "classification_threshold_m": 0.15005505628212776,
+        "category": "difficult_top95_fde",
+        "path": "site/assets/encoding_difficult_top95_fde__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_62c9e5e1.gif",
+        "figure_path": "figures/difficult_top95_fde__02__shenzhen_office_r23_k3_bin1_pair600_20261028__train__shenzhen_office__shenzhen_office_v9_semantic__semantic_62c9e5e1.gif"
+      }
+    ],
+    "case_gif_manifest": "figures/index.json"
+  }
+}

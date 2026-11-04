@@ -1,0 +1,33 @@
+{
+  "dataset_class": "training_adapter.TrainingDataset",
+  "module_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/training_adapter.py",
+  "branches": [
+    "k256",
+    "rvq"
+  ],
+  "split": "train",
+  "history_size": 16,
+  "images": "RGB uint8 HxWx3; chronological history then current",
+  "batch_collation": "list; image history lengths vary, apply the target model processor in its collator",
+  "codebooks": {
+    "k256": {
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/k256/codebook.npz",
+      "sha256": "965b23d9e04805c6e4b86ae4363bab75732d49082923c5165bbea68c1e3cb7ae"
+    },
+    "rvq": {
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2/deps/codebook.npz",
+      "sha256": "415dbdf0f5da122557bbdfe9db698d2bde52662b614472c53b8ee615259b2177"
+    }
+  },
+  "validated_reader_settings": {
+    "num_workers": [
+      0,
+      2
+    ],
+    "history_size": 2,
+    "batch_size": 4,
+    "batches_each": 2
+  },
+  "trainer_registered": false,
+  "model_tokenizer_required": true
+}

@@ -1,0 +1,150 @@
+{
+  "status": "passed",
+  "branches": {
+    "k256": {
+      "batch_size": 4,
+      "image_shapes": [
+        [
+          [
+            360,
+            640,
+            3
+          ]
+        ],
+        [
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ]
+        ],
+        [
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ]
+        ],
+        [
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ]
+        ]
+      ],
+      "episode_ids": [
+        "shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5",
+        "shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5",
+        "shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5",
+        "shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5"
+      ],
+      "actual_frame_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "torch_dataloader_batch_size": 4,
+      "torch_dataloader_batch_contains_real_images": true
+    },
+    "rvq": {
+      "batch_size": 4,
+      "image_shapes": [
+        [
+          [
+            360,
+            640,
+            3
+          ]
+        ],
+        [
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ]
+        ],
+        [
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ]
+        ],
+        [
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ],
+          [
+            360,
+            640,
+            3
+          ]
+        ]
+      ],
+      "episode_ids": [
+        "shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5",
+        "shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5",
+        "shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5",
+        "shenzhen_office__shenzhen_office_v9_semantic__semantic_56f9cac5"
+      ],
+      "actual_frame_indices": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "torch_dataloader_batch_size": 4,
+      "torch_dataloader_batch_contains_real_images": true
+    }
+  },
+  "tokenizer_validation": "Runtime adapter maps every token string through supplied training tokenizer and requires one atomic token. No target model tokenizer was supplied or claimed tested."
+}
