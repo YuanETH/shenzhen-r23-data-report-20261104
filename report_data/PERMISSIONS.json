@@ -1,8 +1,8 @@
 {
   "status": "passed",
   "counts": {
-    "files": 242314,
-    "directories": 187161
+    "files": 242378,
+    "directories": 187185
   },
   "ancestor_checks": [
     {
@@ -57,5 +57,13 @@
     }
   ],
   "unfixed": [],
-  "scope": "Only release tree, task-specific restored source/cache tree and traversal bits on the referenced cache ancestor. Original OSS/production/unrelated descendants unchanged."
+  "scope": "Only release tree, task-specific restored source/cache tree and traversal bits on the referenced cache ancestor. Original OSS/production/unrelated descendants unchanged.",
+  "shared_video_storage": {
+    "status": "passed",
+    "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105",
+    "videos": 80475,
+    "files_other_readable": true,
+    "all_ancestors_other_traversable": true,
+    "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VIDEO_STORAGE_VALIDATION.json"
+  }
 }

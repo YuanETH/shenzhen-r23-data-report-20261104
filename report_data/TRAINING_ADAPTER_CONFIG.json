@@ -29,5 +29,9 @@
     "batches_each": 2
   },
   "trainer_registered": false,
-  "model_tokenizer_required": true
+  "model_tokenizer_required": true,
+  "video_storage": {
+    "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105",
+    "requires": "same CPFS mounted at /cpfs-normal; no source-host /data/pool required"
+  }
 }

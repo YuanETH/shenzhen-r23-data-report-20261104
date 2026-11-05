@@ -52,5 +52,12 @@
     "unresolved_gt_frames": 0,
     "unresolved_rvq_trajectories": 0,
     "unresolved_rvq_frames": 0
-  }
+  },
+  "updates": [
+    {
+      "date": "2026-11-05",
+      "change": "All 80,475 retained videos copied to shared CPFS with per-file SHA256 verification; training source_video/source_root paths and part SHA256 updated; numerical labels unchanged; originals preserved.",
+      "video_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105"
+    }
+  ]
 }

@@ -146,5 +146,14 @@
       "torch_dataloader_batch_contains_real_images": true
     }
   },
-  "tokenizer_validation": "Runtime adapter maps every token string through supplied training tokenizer and requires one atomic token. No target model tokenizer was supplied or claimed tested."
+  "tokenizer_validation": "Runtime adapter maps every token string through supplied training tokenizer and requires one atomic token. No target model tokenizer was supplied or claimed tested.",
+  "video_storage_migration": {
+    "date": "2026-11-05",
+    "status": "passed",
+    "shared_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105",
+    "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VIDEO_STORAGE_VALIDATION.json",
+    "validation_sha256": "acfc145216edbd61ddfeacae7562ca218f39d2bfd70a22d942acfeeac08ad7a1",
+    "numerical_labels_unchanged": true,
+    "prior_checks_preserved": true
+  }
 }

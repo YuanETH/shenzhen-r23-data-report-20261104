@@ -4,5 +4,13 @@
   "GT": "Same exact true first-to-terminal original observation node indices in both branches; raw videos/poses unchanged. Immutable internal GT preparation refers to previous release, explicitly; training label parts and books are independent copies.",
   "source_verification_sha256": "6825cf79fa39ddfb020afa511b000259bab0e74125545dd365180fed0586ebd5",
   "frozen_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
-  "producer_sha256": "e3fcc57fd82c4d11718267fc3a5a95791a59eb475fec20cbcbfa02e4059a8156"
+  "producer_sha256": "e3fcc57fd82c4d11718267fc3a5a95791a59eb475fec20cbcbfa02e4059a8156",
+  "video_path_migration": {
+    "date": "2026-11-05",
+    "old_prefix": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output",
+    "new_prefix": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105",
+    "annotation_change": "Only storage path prefix changed; all numerical labels/frames/targets/masks unchanged. Compressed part hashes refreshed.",
+    "original_parts": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/video_migration_20261105/original",
+    "receipt": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VIDEO_STORAGE_VALIDATION.json"
+  }
 }

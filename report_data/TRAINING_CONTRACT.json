@@ -98,5 +98,15 @@
     "model quality evaluation",
     "real robot test"
   ],
-  "source_protection": "Original OSS and prior products unmodified; independent source restore. No deletion; only the explicitly authorized static report, selected media and public statistics are published. Full training data is not uploaded."
+  "source_protection": "Original OSS and prior products unmodified; independent source restore. No deletion; only the explicitly authorized static report, selected media and public statistics are published. Full training data is not uploaded.",
+  "video_storage": {
+    "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105",
+    "storage": "shared CPFS",
+    "reference": "source_video in every delivered training part is an absolute shared CPFS path",
+    "videos": 80475,
+    "scope": "QC retained set only",
+    "manifest": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105/VIDEO_MANIFEST.jsonl",
+    "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VIDEO_STORAGE_VALIDATION.json",
+    "originals_preserved": true
+  }
 }

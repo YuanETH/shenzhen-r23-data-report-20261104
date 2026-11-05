@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "shared_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105",
+  "videos": 80475,
+  "bytes": 88695339030,
+  "copy_checks": "all source and destination bytes SHA256 compared; matched frozen source_video_sha256 in both branches",
+  "parts": 2532,
+  "part_sha256_verified": true,
+  "annotation_change": "exact decompressed bytes equal originals after reversing only the video directory prefix",
+  "trajectories": {
+    "k256": 80475,
+    "rvq": 80475
+  },
+  "same_video_set": true,
+  "permissions": "all videos other-readable and all ancestors other-traversable; no symlink videos",
+  "sample_full_decode_videos": 130,
+  "sample_full_decode_frames": 10157,
+  "codebook_sha256_unchanged": {
+    "k256": true,
+    "rvq": true
+  },
+  "originals_preserved": true,
+  "source_host_access_required_for_training": false,
+  "remote_node_login_tested": false,
+  "datasets_sha256": "c26687a8ddb0769f922d674480e770f6c389722cb8d8bca3eb93919409595ff3",
+  "training_adapter_real_image_batches": {
+    "status": "passed",
+    "branches": [
+      "k256",
+      "rvq"
+    ],
+    "workers": [
+      0,
+      2
+    ],
+    "batch_size": 4,
+    "batches_each": 2,
+    "details": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/TRAINING_ADAPTER_VALIDATION.json"
+  }
+}
