@@ -1,0 +1,33 @@
+{
+  "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028",
+  "default_training_release": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256",
+  "training_entry": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/AI_ENTRY.md",
+  "training_manifest": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/DATASETS.json",
+  "maps": {
+    "scene_glb": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/maps/shenzhen/data/scene_datasets/custom/shenzhen_office_v9_semantic/shenzhen_office_v9_semantic.glb",
+    "scene_dataset_config": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/maps/shenzhen/data/scene_datasets/shenzhen_office_v9_semantic.scene_dataset_config.json",
+    "collection_navmesh": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source/navmeshes/office_preinflated_radius_0p30_1e9e3276/8e/8eeb0d96e99f5522c4ccdd1e31d490a0a1ee25453a182c4bd29fae06bd4659a8.navmesh",
+    "collection_navmesh_sha256": "1e9e3276e8040161d3df878698442ad307c3f576a677f7aa8b54f000dcd4657a",
+    "note": "Use collection_navmesh for this R23 collection. The scene snapshot also preserves its separate original default navmesh."
+  },
+  "raw_routes": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source/datasets",
+  "raw_trajectories_and_videos": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source/runs/output",
+  "raw_video_count": 93629,
+  "all_video_manifest": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/ALL_VIDEO_MANIFEST.jsonl",
+  "successful_collected_trajectories": 93319,
+  "retained_trajectories": 80475,
+  "pose_arrays": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/trajectories/arrays",
+  "pose_array_files": 93319,
+  "timestamp_cache": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/trajectories/times.sqlite",
+  "encodings": {
+    "v4-macro-k256": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256",
+    "v3-refit": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v3-refit",
+    "v2": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v2",
+    "v1": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v1"
+  },
+  "collection_records": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/collection/launch",
+  "collection_code_snapshot": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/collection/code_snapshot",
+  "path_mappings": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/RESOURCE_PATHS.json",
+  "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/CONSOLIDATION_VALIDATION.json",
+  "compressed_backup": "Original OSS archives retained remotely; duplicate local _archives not copied."
+}

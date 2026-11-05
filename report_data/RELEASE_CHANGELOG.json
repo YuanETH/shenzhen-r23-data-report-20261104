@@ -1,7 +1,7 @@
 {
   "date": "2026-11-04",
   "source": "oss://ss-oss1/data/user/yuanxu/vln_data/shenzhen-r23-data-20261028/",
-  "output_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256",
+  "output_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256",
   "source_modified": false,
   "source_deleted": false,
   "public_report_authorized": true,
@@ -58,6 +58,11 @@
       "date": "2026-11-05",
       "change": "All 80,475 retained videos copied to shared CPFS with per-file SHA256 verification; training source_video/source_root paths and part SHA256 updated; numerical labels unchanged; originals preserved.",
       "video_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105"
+    },
+    {
+      "date": "2026-11-05",
+      "change": "Consolidate maps, full raw videos/routes/trajectories, pose arrays, current and historical encodings, collection records and checks into one shared CPFS directory. Current v4 paths and checksums refreshed; numerical labels unchanged.",
+      "collection_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028"
     }
   ]
 }

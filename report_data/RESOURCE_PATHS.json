@@ -1,0 +1,15 @@
+{
+  "/cpfs-normal/xuyuan/EasyVLNCE-office-tight-boxes-20260928/artifacts/office_shelf_fix_v9_20260929/native/shenzhen": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/maps/shenzhen",
+  "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256",
+  "/cpfs-normal/xuyuan/data/navmeshes/shenzhen_office_da32342e_simplified_5k_20260928": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/maps/supplied_navmesh",
+  "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v3-refit",
+  "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v2": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v2",
+  "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v1",
+  "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source",
+  "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/arrays": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/trajectories/arrays",
+  "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source/runs/output",
+  "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-launch-20261028": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/collection/launch",
+  "/cpfs-normal/data-workspace/xuyuan/shenzhen-r23-data-20261028": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source",
+  "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-data-20261028": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source",
+  "/cpfs-normal/xuyuan/data-workspace/video-audit-20261105": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/video-audit-20261105"
+}

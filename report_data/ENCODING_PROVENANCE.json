@@ -12,5 +12,11 @@
     "annotation_change": "Only storage path prefix changed; all numerical labels/frames/targets/masks unchanged. Compressed part hashes refreshed.",
     "original_parts": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/video_migration_20261105/original",
     "receipt": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VIDEO_STORAGE_VALIDATION.json"
+  },
+  "collection_consolidation": {
+    "date": "2026-11-05",
+    "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028",
+    "change": "Resource paths only; physical encoded versions moved by rename with old paths retained as compatibility symlinks. Map and pose references in current v4 parts now point inside the collection root.",
+    "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/CONSOLIDATION_VALIDATION.json"
   }
 }

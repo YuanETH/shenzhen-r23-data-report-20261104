@@ -1,6 +1,6 @@
 {
   "dataset_class": "training_adapter.TrainingDataset",
-  "module_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/training_adapter.py",
+  "module_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/training_adapter.py",
   "branches": [
     "k256",
     "rvq"
@@ -11,11 +11,11 @@
   "batch_collation": "list; image history lengths vary, apply the target model processor in its collator",
   "codebooks": {
     "k256": {
-      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/k256/codebook.npz",
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k256/codebook.npz",
       "sha256": "685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d"
     },
     "rvq": {
-      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/deps/codebook.npz",
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/deps/codebook.npz",
       "sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f"
     }
   },
@@ -31,7 +31,7 @@
   "trainer_registered": false,
   "model_tokenizer_required": true,
   "video_storage": {
-    "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105",
+    "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source/runs/output",
     "requires": "same CPFS mounted at /cpfs-normal; no source-host /data/pool required"
   }
 }

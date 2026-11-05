@@ -1,12 +1,15 @@
 {
   "status": "complete",
-  "source_root": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104/source/runs/output",
-  "shared_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105",
+  "source_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source/runs/output",
+  "shared_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source/runs/output",
   "videos": 80475,
   "bytes": 88695339030,
   "source_deleted": false,
-  "scope": "All videos referenced by both retained training branches; filtered videos not copied.",
-  "manifest": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105/VIDEO_MANIFEST.jsonl",
-  "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VIDEO_STORAGE_VALIDATION.json",
-  "validation_sha256": "acfc145216edbd61ddfeacae7562ca218f39d2bfd70a22d942acfeeac08ad7a1"
+  "scope": "All raw collected videos stored here; training indexes read only the QC-retained set.",
+  "manifest": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source/runs/output/VIDEO_MANIFEST.jsonl",
+  "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/VIDEO_STORAGE_VALIDATION.json",
+  "validation_sha256": "1f4d8749badfbae94da62fd133ebeaa3fcf621f98abb5f964656bd2d3b26175b",
+  "all_raw_videos": 93629,
+  "retained_videos": 80475,
+  "all_video_manifest": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/ALL_VIDEO_MANIFEST.jsonl"
 }

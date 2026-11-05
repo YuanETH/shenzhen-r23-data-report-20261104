@@ -65,5 +65,12 @@
     "files_other_readable": true,
     "all_ancestors_other_traversable": true,
     "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VIDEO_STORAGE_VALIDATION.json"
+  },
+  "collection_consolidation": {
+    "status": "passed",
+    "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028",
+    "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/CONSOLIDATION_VALIDATION.json",
+    "validation_sha256": "0619cf943890fc98e3a389c3595edd88162fb1078235ff784df209ec49ab237c",
+    "numerical_annotations_unchanged": true
   }
 }
