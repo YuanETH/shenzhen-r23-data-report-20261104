@@ -5,7 +5,7 @@
     "body_delta": "forward_m,left_m,ccw_yaw_rad; orientation at current observation",
     "camera": "recorded Habitat Rz@Ry@Rx mount, actual optical axis and pinhole intrinsics"
   },
-  "splits": "Preserved from collection state. Both fit ID lists are k256/fit_trajectories.json and rvq/fit_trajectories.json. No eval/probe is synthesized.",
+  "splits": "All three books fit only retained train trajectories; see each branch fit_trajectories.json. No eval/probe synthesized.",
   "qc": {
     "score": "round(max(0,10-.9*M-T-V),2), hard cap4.9",
     "keep": "no hard error, no unresolved suspicious, rounded quality_score>=7",
@@ -110,5 +110,20 @@
     "originals_preserved": true
   },
   "collection_root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028",
-  "collection_catalog": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/CATALOG.json"
+  "collection_catalog": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/CATALOG.json",
+  "default_branch": "k64",
+  "k64": {
+    "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k64/codebook.npz",
+    "sha256": "0cfa304c662a598c32bd2e3f655d3b72ebb28ce79040aee6d6557c64dc780ecc",
+    "motion_ids": "1..64",
+    "stop": 0,
+    "dtype": "uint16",
+    "fit": "each retained nonleaking train trajectory equal total weight; real macro observation nodes, exact same indices as RVQ",
+    "supervision": "current retained image -> next retained image; true original terminal frame -> STOP",
+    "micro_actions": "merged; GT edges and all decoded motion codes must exceed10cm OR10deg; terminal preserved; K64_VALIDATION.json",
+    "deployment": "execute one decoded macro goal then reobserve; recorded timestamp gaps are not control deadlines",
+    "encode_entry": "k64.encode(body_deltas_Nx3,k64.load_book())",
+    "decode_entry": "k64.decode(codes,k64.load_book())",
+    "token_vocabulary": "<k64_0>.. <k64_64>; 65 atomic strings including STOP"
+  }
 }

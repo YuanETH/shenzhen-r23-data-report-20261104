@@ -162,5 +162,17 @@
     "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/CONSOLIDATION_VALIDATION.json",
     "validation_sha256": "0619cf943890fc98e3a389c3595edd88162fb1078235ff784df209ec49ab237c",
     "numerical_annotations_unchanged": true
+  },
+  "default_branch": "k64",
+  "k64_full_sequence_validation": {
+    "status": "passed",
+    "actual_reader_samples_checked": 5167420,
+    "stop_samples": 80475,
+    "default_branch": "k64",
+    "history_check": "All emitted histories exactly equal prior selected real observation nodes; skipped raw frames never reappear.",
+    "codec_boundary_check": "STOP0, motion1..64, invalid negative/65/noninteger rejected",
+    "reader_sha256": "f915644f2e6a7470386a9d442ce09348164920add1fde25c82cf7923c15ad624",
+    "adapter_sha256": "ef71133ee2a8486328a5e631a654025e170fed49ee5439f0053e9b4b4abc77f8",
+    "datasets_sha256": "d5bd3f517fe672feb40f0b7be6d47bb8dd8f6caf53328ff7f885b5bc7451cf67"
   }
 }

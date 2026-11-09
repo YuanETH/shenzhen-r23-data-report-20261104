@@ -1,7 +1,10 @@
 {
   "dataset_class": "training_adapter.TrainingDataset",
   "module_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/training_adapter.py",
+  "default_branch": "k64",
+  "branch": "k64",
   "branches": [
+    "k64",
     "k256",
     "rvq"
   ],
@@ -17,6 +20,10 @@
     "rvq": {
       "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/deps/codebook.npz",
       "sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f"
+    },
+    "k64": {
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k64/codebook.npz",
+      "sha256": "0cfa304c662a598c32bd2e3f655d3b72ebb28ce79040aee6d6557c64dc780ecc"
     }
   },
   "validated_reader_settings": {

@@ -1,6 +1,26 @@
 {
   "status": "passed",
   "checks": {
+    "k64": {
+      "0": {
+        "batches": 2,
+        "batch_size": 4,
+        "real_image_samples": 8,
+        "duplicate_episode_frame_pairs": 0,
+        "independent_image_pixel_match": true,
+        "codec_dtype": "uint16",
+        "target_tokenizer": "not supplied; not claimed tested"
+      },
+      "2": {
+        "batches": 2,
+        "batch_size": 4,
+        "real_image_samples": 8,
+        "duplicate_episode_frame_pairs": 0,
+        "independent_image_pixel_match": true,
+        "codec_dtype": "uint16",
+        "target_tokenizer": "not supplied; not claimed tested"
+      }
+    },
     "k256": {
       "0": {
         "batches": 2,
@@ -42,7 +62,7 @@
       }
     }
   },
-  "producer_sha256": "3e2e0edbe5d53ff8d512fac459bc26a019e328fce364138e044bc8b653329408",
+  "producer_sha256": "ef71133ee2a8486328a5e631a654025e170fed49ee5439f0053e9b4b4abc77f8",
   "target_tokenizer_tested": false,
   "trainer_registration": "Explicit Dataset import is supplied; no external trainer or VeOmni registration performed."
 }

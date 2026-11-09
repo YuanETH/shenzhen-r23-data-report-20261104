@@ -18,5 +18,6 @@
     "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028",
     "change": "Resource paths only; physical encoded versions moved by rename with old paths retained as compatibility symlinks. Map and pose references in current v4 parts now point inside the collection root.",
     "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/CONSOLIDATION_VALIDATION.json"
-  }
+  },
+  "K64": "Fresh 64-center fit on all 80,475 retained train trajectories and 5,086,945 already merged real macro edges; same nodes/STOP as K256/RVQ, independent labels and codebook. Default training branch."
 }

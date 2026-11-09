@@ -55,5 +55,11 @@
     "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/CONSOLIDATION_VALIDATION.json",
     "validation_sha256": "0619cf943890fc98e3a389c3595edd88162fb1078235ff784df209ec49ab237c",
     "numerical_annotations_unchanged": true
+  },
+  "default_branch": "k64",
+  "k64_validation": {
+    "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/K64_VALIDATION.json",
+    "sha256": "b33ec4dde32b1deca3ca4d1dfb40f26d411375393a66c3ce8f42aed90814cc1d",
+    "status": "passed"
   }
 }

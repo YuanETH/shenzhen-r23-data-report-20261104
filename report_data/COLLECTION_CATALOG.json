@@ -29,5 +29,11 @@
   "collection_code_snapshot": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/collection/code_snapshot",
   "path_mappings": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/RESOURCE_PATHS.json",
   "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/CONSOLIDATION_VALIDATION.json",
-  "compressed_backup": "Original OSS archives retained remotely; duplicate local _archives not copied."
+  "compressed_backup": "Original OSS archives retained remotely; duplicate local _archives not copied.",
+  "default_training_branch": "k64",
+  "default_supervision_index": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k64/training_samples/index.json",
+  "default_codebook": {
+    "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k64/codebook.npz",
+    "sha256": "0cfa304c662a598c32bd2e3f655d3b72ebb28ce79040aee6d6557c64dc780ecc"
+  }
 }
