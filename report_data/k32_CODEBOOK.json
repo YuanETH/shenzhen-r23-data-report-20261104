@@ -1,0 +1,285 @@
+{
+  "sha256": "2cd130dc5ae806c3334e5780fb4d529c5cacb6aa08cffc403321cd5b5e36d66a",
+  "producer_sha256": "b6b967e1d54ae8f77573abf1051282fbe40e5d85b881dc006ec2bcf237920aa6",
+  "shape": [
+    32,
+    3
+  ],
+  "seed": 20261105,
+  "frozen_qc_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+  "fit_trajectories_sha256": "9ea51004ba9908db8663036916f4bfc4f4aa2ee048c250702af9f313d91c5896",
+  "trajectories": 80475,
+  "motion_samples": 5086945,
+  "weight_policy": "each train trajectory sums to 1; no length buckets; all real macro-node deltas; each codeword must exceed 10cm OR 10deg",
+  "normalization": "weighted mean and weighted population std of forward_m,left_m,ccw_yaw_rad; std floor1e-6",
+  "motion_ids": "1..32",
+  "STOP": 0,
+  "dtype": "uint16",
+  "sampling": "same real macro observation nodes as RVQ; GT micro actions merged including terminal tail",
+  "logs": [
+    {
+      "iteration": 1,
+      "weighted_mse": 0.06738229704456712,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 2,
+      "weighted_mse": 0.05547430047589572,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 3,
+      "weighted_mse": 0.05322582946304342,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 4,
+      "weighted_mse": 0.052489410030378256,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 5,
+      "weighted_mse": 0.0521461534304796,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 6,
+      "weighted_mse": 0.0519351647065495,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 7,
+      "weighted_mse": 0.051793582251506105,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 8,
+      "weighted_mse": 0.05168544914598932,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 9,
+      "weighted_mse": 0.05158749348705292,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 10,
+      "weighted_mse": 0.051490723746414564,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 11,
+      "weighted_mse": 0.051376531378570234,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 12,
+      "weighted_mse": 0.05123947332675324,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 13,
+      "weighted_mse": 0.051068442058302,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 14,
+      "weighted_mse": 0.05086337744845716,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 15,
+      "weighted_mse": 0.050619505569908095,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 16,
+      "weighted_mse": 0.05034191270255325,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 17,
+      "weighted_mse": 0.05010013662205904,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 18,
+      "weighted_mse": 0.04990825872139089,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 19,
+      "weighted_mse": 0.049751588949952734,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 20,
+      "weighted_mse": 0.04963731925516581,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 21,
+      "weighted_mse": 0.04956367792958226,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 22,
+      "weighted_mse": 0.04951153590493117,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 23,
+      "weighted_mse": 0.04947241199277728,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 24,
+      "weighted_mse": 0.04944305159407775,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 25,
+      "weighted_mse": 0.04942255863465764,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 26,
+      "weighted_mse": 0.04940684729499999,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 27,
+      "weighted_mse": 0.049394556570864986,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 28,
+      "weighted_mse": 0.04938396926611462,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 29,
+      "weighted_mse": 0.04937598960227424,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 30,
+      "weighted_mse": 0.049369433339844726,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 31,
+      "weighted_mse": 0.049363621784743905,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 32,
+      "weighted_mse": 0.049359078140074265,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 33,
+      "weighted_mse": 0.04935628151740762,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 34,
+      "weighted_mse": 0.04935446408893293,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 35,
+      "weighted_mse": 0.0493534023909392,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 36,
+      "weighted_mse": 0.049352791058453985,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 37,
+      "weighted_mse": 0.049352364563302165,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 38,
+      "weighted_mse": 0.049352081397462104,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 39,
+      "weighted_mse": 0.049351871970878376,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 40,
+      "weighted_mse": 0.049351685390020786,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 41,
+      "weighted_mse": 0.04935157697833912,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 42,
+      "weighted_mse": 0.04935152077186324,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 43,
+      "weighted_mse": 0.04935145494813106,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    },
+    {
+      "iteration": 44,
+      "weighted_mse": 0.049351408753435654,
+      "empty_clusters": 0,
+      "tiny_centroids_replaced_with_real_members": 0
+    }
+  ]
+}

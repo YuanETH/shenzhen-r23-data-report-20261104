@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "counts": {
+    "trajectories": 80475,
+    "samples": 5167420,
+    "stop": 80475,
+    "motion_edges": 5086945,
+    "skipped_raw_frames": 1701277
+  },
+  "frozen_qc_sha256": "cfcb697ac7ae98c942f6fb108d3798bc47f9df6a732e643d17f17d58413d71fa",
+  "codebook_sha256": "2cd130dc5ae806c3334e5780fb4d529c5cacb6aa08cffc403321cd5b5e36d66a",
+  "index_sha256": "7a3617fb23fc5e3ed67a1ef692edf9b4f8e8b31faef7cbef95adb1cb58414d0e",
+  "fit_manifest_sha256": "9ea51004ba9908db8663036916f4bfc4f4aa2ee048c250702af9f313d91c5896",
+  "producer_sha256": "e14f9d86e32a7dcecb08c988a03faf91ccefe7e941e2b8719eb7cd317adecdd1",
+  "GT_micro_residual": 0,
+  "decoded_micro_residual": 0,
+  "terminal_micro_residual": 0,
+  "last3_micro_residual": 0,
+  "tiny_motion_centers": 0,
+  "all_parts_reread_and_reencoded": true,
+  "same_exact_real_first_to_terminal_nodes_as_K256_and_RVQ": true,
+  "all_pose_array_checksums_verified": true
+}

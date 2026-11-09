@@ -61,5 +61,10 @@
     "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/K64_VALIDATION.json",
     "sha256": "b33ec4dde32b1deca3ca4d1dfb40f26d411375393a66c3ce8f42aed90814cc1d",
     "status": "passed"
+  },
+  "k32_validation": {
+    "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/K32_VALIDATION.json",
+    "sha256": "95f04609d82690bad6f49386ea6aa30a8ac3fbb5afc049312290dc89fa40a702",
+    "status": "passed"
   }
 }

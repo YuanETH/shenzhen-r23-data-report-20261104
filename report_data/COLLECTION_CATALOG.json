@@ -35,5 +35,15 @@
   "default_codebook": {
     "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k64/codebook.npz",
     "sha256": "0cfa304c662a598c32bd2e3f655d3b72ebb28ce79040aee6d6557c64dc780ecc"
+  },
+  "optional_training_branches": {
+    "k32": {
+      "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k32",
+      "supervision_index": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k32/training_samples/index.json",
+      "codebook": {
+        "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k32/codebook.npz",
+        "sha256": "2cd130dc5ae806c3334e5780fb4d529c5cacb6aa08cffc403321cd5b5e36d66a"
+      }
+    }
   }
 }

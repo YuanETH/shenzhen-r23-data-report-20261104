@@ -1,10 +1,20 @@
 {
   "status": "passed",
   "counts": {
-    "files": 242378,
-    "directories": 187185
+    "files": 14631,
+    "directories": 216
   },
   "ancestor_checks": [
+    {
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded",
+      "mode": "0o775",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028",
+      "mode": "0o775",
+      "other_can_traverse": true
+    },
     {
       "path": "/cpfs-normal/xuyuan/data-workspace",
       "mode": "0o777",
@@ -26,28 +36,23 @@
       "other_can_traverse": true
     },
     {
-      "path": "/data/pool/user-cache/xuyuan/shenzhen-r23-release-20261104",
+      "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028",
+      "mode": "0o775",
+      "other_can_traverse": true
+    },
+    {
+      "path": "/cpfs-normal/xuyuan/data-workspace",
       "mode": "0o777",
       "other_can_traverse": true
     },
     {
-      "path": "/data/pool/user-cache/xuyuan",
-      "mode": "0o711",
+      "path": "/cpfs-normal/xuyuan",
+      "mode": "0o2751",
       "other_can_traverse": true
     },
     {
-      "path": "/data/pool/user-cache",
-      "mode": "0o755",
-      "other_can_traverse": true
-    },
-    {
-      "path": "/data/pool",
-      "mode": "0o755",
-      "other_can_traverse": true
-    },
-    {
-      "path": "/data",
-      "mode": "0o755",
+      "path": "/cpfs-normal",
+      "mode": "0o777",
       "other_can_traverse": true
     },
     {
@@ -57,20 +62,5 @@
     }
   ],
   "unfixed": [],
-  "scope": "Only release tree, task-specific restored source/cache tree and traversal bits on the referenced cache ancestor. Original OSS/production/unrelated descendants unchanged.",
-  "shared_video_storage": {
-    "status": "passed",
-    "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-videos-20261105",
-    "videos": 80475,
-    "files_other_readable": true,
-    "all_ancestors_other_traversable": true,
-    "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VIDEO_STORAGE_VALIDATION.json"
-  },
-  "collection_consolidation": {
-    "status": "passed",
-    "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028",
-    "validation": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/audit/CONSOLIDATION_VALIDATION.json",
-    "validation_sha256": "0619cf943890fc98e3a389c3595edd88162fb1078235ff784df209ec49ab237c",
-    "numerical_annotations_unchanged": true
-  }
+  "scope": "Current release tree including K64 and report; unchanged source/cache file permissions reuse prior_entrypoints/PERMISSIONS.json; current source image access independently exercised in TRAINING_ADAPTER_VALIDATION.json."
 }

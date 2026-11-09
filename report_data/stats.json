@@ -29,7 +29,11 @@
         "k64_trajectories": 3,
         "k64_samples": 122,
         "k64_stop": 3,
-        "k64_merged_skipped_frames": 40
+        "k64_merged_skipped_frames": 40,
+        "k32_trajectories": 3,
+        "k32_samples": 122,
+        "k32_stop": 3,
+        "k32_merged_skipped_frames": 40
       }
     },
     {
@@ -61,7 +65,11 @@
         "k64_trajectories": 80472,
         "k64_samples": 5167298,
         "k64_stop": 80472,
-        "k64_merged_skipped_frames": 1701237
+        "k64_merged_skipped_frames": 1701237,
+        "k32_trajectories": 80472,
+        "k32_samples": 5167298,
+        "k32_stop": 80472,
+        "k32_merged_skipped_frames": 1701237
       }
     },
     {
@@ -93,7 +101,11 @@
         "k64_trajectories": 0,
         "k64_samples": 0,
         "k64_stop": 0,
-        "k64_merged_skipped_frames": 0
+        "k64_merged_skipped_frames": 0,
+        "k32_trajectories": 0,
+        "k32_samples": 0,
+        "k32_stop": 0,
+        "k32_merged_skipped_frames": 0
       }
     }
   ],
@@ -132,7 +144,10 @@
     "unresolved_rvq_frames": 0,
     "k64_trajectories": 80475,
     "k64_samples": 5167420,
-    "k64_stop": 80475
+    "k64_stop": 80475,
+    "k32_trajectories": 80475,
+    "k32_samples": 5167420,
+    "k32_stop": 80475
   },
   "primary_reasons": {
     "duplicate_train_identity_or_full_trajectory": 1763,
@@ -150,6 +165,11 @@
   "k64_validation": {
     "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/K64_VALIDATION.json",
     "sha256": "b33ec4dde32b1deca3ca4d1dfb40f26d411375393a66c3ce8f42aed90814cc1d",
+    "status": "passed"
+  },
+  "k32_validation": {
+    "path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/K32_VALIDATION.json",
+    "sha256": "95f04609d82690bad6f49386ea6aa30a8ac3fbb5afc049312290dc89fa40a702",
     "status": "passed"
   }
 }

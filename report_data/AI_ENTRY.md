@@ -19,3 +19,6 @@ python /cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro
 
 拟合参数、SHA256、全量校验及真实图像batch验证分别见k64/CODEBOOK.json、K64_VALIDATION.json、TRAINING_ADAPTER_VALIDATION.json和k64_reader_sequence_validation.json。
 编码报告：公开tokenizer.html#k64。旧K256/RVQ标签和码本保持原样，不能跨分支混用。
+
+<!-- K32 OPTIONAL -->
+新增可选 K32：/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k32/README.md。显式 branch='k32'；码本k32/codebook.npz，运动1..32、STOP0，33个模型词表token。默认继续K64，节点/历史/终点与其它分支相同。

@@ -54,7 +54,10 @@
     "unresolved_rvq_frames": 0,
     "k64_trajectories": 80475,
     "k64_samples": 5167420,
-    "k64_stop": 80475
+    "k64_stop": 80475,
+    "k32_trajectories": 80475,
+    "k32_samples": 5167420,
+    "k32_stop": 80475
   },
   "updates": [
     {
@@ -72,6 +75,13 @@
       "change": "Add independently fitted K64 from the same QC-retained merged macro nodes, switch default training branch to K64, preserve K256/RVQ, update all entrypoints and the public encoding report.",
       "codebook_sha256": "0cfa304c662a598c32bd2e3f655d3b72ebb28ce79040aee6d6557c64dc780ecc",
       "validation_sha256": "b33ec4dde32b1deca3ca4d1dfb40f26d411375393a66c3ce8f42aed90814cc1d"
+    },
+    {
+      "branch": "k32",
+      "date": "2026-11-09",
+      "change": "Add independently fitted K32 on identical QC-retained merged nodes; preserve default K64; extend reader, indexes, documentation and public report.",
+      "codebook_sha256": "2cd130dc5ae806c3334e5780fb4d529c5cacb6aa08cffc403321cd5b5e36d66a",
+      "validation_sha256": "95f04609d82690bad6f49386ea6aa30a8ac3fbb5afc049312290dc89fa40a702"
     }
   ],
   "default_branch": "k64"

@@ -174,5 +174,17 @@
     "reader_sha256": "f915644f2e6a7470386a9d442ce09348164920add1fde25c82cf7923c15ad624",
     "adapter_sha256": "ef71133ee2a8486328a5e631a654025e170fed49ee5439f0053e9b4b4abc77f8",
     "datasets_sha256": "d5bd3f517fe672feb40f0b7be6d47bb8dd8f6caf53328ff7f885b5bc7451cf67"
+  },
+  "k32_full_sequence_validation": {
+    "status": "passed",
+    "actual_reader_samples_checked": 5167420,
+    "stop_samples": 80475,
+    "branch": "k32",
+    "default_branch": "k64",
+    "history_check": "All emitted histories exactly equal prior selected real observation nodes; skipped raw frames never reappear.",
+    "codec_boundary_check": "STOP0, motion1..32, invalid negative/33/noninteger rejected",
+    "reader_sha256": "434f6fa6388ae24a174852d86fe8babf225b79916217a73a436bfb19403b583f",
+    "adapter_sha256": "4e6a324a2fde988fca47f5ad11a482aa426aba2e4b357b1e6e9db8a9558b140b",
+    "datasets_sha256": "ae035f66d4574f435f9f2881b41bdadedd38722455883dc7a7e00778f96580a1"
   }
 }

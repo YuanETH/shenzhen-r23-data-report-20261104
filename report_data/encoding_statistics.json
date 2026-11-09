@@ -3,13 +3,13 @@
   "generated_at_utc": "2026-11-04T11:07:19.890015+00:00",
   "source": {
     "verification_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/VERIFICATION.json",
-    "verification_sha256": "44a4b4fef5920a0327b0e7f4dc9df6c30c9a670c1e5ba16ec17ef20e2d922360",
+    "verification_sha256": "0aec8445788a4d2fc7a66586e1b95fe504b488310b2cc3cca5900afa9c20273c",
     "offline_metrics_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/offline_metrics.jsonl.gz",
     "offline_metrics_sha256": "ced78ce09b4376a5fc1ae6066452e148d64722c1fa85b12e61c4302e6b5ad06a",
     "k256_codebook_sha256": "685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d",
     "rvq_codebook_sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f",
     "encoding_provenance_path": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v4-macro-k256/ENCODING_PROVENANCE.json",
-    "encoding_provenance_sha256": "99cd6eebe271989fcd16eaaae72892d2dcc0f86645ec0a5a9fa8bdac117199c9",
+    "encoding_provenance_sha256": "eb1a66967a3bfef8f97f406bbd91f286d1e21ac83a408c2160a58d0e8a9146b7",
     "RVQ_statistics_reuse": {
       "source": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-qc-k256-rvq-h5-20261104-v3-refit/report_data/encoding_statistics.json",
       "source_sha256": "13d377d5291c2894b9fe70462f0ff9aec2f976cc25ada1738da28f6ac3ae563a",
@@ -19,7 +19,9 @@
       "note": "All RVQ values and physical GT spans reused unchanged; new K256 metrics/usage recomputed on identical nodes."
     },
     "k64_codebook_sha256": "0cfa304c662a598c32bd2e3f655d3b72ebb28ce79040aee6d6557c64dc780ecc",
-    "k64_validation_sha256": "b33ec4dde32b1deca3ca4d1dfb40f26d411375393a66c3ce8f42aed90814cc1d"
+    "k64_validation_sha256": "b33ec4dde32b1deca3ca4d1dfb40f26d411375393a66c3ce8f42aed90814cc1d",
+    "k32_codebook_sha256": "2cd130dc5ae806c3334e5780fb4d529c5cacb6aa08cffc403321cd5b5e36d66a",
+    "k32_validation_sha256": "95f04609d82690bad6f49386ea6aa30a8ac3fbb5afc049312290dc89fa40a702"
   },
   "definitions": {
     "cohort": "K256 usage over all verified retained K256 outputs; RVQ usage over accepted RVQ non-STOP macro nodes; performance on paired complete trajectories only.",
@@ -4536,5 +4538,268 @@
       }
     }
   },
-  "default_branch": "k64"
+  "default_branch": "k64",
+  "k32": {
+    "counts": {
+      "trajectories": 80475,
+      "samples": 5167420,
+      "stop": 80475,
+      "motion_edges": 5086945,
+      "skipped_raw_frames": 1701277
+    },
+    "codebook_sha256": "2cd130dc5ae806c3334e5780fb4d529c5cacb6aa08cffc403321cd5b5e36d66a",
+    "frequency": [
+      899188,
+      259661,
+      99223,
+      96347,
+      13477,
+      1409,
+      130,
+      2352,
+      13493,
+      14597,
+      54362,
+      99551,
+      1557,
+      345174,
+      112923,
+      923,
+      366468,
+      34765,
+      47579,
+      372258,
+      55971,
+      499713,
+      1240,
+      44823,
+      198172,
+      11510,
+      53729,
+      96042,
+      188569,
+      316,
+      7088,
+      1094335
+    ],
+    "usage": {
+      "entropy_bits": 3.70287424738959,
+      "effective_codes": 13.021955851997824,
+      "used_codes": 32,
+      "top10_share": 0.8524686231126933
+    },
+    "errors": {
+      "openloop_ade_m": {
+        "n": 80475,
+        "mean": 1.2299549037152533,
+        "p50": 0.7465538843475729,
+        "p95": 4.007824314197817
+      },
+      "openloop_fde_m": {
+        "n": 80475,
+        "mean": 2.4867400180708663,
+        "p50": 1.466696836886687,
+        "p95": 8.313464349828166
+      },
+      "terminal_yaw_drift_deg": {
+        "n": 80475,
+        "mean": 8.244982320344477,
+        "p50": 6.434059184339276,
+        "p95": 22.226550908413802
+      },
+      "h1_position_m": {
+        "n": 80475,
+        "mean": 0.024454213864933974,
+        "p50": 0.023857303529523116,
+        "p95": 0.033069728063694494
+      },
+      "h1_yaw_deg": {
+        "n": 80475,
+        "mean": 0.5632520271758302,
+        "p50": 0.5189423942966481,
+        "p95": 0.9689090279464582
+      },
+      "h1_span_m": {
+        "n": 80475,
+        "mean": 0.4379846874451005,
+        "p50": 0.44356643849895605,
+        "p95": 0.6158457178066383
+      },
+      "h1_span_sec": {
+        "n": 80475,
+        "mean": 0.6750425696262806,
+        "p50": 0.6684782608695652,
+        "p95": 0.75
+      },
+      "h2_position_m": {
+        "n": 80475,
+        "mean": 0.037142487002737375,
+        "p50": 0.03612934189177273,
+        "p95": 0.050910440309553294
+      },
+      "h2_yaw_deg": {
+        "n": 80475,
+        "mean": 0.8647847134674146,
+        "p50": 0.7836462645196791,
+        "p95": 1.55152479027843
+      },
+      "h2_span_m": {
+        "n": 80475,
+        "mean": 0.8877079954396339,
+        "p50": 0.8994408979557655,
+        "p95": 1.2475914325022022
+      },
+      "h2_span_sec": {
+        "n": 80475,
+        "mean": 1.3308310690721796,
+        "p50": 1.3205128205128205,
+        "p95": 1.4673913043478262
+      },
+      "h3_position_m": {
+        "n": 80475,
+        "mean": 0.04951206272793008,
+        "p50": 0.04798443408281227,
+        "p95": 0.06925713029974703
+      },
+      "h3_yaw_deg": {
+        "n": 80475,
+        "mean": 1.1293048819949996,
+        "p50": 1.020200773872604,
+        "p95": 2.051611532053722
+      },
+      "h3_span_m": {
+        "n": 80475,
+        "mean": 1.346252187472333,
+        "p50": 1.364498562481197,
+        "p95": 1.8929570635912956
+      },
+      "h3_span_sec": {
+        "n": 80475,
+        "mean": 1.9833419076508432,
+        "p50": 1.9699248120300752,
+        "p95": 2.1842105263157894
+      },
+      "h4_position_m": {
+        "n": 80475,
+        "mean": 0.061857970426627766,
+        "p50": 0.059739682276329954,
+        "p95": 0.08812820172161233
+      },
+      "h4_yaw_deg": {
+        "n": 80475,
+        "mean": 1.3661019868028317,
+        "p50": 1.2362254877539556,
+        "p95": 2.4987013470533004
+      },
+      "h4_span_m": {
+        "n": 80475,
+        "mean": 1.8112934916994727,
+        "p50": 1.8376992123731886,
+        "p95": 2.549950923577177
+      },
+      "h4_span_sec": {
+        "n": 80475,
+        "mean": 2.634953386553849,
+        "p50": 2.6176470588235294,
+        "p95": 2.903438995215311
+      },
+      "h5_position_m": {
+        "n": 80475,
+        "mean": 0.0749053404023321,
+        "p50": 0.0720259725338172,
+        "p95": 0.10882929576329439
+      },
+      "h5_yaw_deg": {
+        "n": 80475,
+        "mean": 1.5980213813614996,
+        "p50": 1.4450158799058908,
+        "p95": 2.948964318549705
+      },
+      "h5_span_m": {
+        "n": 80475,
+        "mean": 2.280083510185514,
+        "p50": 2.314183081033384,
+        "p95": 3.216329380440437
+      },
+      "h5_span_sec": {
+        "n": 80475,
+        "mean": 3.2867409992152434,
+        "p50": 3.2663551401869158,
+        "p95": 3.625
+      },
+      "h10_position_m": {
+        "n": 80117,
+        "mean": 0.15608513923113904,
+        "p50": 0.14787885846270607,
+        "p95": 0.24131318900028748
+      },
+      "h10_yaw_deg": {
+        "n": 80117,
+        "mean": 2.603078588773087,
+        "p50": 2.3156232002887838,
+        "p95": 5.052846494246555
+      },
+      "h10_span_m": {
+        "n": 80117,
+        "mean": 4.661670915432771,
+        "p50": 4.738571854281963,
+        "p95": 6.6545988362093915
+      },
+      "h10_span_sec": {
+        "n": 80117,
+        "mean": 6.5600664075732364,
+        "p50": 6.517857142857143,
+        "p95": 7.2442377260981905
+      }
+    },
+    "definition": "All complete QC-retained train trajectories; shared actual macro nodes; open loop never reanchored; local overlapping h-node windows reanchored at each true start, each trajectory contributes its mean once. h is nodes, not seconds. Position metres; yaw degrees. Training reconstruction only.",
+    "route_length_tertiles_m": [
+      17.36058960331665,
+      35.70807301878749
+    ],
+    "route_strata": {
+      "short": {
+        "openloop_fde_m": {
+          "n": 26825,
+          "mean": 0.855662586614508,
+          "p50": 0.5942503479600285,
+          "p95": 2.4494367193083804
+        },
+        "terminal_yaw_drift_deg": {
+          "n": 26825,
+          "mean": 7.140819300302782,
+          "p50": 5.408533482816134,
+          "p95": 19.683216421485394
+        }
+      },
+      "medium": {
+        "openloop_fde_m": {
+          "n": 26825,
+          "mean": 2.1364945824924058,
+          "p50": 1.5814357476817456,
+          "p95": 5.860879219962673
+        },
+        "terminal_yaw_drift_deg": {
+          "n": 26825,
+          "mean": 8.204633259378179,
+          "p50": 6.4976619136089795,
+          "p95": 21.845055686892323
+        }
+      },
+      "long": {
+        "openloop_fde_m": {
+          "n": 26825,
+          "mean": 4.468062885105686,
+          "p50": 3.3652271893016796,
+          "p95": 11.9569146830599
+        },
+        "terminal_yaw_drift_deg": {
+          "n": 26825,
+          "mean": 9.389494401352467,
+          "p50": 7.603745039791904,
+          "p95": 24.119967333578515
+        }
+      }
+    }
+  }
 }
