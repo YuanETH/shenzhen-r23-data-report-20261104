@@ -93,7 +93,7 @@
     "tokenizer": "map by token string with tokenizer.encode(...,add_special_tokens=False); require atomic registered tokens; source token IDs are not model IDs",
     "VeOmni": "Generic explicit PyTorch Dataset supplied; no VeOmni installation or trainer integration claimed."
   },
-  "evaluation": "Prior old-codebook metrics do not apply to the joint codebooks. New sampled reconstruction metrics are documented in site/report_data/JOINT_REPORT_SAMPLE.json; no new full-population reconstruction or policy evaluation has been performed.",
+  "evaluation": "Full retained trajectories were evaluated with no-intermediate-correction open-loop ADE/FDE and per-trajectory weighting; current full codebook frequency and metrics are in site/report_data/JOINT_FULL_METRICS.json. This is reconstruction on fitted data, not policy evaluation.",
   "not_performed": [
     "policy optimization",
     "model quality evaluation",
