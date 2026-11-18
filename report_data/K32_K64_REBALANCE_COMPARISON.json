@@ -1,0 +1,120 @@
+{
+  "status": "complete",
+  "scope": "all retained trajectories; candidates fitted on same data; motion objective lateral boost, offline full-population evaluation. Target first-node poses stored as float32; no intermediate GT correction; trajectory-weighted FDE; not held-out.",
+  "gamma": 4,
+  "threshold_m": 0.025,
+  "sources": {
+    "hm3d": {
+      "trajectories": 1940232,
+      "nodes": 81362028,
+      "lateral_nodes": 981868,
+      "lateral_trajectories": 768116,
+      "models": {
+        "k32_old": {
+          "position_cm": 1.4482236046884807,
+          "yaw_deg": 0.9011986670605601,
+          "lateral_position_cm": 10.5735141916876,
+          "lateral_yaw_deg": 7.353974767200169,
+          "nonlateral_position_cm": 1.336755416293787,
+          "fde_mean_m": 1.2074514434943642,
+          "fde_p95_m": 3.8602137500666065,
+          "ade_mean_m": 0.5927777288169855,
+          "lateral_traj_fde_mean_m": 1.515613602524021,
+          "nonlateral_traj_fde_mean_m": 1.0055053179016553
+        },
+        "k32_new": {
+          "position_cm": 1.5119789783922366,
+          "yaw_deg": 0.9131358594921754,
+          "lateral_position_cm": 6.57221596385124,
+          "lateral_yaw_deg": 4.684920346558951,
+          "nonlateral_position_cm": 1.4501666509666795,
+          "fde_mean_m": 1.1400360814762178,
+          "fde_p95_m": 3.633007651007284,
+          "ade_mean_m": 0.5555330541766703,
+          "lateral_traj_fde_mean_m": 1.3590654135270188,
+          "nonlateral_traj_fde_mean_m": 0.996500855937506
+        },
+        "k64_old": {
+          "position_cm": 0.9258947801135895,
+          "yaw_deg": 0.5666498256371902,
+          "lateral_position_cm": 10.405808901011056,
+          "lateral_yaw_deg": 7.177001483865671,
+          "nonlateral_position_cm": 0.810094757843699,
+          "fde_mean_m": 0.8791150477482951,
+          "fde_p95_m": 2.767921796245015,
+          "ade_mean_m": 0.4372067694485599,
+          "lateral_traj_fde_mean_m": 1.18023794587585,
+          "nonlateral_traj_fde_mean_m": 0.6817819202949158
+        },
+        "k64_new": {
+          "position_cm": 0.8059814978321896,
+          "yaw_deg": 0.49423763217478545,
+          "lateral_position_cm": 2.6644027135180797,
+          "lateral_yaw_deg": 2.0698980285984705,
+          "nonlateral_position_cm": 0.7832803198026477,
+          "fde_mean_m": 0.7336130597017748,
+          "fde_p95_m": 2.3576338060556963,
+          "ade_mean_m": 0.35896722371377254,
+          "lateral_traj_fde_mean_m": 0.8510915777244985,
+          "nonlateral_traj_fde_mean_m": 0.6566265418575151
+        }
+      }
+    },
+    "shenzhen": {
+      "trajectories": 80475,
+      "nodes": 5086945,
+      "lateral_nodes": 40702,
+      "lateral_trajectories": 31470,
+      "models": {
+        "k32_old": {
+          "position_cm": 1.7468957375497736,
+          "yaw_deg": 0.6567623684194873,
+          "lateral_position_cm": 11.095464170468663,
+          "lateral_yaw_deg": 8.030021753812793,
+          "nonlateral_position_cm": 1.6714920298098441,
+          "fde_mean_m": 3.6304650191680676,
+          "fde_p95_m": 12.27107606567567,
+          "ade_mean_m": 1.761280672230851,
+          "lateral_traj_fde_mean_m": 4.39035307206802,
+          "nonlateral_traj_fde_mean_m": 3.142480588502594
+        },
+        "k32_new": {
+          "position_cm": 1.8207794220634017,
+          "yaw_deg": 0.6603516929453066,
+          "lateral_position_cm": 7.869894075376553,
+          "lateral_yaw_deg": 5.228574952146813,
+          "nonlateral_position_cm": 1.7719884572566829,
+          "fde_mean_m": 3.3241671473014986,
+          "fde_p95_m": 11.203366132043643,
+          "ade_mean_m": 1.6127889281407235,
+          "lateral_traj_fde_mean_m": 3.815538971170045,
+          "nonlateral_traj_fde_mean_m": 3.0086182992830692
+        },
+        "k64_old": {
+          "position_cm": 1.312145302684718,
+          "yaw_deg": 0.41838832101758167,
+          "lateral_position_cm": 11.041420732313615,
+          "lateral_yaw_deg": 7.503419638065988,
+          "nonlateral_position_cm": 1.2336708874540692,
+          "fde_mean_m": 2.6379170321324596,
+          "fde_p95_m": 8.759382661474366,
+          "ade_mean_m": 1.3288468060334984,
+          "lateral_traj_fde_mean_m": 3.364822664864482,
+          "nonlateral_traj_fde_mean_m": 2.1711132312534325
+        },
+        "k64_new": {
+          "position_cm": 1.1461730550182838,
+          "yaw_deg": 0.3788287530724018,
+          "lateral_position_cm": 4.252136654614418,
+          "lateral_yaw_deg": 2.8344015310993207,
+          "nonlateral_position_cm": 1.1211209656855343,
+          "fde_mean_m": 2.2149403711018945,
+          "fde_p95_m": 7.479458986431891,
+          "ade_mean_m": 1.1100548409338855,
+          "lateral_traj_fde_mean_m": 2.4287428545653356,
+          "nonlateral_traj_fde_mean_m": 2.0776408270840494
+        }
+      }
+    }
+  }
+}
