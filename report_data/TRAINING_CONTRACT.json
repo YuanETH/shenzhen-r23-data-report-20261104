@@ -5,7 +5,7 @@
     "body_delta": "forward_m,left_m,ccw_yaw_rad; orientation at current observation",
     "camera": "recorded Habitat Rz@Ry@Rx mount, actual optical axis and pinhole intrinsics"
   },
-  "splits": "All four books fit only retained train trajectories; see each branch fit_trajectories.json. No eval/probe synthesized.",
+  "splits": "Shenzhen retained train trajectories and HM3D generation_pool retained trajectories jointly fit K32/K64/RVQ with equal trajectory weight; K256 was fit on Shenzhen retained train only. HM3D is not split into train/val/test.",
   "qc": {
     "score": "round(max(0,10-.9*M-T-V),2), hard cap4.9",
     "keep": "no hard error, no unresolved suspicious, rounded quality_score>=7",
@@ -28,7 +28,7 @@
   },
   "rvq": {
     "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/deps/codebook.npz",
-    "sha256": "a77f0577ac9b63b9d652f5482b250a9c434fabcb2184e8ec44a291fde94b8d3f",
+    "sha256": "8c8f595a61c63f35a83e7935c087debb188bcdc317753a20dcab43b4d9786e18",
     "shape": [
       3,
       256,
@@ -52,7 +52,7 @@
       1
     ],
     "fit_metadata": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/rvq/CODEBOOK.json",
-    "fitting": "from scratch on all frozen retained train trajectories; per-trajectory weight1; masked future padding; STOP excluded",
+    "fitting": "Jointly fitted on Shenzhen and HM3D QC-retained trajectories, equal total weight per trajectory; masked future padding; STOP excluded.",
     "horizon": 5,
     "target": "five absolute local poses relative to current selected real observation, never chained increments",
     "nodes": "continuous selected real first-to-terminal image frames; timestamps preserved; omitted frames absent from current and history",
@@ -73,7 +73,8 @@
     "stop": "complete000 AND <apos_1299> iff original terminal; only complete000 decodes to zeros; any single zero code ordinary",
     "deployment": "execute decoded[0] once, then reobserve/update retained-node history/replan; recorded duration is not control duration",
     "encode_entry": "deps/codec_torch.py encode(target_Nx5x3,valid_Nx5,books,device,beam=8); retry policy in encoding.py",
-    "decode_entry": "deps/reader_macro_h5.py decode(books,codes)"
+    "decode_entry": "deps/reader_macro_h5.py decode(books,codes)",
+    "fit": "深圳与 HM3D 的质检保留轨迹联合拟合；每条轨迹权重相同，终点不参与拟合"
   },
   "projection": {
     "object": "real object-goal annotated AABB center, positive camera depth plus image bounds, vocabulary48x27; region goals have <opos_0> with no_object_target status",
@@ -92,13 +93,13 @@
     "tokenizer": "map by token string with tokenizer.encode(...,add_special_tokens=False); require atomic registered tokens; source token IDs are not model IDs",
     "VeOmni": "Generic explicit PyTorch Dataset supplied; no VeOmni installation or trainer integration claimed."
   },
-  "evaluation": "Paired cohort only: complete trajectories successfully supervised in both branches. Both branches compared at identical true retained macro nodes. K256 rolls one decoded macro action per real retained node; RVQ rolls only decoded[0] per decision. Local H5 compares the same five actual future node frames; padding excluded. Metrics distributions are across per-trajectory metric values; no length weighting.",
+  "evaluation": "Prior old-codebook metrics do not apply to the joint codebooks. New sampled reconstruction metrics are documented in site/report_data/JOINT_REPORT_SAMPLE.json; no new full-population reconstruction or policy evaluation has been performed.",
   "not_performed": [
     "policy optimization",
     "model quality evaluation",
     "real robot test"
   ],
-  "source_protection": "Original OSS and prior products unmodified; independent source restore. No deletion; only the explicitly authorized static report, selected media and public statistics are published. Full training data is not uploaded.",
+  "source_protection": "Raw videos, source poses and QC data preserved; old K32, K64 and RVQ labels and books were replaced by the authorized joint encoding.",
   "video_storage": {
     "root": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/source/runs/output",
     "storage": "shared CPFS",
@@ -114,11 +115,11 @@
   "default_branch": "k64",
   "k64": {
     "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k64/codebook.npz",
-    "sha256": "0cfa304c662a598c32bd2e3f655d3b72ebb28ce79040aee6d6557c64dc780ecc",
+    "sha256": "ca975a90f2969c36f9173a95234fdf4a799e7e332a5649712a60782025c26e1c",
     "motion_ids": "1..64",
     "stop": 0,
     "dtype": "uint16",
-    "fit": "each retained nonleaking train trajectory equal total weight; real macro observation nodes, exact same indices as RVQ",
+    "fit": "深圳与 HM3D 的质检保留轨迹联合拟合；每条轨迹权重相同，终点不参与拟合",
     "supervision": "current retained image -> next retained image; true original terminal frame -> STOP",
     "micro_actions": "merged; GT edges and all decoded motion codes must exceed10cm OR10deg; terminal preserved; K64_VALIDATION.json",
     "deployment": "execute one decoded macro goal then reobserve; recorded timestamp gaps are not control deadlines",
@@ -128,11 +129,11 @@
   },
   "k32": {
     "codebook": "/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k32/codebook.npz",
-    "sha256": "2cd130dc5ae806c3334e5780fb4d529c5cacb6aa08cffc403321cd5b5e36d66a",
+    "sha256": "2787d1e071033632e99be1de29b1e58e33f501bff0a2a98cfedbe712b0dcf6ce",
     "motion_ids": "1..32",
     "stop": 0,
     "dtype": "uint16",
-    "fit": "each retained nonleaking train trajectory equal total weight; real macro observation nodes, exact same indices as RVQ",
+    "fit": "深圳与 HM3D 的质检保留轨迹联合拟合；每条轨迹权重相同，终点不参与拟合",
     "supervision": "current retained image -> next retained image; true original terminal frame -> STOP",
     "micro_actions": "merged; GT edges and all decoded motion codes must exceed10cm OR10deg; terminal preserved; K32_VALIDATION.json",
     "deployment": "execute one decoded macro goal then reobserve; recorded timestamp gaps are not control deadlines",
