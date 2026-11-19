@@ -1,22 +1,26 @@
-# 深圳办公室数据发版日志（2026-11-18 联合编码更新）
+# 深圳办公室数据发版日志（2026-11-19 联合编码更新）
 
 ## 数据与版本
 
 总目录：`/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028`；`START_HERE.txt` 为总入口，`CURRENT/` 指向 `/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256`。原始成功采集 **93,319** 条，质检保留 **80,475** 条、约 **954.0 小时**。
 
-2026-11-18，K32、K64 与 HM3D 和深圳的质检保留轨迹联合拟合，以每条轨迹等权为基础，真实动作 |左向位移| ≥ 2.5 cm 的拟合权重为 5 倍；RVQ 沿用原有逐轨迹等权的联合码本。 K32、K64 标签和码本已替换。每分支 **80,475 条轨迹、5,167,420 个节点、80,475 个 STOP**。原有 K256 保留，共 5,167,420 个宏节点；历史 `v1/v2/v3-refit` 的 RVQ 入口现指向联合 RVQ。
+2026-11-19，K32/K64 近直行码字（|左向|<0.5cm且|转角|<3°）前进距离间隔至少5cm，分别保留13和16个；其他既有码字向量保持一致，释放的1和9个ID重新拟合到真实侧向动作；原始归一化、STOP及每步1个运动token保持一致；RVQ沿用当前联合码本。 K32、K64 标签和码本已替换。每分支 **80,475 条轨迹、5,167,420 个节点、80,475 个 STOP**。原有 K256 保留，共 5,167,420 个宏节点；历史 `v1/v2/v3-refit` 的 RVQ 入口现指向联合 RVQ。
 
 | 分支 | 码本路径 | SHA256 |
 |---|---|---|
-| K32 | `/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k32/codebook.npz` | `589c78646229561178e0fb0251a228dc0e4b2ee68f96bd7f3deee3710d4acac6` |
-| K64 | `/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k64/codebook.npz` | `b03891724cfab35bc174fab31a20c6e1161df704c0ae65be6961547882f18276` |
+| K32 | `/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k32/codebook.npz` | `0429002c179e4223b21a5faf5fd00ae18326f7cd5b2384be22dea9799cc0c16b` |
+| K64 | `/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/k64/codebook.npz` | `5f633256e06b28b78da1a16c370c37711212d7146c20c12078e5cd38a446aeb7` |
 | RVQ | `/cpfs-normal/xuyuan/data-workspace/shenzhen-r23-20261028/encoded/v4-macro-k256/deps/codebook.npz` | `8c8f595a61c63f35a83e7935c087debb188bcdc317753a20dcab43b4d9786e18` |
 
 K256 保留码本 SHA256：`685a9d717360a3ab6776657dd1920fd10efddcce393a94131f58b90c848b9c9d`。各联合分支索引为 `<branch>/training_samples/index.json` 与 `<branch>/index.json`。先读 `AI_ENTRY.md`、`DATASETS.json`、`TRAINING_CONTRACT.json`，默认 K64。
 
-## 2026-11-19 K64 多样性调整
+## 2026-11-19 K32/K64 直行间距调整
 
-K64 保留56个码字，将密集直线区8个码字重新拟合到真实左右侧向动作，各侧4个。前向0.2–0.4m密集直线区由18码减为10码，侧向位移至少1cm的码字由10增至18；K64仍为每步1个动作token。K32、RVQ和深圳K256沿用当前版本。直线区平均位置误差由约2.8mm升至约5.2–5.3mm，HM3D和深圳整轨迹FDE均小幅下降，详见编码报告的完整对照。
+K32/K64 近直行码字（|左向|<0.5cm且|转角|<3°）前进距离间隔至少5cm，分别保留13和16个；其他既有码字向量保持一致，释放的1和9个ID重新拟合到真实侧向动作；原始归一化、STOP及每步1个运动token保持一致；RVQ沿用当前联合码本。
+
+近直行判定为 |左向位移|<0.5cm 且 |转角|<3°；K32 最小前进间距由4.02cm升至5.00cm，K64由1.58cm升至5.00cm。释放的码字使用真实侧向动作拟合，侧向至少1cm的码字分别由9增至10、由18增至27。
+
+与本次调整前相比，整轨迹 FDE 均值： K32 3.324→3.400m； K64 2.166→1.879m；K32 误差略升，K64 误差下降。更大间距会损失部分直行步长精度，完整分组误差与可视化见编码报告。
 
 ## 全量开环误差与码频
 
@@ -24,8 +28,8 @@ K64 保留56个码字，将密集直线区8个码字重新拟合到真实左右�
 
 | 分支 | ADE 均值 m | FDE 均值 m | FDE P95 m |
 |---|---:|---:|---:|
-| K32 | 1.613 | 3.324 | 11.203 |
-| K64 | 1.083 | 2.166 | 7.336 |
+| K32 | 1.646 | 3.400 | 11.404 |
+| K64 | 0.936 | 1.879 | 6.320 |
 | RVQ | 0.171 | 0.327 | 1.053 |
 | K256 | 0.292 | 0.591 | 1.951 |
 
