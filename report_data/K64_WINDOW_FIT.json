@@ -1,0 +1,42 @@
+{
+  "status": "complete",
+  "method": "K64 joint offline label search and codebook refinement directly minimize overlapping 5-step and 10-step SE(2) endpoint distance. One fixed code sequence per trajectory serves both horizons. Codebook trained on 8192 HM3D and 8192 Shenzhen trajectories, selected on 4096 disjoint trajectories per source. Differentiable endpoint fitting alternates with sequence search; no whole-route FDE or step ADE in primary training loss. Retain 64 motion IDs plus STOP=0 and >=5cm near-straight forward spacing. Decoder unchanged; labels are no longer pointwise nearest-center assignments.",
+  "books": {
+    "k64": {
+      "sha256": "f0cc68c7892d8b43b1c1a9aa5a309db0b9053b6864b3fd73f96aa94d8249950b",
+      "source_sha256": "5f633256e06b28b78da1a16c370c37711212d7146c20c12078e5cd38a446aeb7"
+    }
+  },
+  "encoder": {
+    "passes": 12,
+    "candidates": 32,
+    "seeds": 3,
+    "regularizer": 0.0001,
+    "source_sha256": "3431b6d4a1ed237fc35cfe37d5c576a1cfbbf811e85e5c43864407bbb12f91c7",
+    "wrapper_sha256": "ed5e5babcd5729a7a8623278e7a9d6038c42c34456c562dea8ce57b517810444",
+    "local_candidate_position_m": 0.08,
+    "local_candidate_yaw_deg": 12.0,
+    "fallback": "always retain per-step nearest code; extend limits to its residual +3cm/+3deg"
+  },
+  "labels_sha256": "b30e2ef22252f0cc79de94a260338d3f4502b2918c9545a3b298c0ad2209a2bb",
+  "motion_nodes": 86448973,
+  "near_straight_definition": "abs(left)<0.5cm and abs(yaw)<3deg",
+  "minimum_straight_gap_cm": 5.0001,
+  "source_trajectory_counts": {
+    "hm3d": 1940232,
+    "shenzhen": 80475
+  },
+  "sample_manifest_sha256": "16f64bdf59b1778d55f2dc50c823e7abda97e7b47bd9a4a62814a566c9218746",
+  "fit_history_sha256": "ae355c9d644f4ea0165d252660212df0798ca206337fdfa7087e500df10be054",
+  "refine_history_sha256": "360d56eac275bf9ac6269265c7652489521c1a1bc9257d01e501b06f2047b88e",
+  "seconds": 66.36088418960571,
+  "update": "315f0edbe86798d566967bb506b1150b888bac8efb8418b1984d9f124b59c3af",
+  "fitting_objective": {
+    "primary": "equal mean endpoint FDE for each (HM3D/Shenzhen) × (5/10-step) pair",
+    "whole_route_fde_weight": 0,
+    "per_step_ade_weight": 0,
+    "codebook_anchor_regularization_weight": 0.0002,
+    "sequence_action_regularization_weight": 0.0001,
+    "near_straight_minimum_gap_m": 0.050001
+  }
+}
