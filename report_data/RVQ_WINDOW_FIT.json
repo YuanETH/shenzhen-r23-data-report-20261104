@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "method": "K32 and RVQ jointly refine their books and offline label sequences for overlapping 5-step and 10-step executed-motion endpoint FDE, with no whole-route FDE or step ADE in the primary fitting loss. Both horizons use the same sequence. K32 keeps 32 motion IDs plus STOP=0, one token per motion, and >=5cm near-straight spacing. RVQ keeps 3x256 residual choices, 3 tokens per motion and H5 additive decoding; only executable components of its book are refined, other H5 components remain fixed and valid-increment/candidate guards remain active. K64 retains its current endpoint-optimized release.",
+  "books": {
+    "k32": {
+      "sha256": "6f94bedcd6e1330e796c3cd71ae9d1d18ffb4156e41ef01ef665ddf1938816b2",
+      "source_sha256": "0429002c179e4223b21a5faf5fd00ae18326f7cd5b2384be22dea9799cc0c16b"
+    },
+    "rvq": {
+      "sha256": "0966c2ba8d04e8fd868a5df92366c2693bf9f1ff1226e74d65c07ad5a562eeee",
+      "source_sha256": "8c8f595a61c63f35a83e7935c087debb188bcdc317753a20dcab43b4d9786e18"
+    }
+  },
+  "encoder": {
+    "passes": 12,
+    "candidates": 32,
+    "seeds": 3,
+    "regularizer": 0.0001,
+    "source_sha256": "d83c312b192fe07289cd3a7196a3e262222cebd5239a8a13a5660f7ba10397ed",
+    "wrapper_sha256": "e1178f02b2d21af2a4e27568808eba0beef127b9c19f8739a3bd11f5be4d86f1",
+    "local_candidate_position_m": 0.08,
+    "local_candidate_yaw_deg": 12.0,
+    "fallback": "always retain per-step nearest code; extend limits to its residual +3cm/+3deg",
+    "branch": "k32"
+  },
+  "labels_sha256": "e85f5553a2c4bcf9b4562c413a0e9fa4d901ff8ff45b14e789541232180d1979",
+  "motion_nodes": 86448973,
+  "near_straight_definition": "abs(left)<0.5cm and abs(yaw)<3deg",
+  "minimum_straight_gap_cm": 5.0001,
+  "source_trajectory_counts": {
+    "hm3d": 1940232,
+    "shenzhen": 80475
+  },
+  "sample_manifest_sha256": "16f64bdf59b1778d55f2dc50c823e7abda97e7b47bd9a4a62814a566c9218746",
+  "fit_history_sha256": "c65d9de1afd63f0e1530049ea9df2c2bb75a77308be533434cf3223e3a87474f",
+  "seconds": 53.65750050544739,
+  "update": "5b42166d7741f3b6e635faf0990bb1e49515719a91ef023d97d74d34a9d868ed",
+  "encoders": {
+    "k32": {
+      "passes": 12,
+      "candidates": 32,
+      "seeds": 3,
+      "regularizer": 0.0001,
+      "source_sha256": "d83c312b192fe07289cd3a7196a3e262222cebd5239a8a13a5660f7ba10397ed",
+      "wrapper_sha256": "e1178f02b2d21af2a4e27568808eba0beef127b9c19f8739a3bd11f5be4d86f1",
+      "local_candidate_position_m": 0.08,
+      "local_candidate_yaw_deg": 12.0,
+      "fallback": "always retain per-step nearest code; extend limits to its residual +3cm/+3deg",
+      "branch": "k32"
+    },
+    "rvq": {
+      "passes": 12,
+      "candidates_per_level": 16,
+      "seeds": 3,
+      "source_sha256": "c51346ee665c3446d323b2b85b91ea014fbe03a09d2678140162e25181272403",
+      "wrapper_sha256": "8e67d37caf4ca66d17d92c8c769e98e1acbda7829a4e4d708c1cf8ac0bd1859e",
+      "initialization": "deterministic beam16 H5 seed from the current codebook and GT; no historical labels or books are required",
+      "primary_objective": "sum of rolling 5/10-step SE(2) endpoint distances from the same executed first-action sequence",
+      "secondary_regularization": "1e-4 normalized first action squared residual + 0.002 masked H5 squared position/yaw residual",
+      "candidate_constraints": "all valid H5 increments must exceed 5cm or 5deg; first action residual <=max(8cm,seed+3cm), yaw <=max(12deg,seed+3deg); masked H5 mean position <=max(8cm,seed+3cm), yaw <=max(6deg,seed+3deg)",
+      "motion_tokens_per_step": 3,
+      "levels": 3,
+      "choices_per_level": 256,
+      "future_nodes": 5,
+      "codebook_fitting": "refine executable first 3 of 15 dimensions; preserve remaining future components; equal source/horizon endpoint loss plus weak center anchor",
+      "fit_history_sha256": "a8ae1db04c7abbd7b7a279251bb5424ffaf107d2b4e2011e01c02aa1829b4d4f"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"status":"passed","scope":"所有暂存标注 SHA、轨迹计数、STOP、位姿与既有GT缓存逐轨迹对齐；全部原位姿与冻结GT逐轨迹对齐，K32/RVQ标签由确定性5/10步联合搜索生成；安装逐文件核验","codebook_sha256":"0966c2ba8d04e8fd868a5df92366c2693bf9f1ff1226e74d65c07ad5a562eeee","index_sha256":"cce81b92f364accf02caa905b3d71c12823a4707647b24bdca0c9f6f29a7d036","joint_update_id":"5b42166d7741f3b6e635faf0990bb1e49515719a91ef023d97d74d34a9d868ed"}
